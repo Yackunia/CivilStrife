@@ -42,7 +42,7 @@ public class Squishy : Enemy
     {
         base.Death();
 
-        gameObject.GetComponent<Squishy>().enabled = false;
+        this.enabled = false;
 
         _onEnemyDeath.Invoke();
     }

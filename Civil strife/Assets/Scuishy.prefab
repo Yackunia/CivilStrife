@@ -1146,7 +1146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4883967613236328279}
   m_LocalRotation: {x: -0, y: -0, z: -0.0000005066391, w: 1}
-  m_LocalPosition: {x: -1.7, y: 0.13, z: 0}
+  m_LocalPosition: {x: 0.3, y: -0.08, z: 0}
   m_LocalScale: {x: 4.3544207, y: 4.493184, z: 1.8549997}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1257,18 +1257,19 @@ MonoBehaviour:
   enemyAnim: {fileID: 4883967613261878476}
   particle: {fileID: 3800552340854736707}
   attackHitBoxPos: {fileID: 4883967613236328278}
-  attackRad: 0.4
+  attackRad: 1
   damage: 1
   speedAttack: 0
   healthFieldDrawable: {fileID: 4883967611866907240}
   canv: {fileID: 4883967613002412344}
   health: 20
+  isAlive: 1
   knockSpeedX: 200
   knockSpeedY: 120
   isDashing: 0
   dashSpeed: 8
   dashMaxTime: 0.3
-  dashTimeToReboot: 5
+  dashTimeToReboot: 2
   dashRebTimer: 0
   dashTimer: 0
   canDash: 1

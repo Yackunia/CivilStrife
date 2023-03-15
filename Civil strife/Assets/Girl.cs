@@ -16,6 +16,8 @@ public class Girl : MonoBehaviour
     public Transform pl;
     public Transform[] man;
     public Transform camp;
+    public Transform vilage;
+
 
     public bool[] canTalking;
 
@@ -30,8 +32,9 @@ public class Girl : MonoBehaviour
     private void Update()
     {
         float x = Vector2.Distance(camp.position, pl.position);
+        float y = Vector2.Distance(vilage.position, pl.position);
 
-        for(int i = 0; i < dist.Length; i++)
+        for (int i = 0; i < dist.Length; i++)
         {
             dist[i] = Vector2.Distance(pl.position, man[i].position);
 
@@ -70,6 +73,12 @@ public class Girl : MonoBehaviour
             tObjcts[1].color = Color.gray;
             Objcts[2].SetActive(true);
         }
+        if (y < 5)
+        {
+            About[3].SetActive(false);
+            tObjcts[3].color = Color.gray;
+            Objcts[4].SetActive(true);
+        }
     }
 
     public void StopAlenaTolking(bool Back)
@@ -77,6 +86,9 @@ public class Girl : MonoBehaviour
         About[2].SetActive(false);
         tObjcts[2].color = Color.gray;
         Objcts[3].SetActive(true);
+
+        isAlenaReturn = Back;
+        man[2].gameObject.SetActive(true);
     }
 
 }

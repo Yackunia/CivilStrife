@@ -10,11 +10,15 @@ public class FireCamps : MonoBehaviour
     [SerializeField] private GameObject hint;
 
     private Transform pl;
-
+    private Rigidbody2D rb;
+    private void Start()
+    {
+        rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+    }
 
     private void Update()
     {
-        if (!notSit && Input.GetKeyDown(KeyCode.E))
+        if (!notSit && Input.GetKeyDown(KeyCode.E) && rb.velocity.x <= 0.001f && rb.velocity.x >= -0.001f)
         {
             pl.SendMessage("CampSitting", campFireID);
             hint.SetActive(notSit);

@@ -38,6 +38,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private bool canMoving = true;
     private bool canAttack;
     private bool seePlayer;
+    private bool playerOnBack = true;
 
     [Header("Анимации")]
     [SerializeField] protected Animator enemyAnim;
@@ -141,14 +142,28 @@ public abstract class Enemy : MonoBehaviour
         var _enemyPosX = _transform.position.x;
 
         if (((_playerPosX < _enemyPosX && currentDirection == 1) || 
+            (_playerPosX > _enemyPosX && currentDirection == -1)) && playerOnBack)
+        {
+            playerOnBack = false;
+            Invoke("CheckRotationFight", delayBeforeRotation);
+        }
+    }
+
+    private void CheckRotationFight()
+    {
+        var _playerPosX = player.position.x;
+        var _enemyPosX = _transform.position.x;
+
+
+        if (((_playerPosX < _enemyPosX && currentDirection == 1) ||
             (_playerPosX > _enemyPosX && currentDirection == -1)))
         {
+            playerOnBack = true;
+
             ChangeDirection();
             ChangeRotation();
         }
     }
-
-    
    
 
     private void CheckForPlayer()

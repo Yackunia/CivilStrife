@@ -123,14 +123,21 @@ public class PlayerHealth : MonoBehaviour
     #region SaveSistem
     private void CampSitting(int ID)
     {
-        campID = ID;
-        isSitting = !isSitting;
-
-        an.SetBool("isSitting", isSitting);
-        attack.enabled = !isSitting;
-        move.enabled = !isSitting;
-        if(!isSitting) invent.Save();
-
+        if(rb.velocity.x <= 0.001f && rb.velocity.x >= -0.001f)
+        {
+            campID = ID;
+            isSitting = !isSitting;
+            an.SetBool("isSitting", isSitting);
+            attack.enabled = !isSitting;
+            move.enabled = !isSitting;
+            if (!isSitting)
+            {
+            }
+            else
+            {
+                invent.Save();
+            }
+        }
     }
     #endregion
 }

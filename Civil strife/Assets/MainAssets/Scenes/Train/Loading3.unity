@@ -912,6 +912,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 444867106440294324, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: items.Array.data[0].img
+      value: 
+      objectReference: {fileID: 21300000, guid: d2224f7dcfa2f5c4992bab45367be326, type: 3}
+    - target: {fileID: 444867106440294324, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: items.Array.data[0].name
+      value: "\u0422\u043E\u043F\u043E\u0440"
+      objectReference: {fileID: 0}
+    - target: {fileID: 444867106440294324, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: items.Array.data[0].description
+      value: "\u042D\u0442\u043E \u0442\u043E\u043F\u043E\u0440, \u0431\u0440\u0430\u0442"
+      objectReference: {fileID: 0}
     - target: {fileID: 1004509484454220649, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1016,6 +1028,10 @@ PrefabInstance:
       propertyPath: lvlSpawnPoint.Array.data[0]
       value: 
       objectReference: {fileID: 603838723}
+    - target: {fileID: 5629980536877790860, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: es
+      value: 
+      objectReference: {fileID: 2002698207}
     - target: {fileID: 6700745267074867395, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: m_LocalScale.x
       value: 64.359406

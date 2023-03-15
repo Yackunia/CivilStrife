@@ -7832,8 +7832,6 @@ MonoBehaviour:
   - {fileID: 429584255}
   - {fileID: 1611452448}
   dialogValue: 0
-  Tasks: {fileID: 6248418300803855301}
-  taskPannel: {fileID: 6248418300654706292}
 --- !u!1 &709052006
 GameObject:
   m_ObjectHideFlags: 0
@@ -9633,6 +9631,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8256903275728149947, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
   m_PrefabInstance: {fileID: 1513944895}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &900450398 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5629980536877790860, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+  m_PrefabInstance: {fileID: 1513944895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57d6beaeceb996044a8f99c089784b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &902804223
 GameObject:
   m_ObjectHideFlags: 0
@@ -16268,6 +16277,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 444867106440294324, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: items.Array.data[1].img
+      value: 
+      objectReference: {fileID: -2455558885743347822, guid: 67b1a546aa109d448985e04f4e737599, type: 3}
+    - target: {fileID: 444867106440294324, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: items.Array.data[1].name
+      value: "\u042F\u0433\u043E\u0434\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 444867106440294324, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: items.Array.data[1].description
+      value: "\u042D\u0442\u043E \u044F \u044F\u0433\u043E\u0434\u0430, \u0431\u0440\u0430\u0442(\u043D\u0435
+        \u044F\u0439\u0446\u043E)"
+      objectReference: {fileID: 0}
     - target: {fileID: 1004509484454220649, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -16396,6 +16418,10 @@ PrefabInstance:
       propertyPath: lvlSpawnPoint.Array.data[1]
       value: 
       objectReference: {fileID: 1810790483}
+    - target: {fileID: 5629980536877790860, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: es
+      value: 
+      objectReference: {fileID: 843816089}
     - target: {fileID: 6700745267074867395, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: m_LocalScale.x
       value: 163.77551
@@ -17313,8 +17339,6 @@ MonoBehaviour:
   - {fileID: 1316560831}
   - {fileID: 631379091}
   dialogValue: 0
-  Tasks: {fileID: 6248418300803855301}
-  taskPannel: {fileID: 6248418300654706292}
 --- !u!114 &1594594541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21333,6 +21357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa4c64ea1721a844b8b3109a18c844f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inv: {fileID: 900450398}
   count: 0
 --- !u!114 &2091385886
 MonoBehaviour:
@@ -21348,8 +21373,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogWords: []
   dialogValue: 0
-  Tasks: {fileID: 0}
-  taskPannel: {fileID: 0}
 --- !u!1001 &2092337772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21717,19 +21740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2d5c9ddf2f66a499a56c6848dbdea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pl: {fileID: 0}
-  at: {fileID: 0}
-  readyButs: []
-  objText: []
-  text: {fileID: 0}
-  Dialog: {fileID: 0}
-  about: []
-  obj: []
-  dist: 0
-  dialogWords: []
-  dialogValue: 0
-  Tasks: {fileID: 0}
-  taskPannel: {fileID: 0}
 --- !u!212 &2129218993
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class MainQuests : MonoBehaviour
     [SerializeField] private GameObject[] questPrefs;
     [SerializeField] private GameObject last;
     [SerializeField] private GameObject mainPannel;
+    [SerializeField] private GameObject taskPannel;
+
 
     [SerializeField] private Transform parent;
 
@@ -33,13 +35,15 @@ public class MainQuests : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P) && isOpen)
         {
-            Time.timeScale = 0f;
+            Time.timeScale = 1f;
+            isOpen = false;
             mainPannel.SetActive(isOpen);
         }
 
         else if (Input.GetKeyDown(KeyCode.P))
         {
-            Time.timeScale = 1f;
+            Time.timeScale = 0f;
+            isOpen = true;
             mainPannel.SetActive(isOpen);
         }
     }

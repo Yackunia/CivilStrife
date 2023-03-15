@@ -7,10 +7,8 @@ public class Dialog : MonoBehaviour
 {
     [SerializeField] private GameObject[] dialogWords;
 
-    [SerializeField] private int dialogValue;
+    public int dialogValue;
 
-    [SerializeField] private GameObject Tasks;
-    [SerializeField] private GameObject taskPannel;
 
 
 
@@ -27,18 +25,4 @@ public class Dialog : MonoBehaviour
         dialogValue++;
         dialogWords[dialogValue].SetActive(true);
     }
-
-    private void Update()
-    {
-        if(dialogValue == 4)
-        {
-            Tasks.SetActive(true);
-        }
-
-        if (dialogValue == 7)
-        {
-            taskPannel.SetActive(false);
-        }
-    }
-
 }

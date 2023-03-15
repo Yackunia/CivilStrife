@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Girl : MonoBehaviour
 {
+    [SerializeField] private PlayerAttackSistem at;
 
     public Dialog[] dialogs;
 
@@ -29,16 +30,17 @@ public class Girl : MonoBehaviour
 
     public Text[] tObjcts;
 
+    public bool[] flag;
     private void Update()
     {
         float x = Vector2.Distance(camp.position, pl.position);
         float y = Vector2.Distance(vilage.position, pl.position);
 
-        for (int i = 0; i < dist.Length; i++)
+        for(int i = 0; i < dist.Length; i++)
         {
             dist[i] = Vector2.Distance(pl.position, man[i].position);
 
-            if(dist[i] <= 2 && !canTalking[i])
+            if (dist[i] <= 2 && !canTalking[i])
             {
                 canTalking[i] = true;
 
@@ -50,24 +52,29 @@ public class Girl : MonoBehaviour
                 canTalking[i] = false;
 
                 PressE[i].SetActive(false);
+                Dialog[i].SetActive(false);
+                at.enabled = true;
+                Cursor.visible = false;
             }
 
-            if(canTalking[i] && Input.GetKeyDown(KeyCode.E))
+            if (canTalking[i] && Input.GetKeyDown(KeyCode.E))
             {
                 Dialog[i].SetActive(true);
+                at.enabled = false;
+                Cursor.visible = true;
             }
         }
-        if(dialogs[0].dialogValue == 1)
+        if (dialogs[0].dialogValue == 1 && flag[0])
         {
             Quest.SetActive(true);
         }
-        if(dialogs[1].dialogValue == 4)
+        if(dialogs[1].dialogValue == 4 && flag[1])
         {
             About[0].SetActive(false);
             tObjcts[0].color = Color.gray;
             Objcts[1].SetActive(true);
         }
-        if(x < 5)
+        if(x < 5 && flag[2])
         {
             About[1].SetActive(false);
             tObjcts[1].color = Color.gray;

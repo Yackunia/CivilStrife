@@ -4,92 +4,91 @@ using UnityEngine;
 
 public class Znacharka : MonoBehaviour
 {
-    [SerializeField] private Transform pl;
-    [SerializeField] private PlayerAttackSistem at;
+    [SerializeField] private Inventory2 inv;
     [SerializeField] private CountOfBerries count;
+    [SerializeField] private PlayerAttackSistem at;
 
 
-    [SerializeField] private Button readyBut;
+    public Dialog[] dialogs;
 
-    [SerializeField] private GameObject text;
-    [SerializeField] private GameObject Dialog;
-    [SerializeField] private GameObject about;
-    [SerializeField] private GameObject obj;
+    public float[] dist;
+
+    public bool isAlenaReturn;
+
+    public Transform pl;
+    public Transform[] man;
+
+    public bool[] canTalking;
+
+    public GameObject[] PressE;
+    public GameObject[] Dialog;
+    public GameObject[] Objcts;
+    public GameObject[] About;
+    public GameObject Quest;
+    public GameObject Pannel;
 
 
+    public Text[] tObjcts;
 
-
-    [SerializeField] private float dist;
-
-    private bool isDial;
-    private void Start()
-    {
-        pl = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
-        at = GameObject.Find("Attacker").GetComponent<PlayerAttackSistem>();
-
-    }
+    public bool[] flags;
 
     private void Update()
     {
-        CheckDialog();
 
-        if(count.count == 5)
+
+        for (int i = 0; i < dist.Length; i++)
         {
-            CheckBerry();
-            about.SetActive(false);
-            obj.SetActive(true);
+            dist[i] = Vector2.Distance(pl.position, man[i].position);
+
+            if (dist[i] <= 2 && !canTalking[i])
+            {
+                canTalking[i] = true;
+
+                PressE[i].SetActive(true);
+            }
+
+            if (dist[i] >= 2 && canTalking[i])
+            {
+                canTalking[i] = false;
+
+                PressE[i].SetActive(false);
+                Dialog[i].SetActive(false);
+                at.enabled = true;
+                Cursor.visible = false;
+            }
+
+            if (canTalking[i] && Input.GetKeyDown(KeyCode.E))
+            {
+                Dialog[i].SetActive(true);
+                at.enabled = false;
+                Cursor.visible = true;
+            }
         }
-        
-
-
-        dist = Vector2.Distance(transform.position, pl.position);
-    }
-
-    private void CheckDialog()
-    {
-        if (dist <= 2 && !isDial)
+        if (dialogs[0].dialogValue == 3 && flags[0])
         {
-            isDial = true;
-            text.SetActive(isDial);
+            Quest.SetActive(true);
+            flags[0] = false;
         }
-        if (dist > 2 && isDial)
+        if (count.count == 5 && flags[1])
         {
-            isDial = false;
-            text.SetActive(isDial);
-            Exit();
-        }
+            About[0].SetActive(false);
+            tObjcts[0].color = Color.gray;
+            Objcts[1].SetActive(true);
+            dialogs[0].butsAns[0].interactable = true;
+            flags[1] = false;
 
-        if (Input.GetKeyDown(KeyCode.E) && isDial)
+        }
+        if (dialogs[0].dialogValue == 7 && flags[2])
         {
-            DialogStart();
+            Destroy(Quest.GetComponent<Button>());
+            inv.RemoveItem(1, 5);
+            inv.AddItem(2, 10);
+            inv.AddItem(3, 2);
+            Destroy(Pannel);
+
+            flags[2] = false;
+
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && isDial)
-        {
-            Exit();
-        }
-    }
-
-    private void DialogStart()
-    {
-        at.enabled = false;
-        //Time.timeScale = 0f;
-        Dialog.SetActive(true);
-        text.SetActive(false);
-        Cursor.visible = true;
-    }
-
-    public void Exit()
-    {
-        at.enabled = true;
-        //Time.timeScale = 1f;
-        Dialog.SetActive(false);
-        Cursor.visible = false;
-    }
-
-    public void CheckBerry()
-    {
-        readyBut.interactable = true;
     }
 
 }

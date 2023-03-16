@@ -44,7 +44,6 @@ public class Znacharka : MonoBehaviour
         CheckOutput();
         Quest.SetActive(isStart);
 
-<<<<<<< HEAD
         for (int i = 0; i < dist.Length; i++)
         {
             dist[i] = Vector2.Distance(pl.position, man[i].position);
@@ -63,6 +62,7 @@ public class Znacharka : MonoBehaviour
                 PressE[i].SetActive(false);
                 Dialog[i].SetActive(false);
                 at.enabled = true;
+                move.enabled = true;
                 Cursor.visible = false;
             }
 
@@ -71,14 +71,13 @@ public class Znacharka : MonoBehaviour
                 PressE[i].SetActive(false);
                 Dialog[i].SetActive(true);
                 at.enabled = false;
+                move.enabled = false;   
                 Cursor.visible = true;
             }
         }
+
         if (dialogs[0].dialogValue == 20 && flag[0])
-=======
-        CheckIsDialog();
-        if (dialogs[0].dialogValue == 3 && flag[0])
->>>>>>> facaf4af91b9883ed62c9d999434cf8e3528bb09
+
         {
             Quest.SetActive(true);
             flag[0] = false;
@@ -87,7 +86,7 @@ public class Znacharka : MonoBehaviour
             isStart = true;
 
         }
-        if (count.count == 26 && flag[1])
+        if (count.count == 5 && flag[1])
         {
             About[0].SetActive(false);
             tObjcts[0].color = Color.gray;
@@ -98,7 +97,7 @@ public class Znacharka : MonoBehaviour
             main.idOfYask = 3;
 
         }
-        if (dialogs[0].dialogValue == 7 && flag[2])
+        if (dialogs[0].dialogValue == 26 && flag[2])
         {
             Destroy(Quest.GetComponent<Button>());
             inv.RemoveItem(1, 5);
@@ -112,40 +111,7 @@ public class Znacharka : MonoBehaviour
         }
     }
 
-    private void CheckIsDialog()
-    {
-        for (int i = 0; i < dist.Length; i++)
-        {
-            dist[i] = Vector2.Distance(pl.position, man[i].position);
-
-            if (dist[i] <= 2 && !canTalking[i])
-            {
-                canTalking[i] = true;
-
-                PressE[i].SetActive(true);
-            }
-
-            if (dist[i] >= 2 && canTalking[i])
-            {
-                canTalking[i] = false;
-
-                PressE[i].SetActive(false);
-                Dialog[i].SetActive(false);
-                at.enabled = true;
-                Cursor.visible = false;
-            }
-
-            if (canTalking[i] && Input.GetKeyDown(KeyCode.E))
-            {
-                PressE[i].SetActive(false);
-                Dialog[i].SetActive(true);
-                at.enabled = false;
-                Cursor.visible = true;
-            }
-        }
-
-    }
-
+  
 
     private void CheckOutput()
     {
@@ -161,6 +127,7 @@ public class Znacharka : MonoBehaviour
         at.enabled = true;
         Cursor.visible = false;
         Dialog[id].SetActive(false);
+        move.enabled = true;
     }
 
     public void SetThisQuest(bool flag)

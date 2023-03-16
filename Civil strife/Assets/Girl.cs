@@ -89,6 +89,7 @@ public class Girl : MonoBehaviour
             Quest.SetActive(true);
             flag[0] = false;
             flag[1] = true;
+            dialogs[1].butsAns[0].interactable = true;
 
         }
         if (dialogs[1].dialogValue == 4 && flag[1])
@@ -107,11 +108,12 @@ public class Girl : MonoBehaviour
             tObjcts[1].color = Color.gray;
             Objcts[2].SetActive(true);
             flag[2] = false;
-            flag[3] = false;
+            flag[3] = true;
+            dialogs[2].butsAns[0].interactable = true;
 
 
         }
-        if (y < 5 && flag[3])
+        if (y < 5 && flag[4])
         {
             About[3].SetActive(false);
             tObjcts[3].color = Color.gray;
@@ -120,20 +122,21 @@ public class Girl : MonoBehaviour
             flag[5] = true;
 
         }
-        if (dialogs[3].dialogValue == 8 && flag[4] && !isAlenaReturn)
+        if (dialogs[3].dialogValue == 8 && flag[5] && !isAlenaReturn)
         {
             flag[5] = false;
             Destroy(Quest.GetComponent<Button>());
             inv.AddItem(2, 10);
             Destroy(Pannel);
-
+            isQuest = false;
         }
-        if (dialogs[3].dialogValue == 11 && flag[4] && isAlenaReturn)
+        if (dialogs[3].dialogValue == 11 && flag[5] && isAlenaReturn)
         {
             flag[5] = false;
             Destroy(Quest.GetComponent<Button>());
             inv.AddItem(2, 10);
             Destroy(Pannel);
+            isQuest = false;
 
         }
     }
@@ -146,7 +149,7 @@ public class Girl : MonoBehaviour
             if (flag[2] == true) main.idOfYask = 5;
             if (flag[3] == true) main.idOfYask = 6;
             if (flag[4] == true) main.idOfYask = 7;
-            if (flag[4] == true) main.idOfYask = 8;
+            if (flag[5] == true) main.idOfYask = 8;
         }
     }
 
@@ -162,8 +165,8 @@ public class Girl : MonoBehaviour
         flag[4] = true;
         man[3].gameObject.SetActive(true);
 
-        if (Back) dialogs[3].dialogValue = 9;
-        else dialogs[3].dialogValue = 0;
+        if (Back) dialogs[3].NewReplika(9);
+        else dialogs[3].NewReplika(0);
 
     }
 

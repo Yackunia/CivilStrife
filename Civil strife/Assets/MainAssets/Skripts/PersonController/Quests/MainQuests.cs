@@ -1,15 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class MainQuests : MonoBehaviour
 {
-    [Header("Output")]
-    [SerializeField] private GameObject[] questPrefs;
-    [SerializeField] private GameObject last;
-    [SerializeField] private GameObject mainPannel;
+    [SerializeField] private Znacharka zn;
+    [SerializeField] private Girl gr;
 
+    [Header("Output")]
+    [SerializeField] private Text[] taskText;
+
+    [SerializeField] private GameObject questPref;
+    [SerializeField] private GameObject mainPannel;
 
     [SerializeField] private Transform parent;
 
@@ -17,13 +19,8 @@ public class MainQuests : MonoBehaviour
 
     [SerializeField] private bool isOpen;
 
-    private void Start()
-    {
-        for(int i = 0; i < questPrefs.Length; i++)
-        {
-            last = Instantiate(questPrefs[i], new Vector2(last.transform.position.x, last.transform.position.y + len),Quaternion.identity,parent) ;
-        }
-    }
+    public int idOfYask;
+   
 
     private void Update()
     {
@@ -45,5 +42,16 @@ public class MainQuests : MonoBehaviour
             isOpen = true;
             mainPannel.SetActive(isOpen);
         }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            questPref.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            questPref.SetActive(false);
+        }
+
+        taskText[0].text = taskText[idOfYask].text;
+        if (!zn.isQuest && !gr.isQuest) idOfYask = 1;
     }
 }

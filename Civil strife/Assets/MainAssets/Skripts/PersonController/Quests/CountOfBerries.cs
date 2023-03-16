@@ -7,12 +7,10 @@ public class CountOfBerries : MonoBehaviour
     [SerializeField] private Inventory2 inv;
 
     public int count;
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            inv.AddItem(1, 2);
-            inv.RemoveItem(1, 1);
-       }
+    public void Plus() 
+    { 
+            inv.AddItem(1, 1);
+            count+=1;
+
     }
 }

@@ -16517,6 +16517,10 @@ PrefabInstance:
       propertyPath: patrolArea
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4883967613261878477, guid: 3e1c76a02faf6ee4eaead330e6f9fe4d, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 4883967613261878515, guid: 3e1c76a02faf6ee4eaead330e6f9fe4d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -46546,6 +46550,10 @@ PrefabInstance:
     - target: {fileID: 8256903275728149956, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: field of view
       value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256903276167672549, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: knockspeedX
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9135975237870538959, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: m_AnchorMax.y

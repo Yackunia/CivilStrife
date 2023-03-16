@@ -68,14 +68,14 @@ public class Znacharka : MonoBehaviour
                 Cursor.visible = true;
             }
         }
-        if (dialogs[0].dialogValue == 3 && flag[0])
+        if (dialogs[0].dialogValue == 20 && flag[0])
         {
             Quest.SetActive(true);
             flag[0] = false;
             main.idOfYask = 2;
             flag[1] = true;
         }
-        if (count.count == 5 && flag[1])
+        if (count.count == 26 && flag[1])
         {
             About[0].SetActive(false);
             tObjcts[0].color = Color.gray;

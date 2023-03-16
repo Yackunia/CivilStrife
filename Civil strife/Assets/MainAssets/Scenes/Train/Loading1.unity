@@ -20495,7 +20495,7 @@ MonoBehaviour:
   tObjcts:
   - {fileID: 6248418299855521553}
   - {fileID: 6248418299608070463}
-  flag: 010000
+  flag: 01000000
 --- !u!4 &708215638
 Transform:
   m_ObjectHideFlags: 0
@@ -46491,6 +46491,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -453.4
       objectReference: {fileID: 0}
+    - target: {fileID: 7771660031827134162, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 7913206581847806090, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -69864,7 +69868,7 @@ MonoBehaviour:
   - {fileID: 445171388}
   - {fileID: 964867024}
   - {fileID: 1859625520}
-  flag: 010000000000
+  flag: 01000000000000
   isStart: 0
 --- !u!114 &2129218996
 MonoBehaviour:

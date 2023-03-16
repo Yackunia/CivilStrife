@@ -104,7 +104,35 @@ public class Inventory2 : MonoBehaviour
         }
         return false;
     }
-    public void OnApplicationQuit()
+
+    public bool RemoveItemAllByID (int id)
+    {
+        Item item = null;
+        for (int i = 0; i < data.items.Count; i++)
+        {
+            if (data.items[i].id == id)
+            {
+                item = data.items[i];
+                break;
+            }
+        }
+        
+
+        for (int i = 0; i < itemCell.Capacity; i++)
+        {
+            if (itemCell[i].id == item.id)
+            {               
+                Remove(item.id, itemCell[i].count);
+
+                itemCell[i].count = 0;
+                itemCell[i].itemObj.GetComponentInChildren<Text>().text = itemCell[i].count.ToString();
+
+                return true;
+            }
+        }
+        return false;
+    }
+    public void SaveInvent()
     {
         //SaveInventory.SavePlayerData(playerData);
         PlayerDataData d = new PlayerDataData(Items);

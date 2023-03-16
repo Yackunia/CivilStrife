@@ -3272,6 +3272,7 @@ MonoBehaviour:
   enemys:
   - {fileID: 4932629182854139158}
   - {fileID: 5456337771072960657}
+  inv: {fileID: 5629980536877790860}
 --- !u!1 &4040337260366168048
 GameObject:
   m_ObjectHideFlags: 0
@@ -6964,7 +6965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8256903275728149946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.480022, y: 4.583758, z: 0}
+  m_LocalPosition: {x: -25.48, y: 4.5837584, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7225,6 +7226,9 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   infoDescriptionObject: {fileID: 7658159082900113747}
   objInfo: {fileID: 8788739524479268207}
+  playerData:
+    Items: []
+  Items: []
 --- !u!1 &8256903275768312957
 GameObject:
   m_ObjectHideFlags: 0

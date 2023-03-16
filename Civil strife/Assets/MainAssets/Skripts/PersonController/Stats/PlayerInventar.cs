@@ -21,6 +21,10 @@ public class PlayerInventar : MonoBehaviour
     [SerializeField] private EnemySaving[] enemys;
     [SerializeField] private Inventory2 inv;
 
+    [SerializeField] private Znacharka ZN;
+    [SerializeField] private Girl GL;
+
+
     private void Start()
     {
        Load();
@@ -35,10 +39,52 @@ public class PlayerInventar : MonoBehaviour
         SaveData.SavePlayerData(this);
         inv.SaveInvent();
 
+        List<bool> fl = new List<bool>();
+
+        for(int i = 0; i < ZN.flag.Length; i++)
+        {
+            fl.Add(ZN.flag[i]);
+        }
+        bool temp = ZN.isQuest;
+
+        List<int> DV = new List<int>();
+        for(int i = 0; i < ZN.dialogs.Length; i++)
+        {
+            DV.Add(ZN.dialogs[i].dialogValue);
+        }
+
+        bool kakashka = ZN.isStart;
+
+        QuestsInfo QI = new QuestsInfo(fl, temp, DV, kakashka);
+
+        QuestsSave.SavePlayerQuests(QI);
+
         for (int i = 0; i < enemys.Length; i++)
         {
             enemys[i].SaveEnemy();
         }
+
+
+        List<bool> fl1 = new List<bool>();
+
+        for (int i = 0; i < GL.flag.Length; i++)
+        {
+            fl1.Add(GL.flag[i]);
+        }
+        bool temp2 = GL.isQuest;
+
+        List<int> DV1 = new List<int>();
+        for (int i = 0; i < GL.dialogs.Length; i++)
+        {
+            DV1.Add(GL.dialogs[i].dialogValue);
+        }
+
+        bool kakashka2 = GL.isStart;
+
+        QuestsInfo2 QI2 = new QuestsInfo2(fl1, temp2, DV1, kakashka2);
+
+        QuestsSave.SavePlayerQuests2(QI2);
+
 
     }
 

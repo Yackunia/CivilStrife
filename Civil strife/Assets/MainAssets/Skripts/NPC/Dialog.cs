@@ -12,7 +12,15 @@ public class Dialog : MonoBehaviour
     public int dialogValue;
 
 
+    private void Start()
+    {
+        for(int i = 0; i < dialogWords.Length; i++)
+        {
+            dialogWords[i].SetActive(false);   
+        }
 
+        dialogWords[dialogValue].SetActive(true) ;
+    }
 
     public void NewReplika(int i)
     {

@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class Girl : MonoBehaviour
 {
@@ -38,9 +39,12 @@ public class Girl : MonoBehaviour
     public Text[] tObjcts;
 
     public bool[] flag;
+
+    public bool isStart;
     private void Update()
     {
         CheckOutput();
+        Quest.SetActive(isStart);
 
         float x = Vector2.Distance(camp.position, pl.position);
         float y = Vector2.Distance(vilage.position, pl.position);
@@ -90,7 +94,7 @@ public class Girl : MonoBehaviour
             flag[0] = false;
             flag[1] = true;
             dialogs[1].butsAns[0].interactable = true;
-
+            isStart = true;
         }
         if (dialogs[1].dialogValue == 4 && flag[1])
         {
@@ -181,5 +185,37 @@ public class Girl : MonoBehaviour
     public void SetThisQuest(bool flag)
     {
         isQuest = flag;
+    }
+
+    private void Start()
+    {
+        if (File.Exists(Application.persistentDataPath
+   + "/lolipop2.log"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file =
+              File.Open(Application.persistentDataPath
+              + "/lolipop2.log", FileMode.Open);
+            QuestsInfo2 data = (QuestsInfo2)bf.Deserialize(file);
+            file.Close();
+
+            for (int i = 0; i < data.flags.Count; i++)
+            {
+                flag[i] = data.flags[i];
+
+            }
+            isQuest = data.isQuest;
+
+            for (int i = 0; i < data.dialogs.Count; i++)
+            {
+                dialogs[i].dialogValue = data.dialogs[i];
+            }
+            bool k = data.isStart;
+            isStart = k;
+
+            Debug.Log("Game data loaded!");
+        }
+        else
+            Debug.Log("There is no save data!");
     }
 }

@@ -194,5 +194,18 @@ public class Znacharka : MonoBehaviour
         }
         else
             Debug.Log("There is no save data!");
+
+
+
+        if (flag[2])
+        {
+            About[0].SetActive(false);
+            tObjcts[0].color = Color.gray;
+            Objcts[1].SetActive(true);
+            dialogs[0].butsAns[0].interactable = true;
+            flag[1] = false;
+            flag[2] = true;
+            main.idOfYask = 3;
+        }
     }
 }

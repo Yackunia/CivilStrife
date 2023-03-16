@@ -96,7 +96,7 @@ public class Girl : MonoBehaviour
             dialogs[1].butsAns[0].interactable = true;
             isStart = true;
         }
-        if (dialogs[1].dialogValue == 4 && flag[1])
+        if (dialogs[1].dialogValue == 5 && flag[1])
         {
             About[0].SetActive(false);
             tObjcts[0].color = Color.gray;

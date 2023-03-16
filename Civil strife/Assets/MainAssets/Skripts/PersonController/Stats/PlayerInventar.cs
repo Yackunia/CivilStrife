@@ -102,7 +102,7 @@ public class PlayerInventar : MonoBehaviour
         {
             enemys[i].Load();
         }
-
+        inv.RemoveItemAllByID(1);
         PlayerStats pl = SaveData.LoadPlayerData();
 
         health.healthPoint = pl.health;

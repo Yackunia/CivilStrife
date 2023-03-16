@@ -6027,11 +6027,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8256903275728149947, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.165314
+      value: -20.170723
       objectReference: {fileID: 0}
     - target: {fileID: 8256903275728149947, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5837517
+      value: 4.5837536
       objectReference: {fileID: 0}
     - target: {fileID: 8256903275728149956, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: field of view
@@ -6114,7 +6114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5228302709736608340, guid: 919682077bf4d43488459194c940de7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.769672
+      value: 19.11
       objectReference: {fileID: 0}
     - target: {fileID: 5228302709736608340, guid: 919682077bf4d43488459194c940de7d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7258,18 +7258,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf7a712536269b429993c37cf1e5701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogCanvas:
-  - {fileID: 2081063627}
-  - {fileID: 1460849782}
   dialogWords:
   - {fileID: 1700585194}
   - {fileID: 917004981}
   - {fileID: 40606884}
   - {fileID: 1680530117}
   - {fileID: 496729501}
+  butsAns: []
   dialogValue: 0
-  pl: {fileID: 0}
-  at: {fileID: 0}
 --- !u!95 &1556788043
 Animator:
   serializedVersion: 4
@@ -7298,7 +7294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556788040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.71, y: 8.65, z: 0}
+  m_LocalPosition: {x: 72.71, y: 8.899, z: 0}
   m_LocalScale: {x: -0.26, y: 0.26, z: 0.26}
   m_ConstrainProportionsScale: 0
   m_Children:

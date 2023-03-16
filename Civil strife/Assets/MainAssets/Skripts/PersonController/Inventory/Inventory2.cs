@@ -135,7 +135,7 @@ public class Inventory2 : MonoBehaviour
         //   AddGraphics();
         for (int i = 0; i < maxItems; i++)
         {
-            AddItem(Random.Range(0, data.items.Count), Random.Range(0, 99));
+            //AddItem(Random.Range(0, data.items.Count), Random.Range(0, 99));
         }
     }
     public void Update()
@@ -149,7 +149,7 @@ public class Inventory2 : MonoBehaviour
         {
             BackgroundCell.SetActive(!BackgroundCell.activeSelf);
             infoDescriptionObject.SetActive(false);
-
+            Cursor.visible = BackgroundCell.activeSelf;
         }
 
     }

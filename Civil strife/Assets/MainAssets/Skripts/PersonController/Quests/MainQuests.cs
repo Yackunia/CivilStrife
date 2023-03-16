@@ -9,7 +9,6 @@ public class MainQuests : MonoBehaviour
     [SerializeField] private GameObject[] questPrefs;
     [SerializeField] private GameObject last;
     [SerializeField] private GameObject mainPannel;
-    [SerializeField] private GameObject taskPannel;
 
 
     [SerializeField] private Transform parent;

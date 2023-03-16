@@ -1,8 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Runtime.Serialization.Formatters.Binary;
+
+[System.Serializable]
+public class ItemInfo 
+{
+    public int id;
+    public int count;
+
+    public ItemInfo(int id, int count)
+    {
+        this.id = id;
+        this.count = count;
+    }
+}
+
+
 public class Inventory2 : MonoBehaviour
 {
     public DataBase data;
@@ -29,6 +46,36 @@ public class Inventory2 : MonoBehaviour
 
     public GameObject infoDescriptionObject;
     public Text objInfo;
+
+    public PlayerDataData playerData;
+
+    public List<ItemInfo> Items = new List<ItemInfo>();
+    public void Add(int id, int count)
+    {
+        for (int i = 0; i < Items.Count; i++)
+        {
+            if (Items[i].id == id)
+            {
+                Items[i].count += count;
+                return;
+            }
+        }
+        ItemInfo temp = new ItemInfo(id,count);
+        Items.Add(temp);
+    }
+
+    public void Remove(int id, int count)
+    {
+        for (int i = 0; i < Items.Count; i++)
+        {
+            if (Items[i].id == id)
+            {
+                Items[i].count -= count;
+                return;
+            }
+        }
+    }
+
     public bool RemoveItem(int id, int count)
     {
         Item item = null;
@@ -50,10 +97,18 @@ public class Inventory2 : MonoBehaviour
             {
                 itemCell[i].count -= count;
                 itemCell[i].itemObj.GetComponentInChildren<Text>().text = itemCell[i].count.ToString();
+
+                Remove(item.id, count);
                 return true;
             }
         }
         return false;
+    }
+    public void OnApplicationQuit()
+    {
+        //SaveInventory.SavePlayerData(playerData);
+        PlayerDataData d = new PlayerDataData(Items);
+        SaveInventory.SavePlayerData(d);
     }
     public void AddItem(int id, int count)
     {
@@ -72,12 +127,14 @@ public class Inventory2 : MonoBehaviour
         {
             if (itemCell[i].count == 128) continue;
             if(itemCell[i].id == item.id)
-            {
+            {              
+                Add(item.id, count);
                 if (itemCell[i].count + count <= 128)
                 {
                     itemCell[i].count += count;
                     itemCell[i].itemObj.GetComponentInChildren<Text>().text = itemCell[i].count.ToString();
                     itemCell[i].itemObj.GetComponent<Image>().sprite = item.img;
+
                     return;
                 }
                 else
@@ -126,17 +183,33 @@ public class Inventory2 : MonoBehaviour
         }
         itemCell[g1].id = item.id;
         itemCell[g1].count = count;
+        Add(item.id, count);
         itemCell[g1].itemObj.GetComponent<Image>().sprite = item.img;
         itemCell[g1].itemObj.GetComponentInChildren<Text>().text = count.ToString();
 
     }
+
     private void Start()
     {
-        //   AddGraphics();
-        for (int i = 0; i < maxItems; i++)
-        {
-            //AddItem(Random.Range(0, data.items.Count), Random.Range(0, 99));
-        }
+           if (File.Exists(Application.persistentDataPath
+      + "/loli.log"))
+           {
+               BinaryFormatter bf = new BinaryFormatter();
+               FileStream file =
+                 File.Open(Application.persistentDataPath
+                 + "/loli.log", FileMode.Open);
+               PlayerDataData data = (PlayerDataData)bf.Deserialize(file);
+               file.Close();
+
+               for(int i = 0; i < data.Items.Count; i++)
+               {
+                   AddItem(data.Items[i].id, data.Items[i].count);
+               }
+               Debug.Log("Game data loaded!");
+           }
+           else
+               Debug.Log("There is no save data!");
+
     }
     public void Update()
     {

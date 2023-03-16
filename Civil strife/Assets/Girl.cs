@@ -217,5 +217,63 @@ public class Girl : MonoBehaviour
         }
         else
             Debug.Log("There is no save data!");
+        if (flag[1])
+        {
+            dialogs[1].butsAns[0].interactable = true;
+
+        }
+        if (flag[2])
+        {
+            About[0].SetActive(false);
+            tObjcts[0].color = Color.gray;
+            Objcts[1].SetActive(true);
+            flag[1] = false;
+            flag[2] = true;
+        }
+
+        if (flag[3])
+        {
+            About[1].SetActive(false);
+            tObjcts[1].color = Color.gray;
+            Objcts[2].SetActive(true);
+            flag[2] = false;
+            flag[3] = true;
+            dialogs[2].butsAns[0].interactable = true;
+
+        }
+
+        if (flag[4])
+        {
+            About[2].SetActive(false);
+            tObjcts[2].color = Color.gray;
+            Objcts[3].SetActive(true);
+
+            man[2].gameObject.SetActive(false);
+            flag[4] = true;
+            man[3].gameObject.SetActive(true);
+        }
+
+        if (flag[5])
+        {
+            About[3].SetActive(false);
+            tObjcts[3].color = Color.gray;
+            Objcts[4].SetActive(true);
+            flag[4] = false;
+            flag[5] = true;
+            man[2].gameObject.SetActive(false);
+            flag[4] = true;
+            man[3].gameObject.SetActive(true);
+        }
+
+        if (flag[6])
+        {
+            flag[5] = false;
+            Destroy(Quest.GetComponent<Button>());
+            Destroy(Pannel);
+            isQuest = false;
+            man[2].gameObject.SetActive(false);
+            flag[4] = true;
+            man[3].gameObject.SetActive(true);
+        }
     }
 }

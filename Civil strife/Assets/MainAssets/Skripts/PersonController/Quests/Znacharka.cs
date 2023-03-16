@@ -84,7 +84,7 @@ public class Znacharka : MonoBehaviour
             isStart = true;
 
         }
-        if (count.count == 26 && flag[1])
+        if (count.count == 5 && flag[1])
         {
             About[0].SetActive(false);
             tObjcts[0].color = Color.gray;
@@ -95,7 +95,7 @@ public class Znacharka : MonoBehaviour
             main.idOfYask = 3;
 
         }
-        if (dialogs[0].dialogValue == 7 && flag[2])
+        if (dialogs[0].dialogValue == 26 && flag[2])
         {
             Destroy(Quest.GetComponent<Button>());
             inv.RemoveItem(1, 5);
@@ -103,6 +103,7 @@ public class Znacharka : MonoBehaviour
             inv.AddItem(3, 2);
             Destroy(Pannel);
 
+            flag[3] = true;
             flag[2] = false;
             main.idOfYask = 1;
             isQuest = false;
@@ -206,6 +207,14 @@ public class Znacharka : MonoBehaviour
             flag[1] = false;
             flag[2] = true;
             main.idOfYask = 3;
+        }
+        if (flag[3])
+        {
+            Destroy(Quest.GetComponent<Button>());
+            Destroy(Pannel);
+            flag[2] = false;
+            main.idOfYask = 1;
+            isQuest = false;
         }
     }
 }

@@ -1,7 +1,8 @@
 using UnityEngine.UI;
 
 using UnityEngine;
-
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 public class Znacharka : MonoBehaviour
 {
     [SerializeField] private Inventory2 inv;
@@ -16,6 +17,7 @@ public class Znacharka : MonoBehaviour
     public float[] dist;
 
     public bool isAlenaReturn;
+    public bool isStart;
 
     public Transform pl;
     public Transform[] man;
@@ -38,6 +40,7 @@ public class Znacharka : MonoBehaviour
     private void Update()
     {
         CheckOutput();
+        Quest.SetActive(isStart);
 
         for (int i = 0; i < dist.Length; i++)
         {
@@ -74,6 +77,8 @@ public class Znacharka : MonoBehaviour
             flag[0] = false;
             main.idOfYask = 2;
             flag[1] = true;
+            isStart = true;
+
         }
         if (count.count == 5 && flag[1])
         {
@@ -119,5 +124,36 @@ public class Znacharka : MonoBehaviour
     public void SetThisQuest(bool flag)
     {
         isQuest = flag;
+    }
+    private void Start()
+    {
+        if (File.Exists(Application.persistentDataPath
+   + "/lolipop1.log"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file =
+              File.Open(Application.persistentDataPath
+              + "/lolipop1.log", FileMode.Open);
+            QuestsInfo data = (QuestsInfo)bf.Deserialize(file);
+            file.Close();
+
+            for(int i = 0; i < data.flags.Count; i++)
+            {
+                flag[i] = data.flags[i];
+
+            }
+            isQuest = data.isQuest;
+
+            for (int i = 0; i < data.dialogs.Count; i++)
+            {
+                dialogs[i].dialogValue = data.dialogs[i];
+            }
+            bool k = data.isStart;
+            isStart = k;
+            
+            Debug.Log("Game data loaded!");
+        }
+        else
+            Debug.Log("There is no save data!");
     }
 }

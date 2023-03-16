@@ -58,6 +58,50 @@ public static class SaveData
             return null;
         }
     }
+    public static PlayerStats DestroyQuestsInfo()
+    {
+        string path = Application.persistentDataPath + "/lolipop1.log";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            Debug.Log("DestroyComplete");
+
+        }
+        else
+        {
+            Debug.LogError("NotFind" + path);
+        }
+
+        string path2 = Application.persistentDataPath + "/lolipop2.log";
+        if (File.Exists(path2))
+        {
+            File.Delete(path2);
+            Debug.Log("DestroyComplete");
+
+            return null;
+        }
+        else
+        {
+            Debug.LogError("NotFind" + path2);
+            return null;
+        }
+    }
+    public static PlayerStats DestroyInventory()
+    {
+        string path = Application.persistentDataPath + "/loli.log";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            Debug.Log("DestroyComplete");
+
+            return null;
+        }
+        else
+        {
+            Debug.LogError("NotFind" + path);
+            return null;
+        }
+    }
     #endregion
 
     #region EnemyData

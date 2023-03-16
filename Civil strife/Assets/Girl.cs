@@ -133,6 +133,7 @@ public class Girl : MonoBehaviour
             inv.AddItem(2, 10);
             Destroy(Pannel);
             isQuest = false;
+            flag[6] = true;
         }
         if (dialogs[3].dialogValue == 11 && flag[5] && isAlenaReturn)
         {
@@ -141,6 +142,7 @@ public class Girl : MonoBehaviour
             inv.AddItem(2, 10);
             Destroy(Pannel);
             isQuest = false;
+            flag[6] = true;
 
         }
     }
@@ -213,6 +215,8 @@ public class Girl : MonoBehaviour
             bool k = data.isStart;
             isStart = k;
 
+            isAlenaReturn = data.isAlenaReturn;
+
             Debug.Log("Game data loaded!");
         }
         else
@@ -233,9 +237,14 @@ public class Girl : MonoBehaviour
 
         if (flag[3])
         {
+            About[0].SetActive(false);
+            tObjcts[0].color = Color.gray;
+            Objcts[1].SetActive(true);
+
             About[1].SetActive(false);
             tObjcts[1].color = Color.gray;
             Objcts[2].SetActive(true);
+
             flag[2] = false;
             flag[3] = true;
             dialogs[2].butsAns[0].interactable = true;
@@ -244,6 +253,14 @@ public class Girl : MonoBehaviour
 
         if (flag[4])
         {
+            About[0].SetActive(false);
+            tObjcts[0].color = Color.gray;
+            Objcts[1].SetActive(true);
+
+            About[1].SetActive(false);
+            tObjcts[1].color = Color.gray;
+            Objcts[2].SetActive(true);
+
             About[2].SetActive(false);
             tObjcts[2].color = Color.gray;
             Objcts[3].SetActive(true);
@@ -255,18 +272,42 @@ public class Girl : MonoBehaviour
 
         if (flag[5])
         {
+            About[0].SetActive(false);
+            tObjcts[0].color = Color.gray;
+            Objcts[1].SetActive(true);
+
+            About[1].SetActive(false);
+            tObjcts[1].color = Color.gray;
+            Objcts[2].SetActive(true);
+
+            About[2].SetActive(false);
+            tObjcts[2].color = Color.gray;
+            Objcts[3].SetActive(true);
+
             About[3].SetActive(false);
             tObjcts[3].color = Color.gray;
             Objcts[4].SetActive(true);
+
             flag[4] = false;
             flag[5] = true;
             man[2].gameObject.SetActive(false);
-            flag[4] = true;
             man[3].gameObject.SetActive(true);
         }
 
         if (flag[6])
         {
+            About[0].SetActive(false);
+            tObjcts[0].color = Color.gray;
+            Objcts[1].SetActive(true);
+
+            About[1].SetActive(false);
+            tObjcts[1].color = Color.gray;
+            Objcts[2].SetActive(true);
+
+            About[2].SetActive(false);
+            tObjcts[2].color = Color.gray;
+            Objcts[3].SetActive(true);
+
             flag[5] = false;
             Destroy(Quest.GetComponent<Button>());
             Destroy(Pannel);

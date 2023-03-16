@@ -35,4 +35,5 @@ public class Dialog : MonoBehaviour
         dialogValue++;
         dialogWords[dialogValue].SetActive(true);
     }
+
 }

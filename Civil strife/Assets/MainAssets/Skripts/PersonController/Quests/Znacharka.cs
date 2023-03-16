@@ -7,6 +7,8 @@ public class Znacharka : MonoBehaviour
     [SerializeField] private Inventory2 inv;
     [SerializeField] private CountOfBerries count;
     [SerializeField] private PlayerAttackSistem at;
+    [SerializeField] private MainQuests main;
+
 
 
     public Dialog[] dialogs;
@@ -19,6 +21,7 @@ public class Znacharka : MonoBehaviour
     public Transform[] man;
 
     public bool[] canTalking;
+    public bool isQuest;
 
     public GameObject[] PressE;
     public GameObject[] Dialog;
@@ -30,11 +33,11 @@ public class Znacharka : MonoBehaviour
 
     public Text[] tObjcts;
 
-    public bool[] flags;
+    public bool[] flag;
 
     private void Update()
     {
-
+        CheckOutput();
 
         for (int i = 0; i < dist.Length; i++)
         {
@@ -59,26 +62,31 @@ public class Znacharka : MonoBehaviour
 
             if (canTalking[i] && Input.GetKeyDown(KeyCode.E))
             {
+                PressE[i].SetActive(false);
                 Dialog[i].SetActive(true);
                 at.enabled = false;
                 Cursor.visible = true;
             }
         }
-        if (dialogs[0].dialogValue == 3 && flags[0])
+        if (dialogs[0].dialogValue == 3 && flag[0])
         {
             Quest.SetActive(true);
-            flags[0] = false;
+            flag[0] = false;
+            main.idOfYask = 2;
+            flag[1] = true;
         }
-        if (count.count == 5 && flags[1])
+        if (count.count == 5 && flag[1])
         {
             About[0].SetActive(false);
             tObjcts[0].color = Color.gray;
             Objcts[1].SetActive(true);
             dialogs[0].butsAns[0].interactable = true;
-            flags[1] = false;
+            flag[1] = false;
+            flag[2] = true;
+            main.idOfYask = 3;
 
         }
-        if (dialogs[0].dialogValue == 7 && flags[2])
+        if (dialogs[0].dialogValue == 7 && flag[2])
         {
             Destroy(Quest.GetComponent<Button>());
             inv.RemoveItem(1, 5);
@@ -86,9 +94,30 @@ public class Znacharka : MonoBehaviour
             inv.AddItem(3, 2);
             Destroy(Pannel);
 
-            flags[2] = false;
-
+            flag[2] = false;
+            main.idOfYask = 1;
+            isQuest = false;
         }
     }
 
+    private void CheckOutput()
+    {
+        if (isQuest)
+        {
+            if (flag[1] == true) main.idOfYask = 2;
+            if (flag[2] == true) main.idOfYask = 3;
+        }
+    }
+
+    public void Exit(int id)
+    {
+        at.enabled = true;
+        Cursor.visible = false;
+        Dialog[id].SetActive(false);
+    }
+
+    public void SetThisQuest(bool flag)
+    {
+        isQuest = flag;
+    }
 }

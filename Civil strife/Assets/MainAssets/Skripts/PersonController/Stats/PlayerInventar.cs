@@ -34,6 +34,12 @@ public class PlayerInventar : MonoBehaviour
         idOfCamp = health.campID;
         healthPoint = health.healthPoint;
     }
+    public void NewGameStart()
+    {
+        SaveData.DestroyQuestsInfo();
+        SaveData.DestroyInventory();
+
+    }
     public void Save()
     {
         SaveData.SavePlayerData(this);

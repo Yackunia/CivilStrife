@@ -4674,6 +4674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5513164216402377171, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
+      propertyPath: scenes.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8256903274976291990, guid: a65722e588a93044fb4cbdbcafae1b26, type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.330001
@@ -5138,6 +5142,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1300795329}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1752585907}
+        m_TargetAssemblyTypeName: PlayerInventar, Assembly-CSharp
+        m_MethodName: NewGameStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

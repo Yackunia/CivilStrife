@@ -44,7 +44,6 @@ public class Znacharka : MonoBehaviour
         CheckOutput();
         Quest.SetActive(isStart);
 
-<<<<<<< HEAD
         for (int i = 0; i < dist.Length; i++)
         {
             dist[i] = Vector2.Distance(pl.position, man[i].position);
@@ -75,10 +74,8 @@ public class Znacharka : MonoBehaviour
             }
         }
         if (dialogs[0].dialogValue == 20 && flag[0])
-=======
         CheckIsDialog();
         if (dialogs[0].dialogValue == 3 && flag[0])
->>>>>>> facaf4af91b9883ed62c9d999434cf8e3528bb09
         {
             Quest.SetActive(true);
             flag[0] = false;

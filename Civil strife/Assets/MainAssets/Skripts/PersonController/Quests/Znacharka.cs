@@ -7,6 +7,8 @@ public class Znacharka : MonoBehaviour
     [SerializeField] private Inventory2 inv;
     [SerializeField] private CountOfBerries count;
     [SerializeField] private PlayerAttackSistem at;
+    [SerializeField] private PlayerMovement move;
+
     [SerializeField] private MainQuests main;
 
 
@@ -39,6 +41,7 @@ public class Znacharka : MonoBehaviour
     {
         CheckOutput();
 
+<<<<<<< HEAD
         for (int i = 0; i < dist.Length; i++)
         {
             dist[i] = Vector2.Distance(pl.position, man[i].position);
@@ -69,6 +72,10 @@ public class Znacharka : MonoBehaviour
             }
         }
         if (dialogs[0].dialogValue == 20 && flag[0])
+=======
+        CheckIsDialog();
+        if (dialogs[0].dialogValue == 3 && flag[0])
+>>>>>>> facaf4af91b9883ed62c9d999434cf8e3528bb09
         {
             Quest.SetActive(true);
             flag[0] = false;
@@ -99,6 +106,41 @@ public class Znacharka : MonoBehaviour
             isQuest = false;
         }
     }
+
+    private void CheckIsDialog()
+    {
+        for (int i = 0; i < dist.Length; i++)
+        {
+            dist[i] = Vector2.Distance(pl.position, man[i].position);
+
+            if (dist[i] <= 2 && !canTalking[i])
+            {
+                canTalking[i] = true;
+
+                PressE[i].SetActive(true);
+            }
+
+            if (dist[i] >= 2 && canTalking[i])
+            {
+                canTalking[i] = false;
+
+                PressE[i].SetActive(false);
+                Dialog[i].SetActive(false);
+                at.enabled = true;
+                Cursor.visible = false;
+            }
+
+            if (canTalking[i] && Input.GetKeyDown(KeyCode.E))
+            {
+                PressE[i].SetActive(false);
+                Dialog[i].SetActive(true);
+                at.enabled = false;
+                Cursor.visible = true;
+            }
+        }
+
+    }
+
 
     private void CheckOutput()
     {

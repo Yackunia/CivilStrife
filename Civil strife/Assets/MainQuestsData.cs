@@ -8,4 +8,5 @@ public class MainQuestsData
     public bool[] isEnabled;
     public int[] idOfCuests;
     public int[] idOfDialog;
+
 }

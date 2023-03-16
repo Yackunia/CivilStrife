@@ -19,6 +19,7 @@ public class PlayerInventar : MonoBehaviour
     public PlayerHealth health;
 
     [SerializeField] private EnemySaving[] enemys;
+    [SerializeField] private Inventory2 inv;
 
     private void Start()
     {
@@ -32,11 +33,13 @@ public class PlayerInventar : MonoBehaviour
     public void Save()
     {
         SaveData.SavePlayerData(this);
+        inv.SaveInvent();
 
         for (int i = 0; i < enemys.Length; i++)
         {
             enemys[i].SaveEnemy();
         }
+
     }
 
     public void Load()
@@ -63,6 +66,8 @@ public class PlayerInventar : MonoBehaviour
 
     public void Respawn()
     {
+        inv.RemoveItemAllByID(1);
+        SaveData.SavePlayerData(this);
 
         health.healthPoint = health.maxHP;
         healthPoint = health.healthPoint;

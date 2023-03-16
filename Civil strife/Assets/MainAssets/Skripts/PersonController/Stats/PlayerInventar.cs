@@ -87,7 +87,9 @@ public class PlayerInventar : MonoBehaviour
 
         bool kakashka2 = GL.isStart;
 
-        QuestsInfo2 QI2 = new QuestsInfo2(fl1, temp2, DV1, kakashka2);
+        bool isal = GL.isAlenaReturn;
+
+        QuestsInfo2 QI2 = new QuestsInfo2(fl1, temp2, DV1, kakashka2, isal);
 
         QuestsSave.SavePlayerQuests2(QI2);
 

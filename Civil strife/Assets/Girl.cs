@@ -133,6 +133,7 @@ public class Girl : MonoBehaviour
             inv.AddItem(2, 10);
             Destroy(Pannel);
             isQuest = false;
+            flag[6] = true;
         }
         if (dialogs[3].dialogValue == 11 && flag[5] && isAlenaReturn)
         {
@@ -141,6 +142,7 @@ public class Girl : MonoBehaviour
             inv.AddItem(2, 10);
             Destroy(Pannel);
             isQuest = false;
+            flag[6] = true;
 
         }
     }
@@ -212,6 +214,8 @@ public class Girl : MonoBehaviour
             }
             bool k = data.isStart;
             isStart = k;
+
+            isAlenaReturn = data.isAlenaReturn;
 
             Debug.Log("Game data loaded!");
         }
@@ -287,7 +291,6 @@ public class Girl : MonoBehaviour
             flag[4] = false;
             flag[5] = true;
             man[2].gameObject.SetActive(false);
-            flag[4] = true;
             man[3].gameObject.SetActive(true);
         }
 

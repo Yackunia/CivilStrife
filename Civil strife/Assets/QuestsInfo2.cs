@@ -10,11 +10,14 @@ public class QuestsInfo2
 
     public bool isStart;
 
-    public QuestsInfo2(List<bool> flags, bool isQuest, List<int> DialValue, bool isStart)
+    public bool isAlenaReturn;
+
+    public QuestsInfo2(List<bool> flags, bool isQuest, List<int> DialValue, bool isStart, bool isAlenaReturn)
     {
         this.flags = flags;
         this.isQuest = isQuest;
         dialogs = DialValue;
         this.isStart = isStart;
+        this.isAlenaReturn = isAlenaReturn;
     }
 }

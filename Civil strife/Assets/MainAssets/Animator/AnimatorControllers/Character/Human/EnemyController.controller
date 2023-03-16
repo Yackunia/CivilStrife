@@ -1,0 +1,1196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+--- !u!1101 &-9168826485136788655
+=======
+--- !u!1101 &-8210489671209681897
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8992586623416065618}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+<<<<<<< HEAD
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.73214287
+=======
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.97405905
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+<<<<<<< HEAD
+--- !u!1102 &-8259439340128241191
+=======
+--- !u!1102 &-2982989126158409189
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_Name: EnemyJump
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 8949904845365423628}
+=======
+  m_Name: Pain
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 4749153162633960988}
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+<<<<<<< HEAD
+  m_Motion: {fileID: 7400000, guid: 4228560805c74d74f9776744123d9c58, type: 2}
+=======
+  m_Motion: {fileID: 7400000, guid: c21363888403fed49896a864ee08b075, type: 2}
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+<<<<<<< HEAD
+--- !u!1101 &-8200489322491477239
+=======
+--- !u!1101 &-539654938661744101
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+<<<<<<< HEAD
+  - m_ConditionMode: 1
+    m_ConditionEvent: isDamage
+    m_EventTreshold: 0
+=======
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isAttacking
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDamage
+    m_EventTreshold: 0
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+========
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isIDLE
+    m_EventTreshold: 0
+<<<<<<< HEAD
+  - m_ConditionMode: 2
+    m_ConditionEvent: Jump
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 2750651562434201053}
+=======
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -373525879941233853}
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+<<<<<<< HEAD
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.99861413
+=======
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+  m_TransitionDuration: 0.12859064
+  m_TransitionOffset: 0
+  m_ExitTime: 0.82906574
+========
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.99861413
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 0
+<<<<<<< HEAD
+========
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+--- !u!1101 &-7342202936228269212
+AnimatorStateTransition:
+=======
+--- !u!1102 &-373525879941233853
+AnimatorState:
+  serializedVersion: 6
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+  m_Name: attack
+  m_Speed: 0.6
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -8210489671209681897}
+========
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: isAttacking
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8992586623416065618}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+=======
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_ExitTime: 0.98927873
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-5496350015060404281
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isIDLE
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+<<<<<<< HEAD
+  - m_ConditionMode: 2
+    m_ConditionEvent: Jump
+    m_EventTreshold: 0
+=======
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -5267310829705179582}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.34414524
+  m_TransitionOffset: 0.004950679
+  m_ExitTime: 0.53144836
+<<<<<<< HEAD
+========
+  m_ExitTime: 0.996599
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+  m_CanTransitionToSelf: 0
+--- !u!1102 &-5267310829705179582
+========
+  m_CanTransitionToSelf: 1
+--- !u!1102 &-5244354048218570841
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+  m_CanTransitionToSelf: 0
+--- !u!1102 &-5267310829705179582
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+=======
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Name: PlayerIdle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+<<<<<<< HEAD
+========
+  m_Name: WakeUp
+  m_Speed: 0.8
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 3037175160301040604}
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+  m_Motion: {fileID: 7400000, guid: 62a3d88324598aa44a67bd5403b88ef5, type: 2}
+========
+  m_Motion: {fileID: 7400000, guid: b8cd7de49ad43c140b2c07d2599ae702, type: 2}
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+  m_Motion: {fileID: 7400000, guid: c484b053993a82c43b52116c1206c5b1, type: 2}
+========
+  m_Motion: {fileID: 7400000, guid: 62a3d88324598aa44a67bd5403b88ef5, type: 2}
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+========
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+--- !u!1101 &-5055903734539839150
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isAttacking
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+=======
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+    m_ConditionEvent: isDamage
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isIDLE
+    m_EventTreshold: 0
+<<<<<<< HEAD
+  - m_ConditionMode: 2
+    m_ConditionEvent: Jump
+========
+    m_ConditionEvent: Combo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Preparation
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+    m_EventTreshold: 0
+=======
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 500313262652650331}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+  m_TransitionDuration: 0.08454275
+  m_TransitionOffset: 0
+  m_ExitTime: 0.8753992
+========
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.9891293
+=======
+  m_TransitionDuration: 0.08454275
+  m_TransitionOffset: 0
+  m_ExitTime: 0.8753992
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 0
+<<<<<<< HEAD
+--- !u!1101 &-4253529752789545031
+=======
+--- !u!1101 &-711712219711995282
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+<<<<<<< HEAD
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isFight
+    m_EventTreshold: 0
+=======
+  m_Conditions: []
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8992586623416065618}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+<<<<<<< HEAD
+  m_ExitTime: 0.9197861
+  m_HasExitTime: 0
+=======
+  m_ExitTime: 0.96487117
+  m_HasExitTime: 1
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+<<<<<<< HEAD
+--- !u!1101 &-3571981155406478529
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Preparation
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -5244354048218570841}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.040757895
+  m_TransitionOffset: 0
+  m_ExitTime: 0.96739364
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1102 &-3125523496506258424
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TR_Idle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -4253529752789545031}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 3fae3d63c425bd642bce3792245e353e, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1101 &-1842587659522319633
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Preparation
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -5244354048218570841}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.06659019
+  m_TransitionOffset: 0.18340999
+  m_ExitTime: 0.8766014
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 0
+--- !u!1101 &-320616850165321076
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Combo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Preparation
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8036318065933786414}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.070940375
+  m_TransitionOffset: 0
+  m_ExitTime: 0.9147982
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 0
+=======
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+--- !u!91 &9100000
+AnimatorController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_Name: EnemyController
+=======
+  m_Name: Bugai
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  serializedVersion: 5
+  m_AnimatorParameters:
+  - m_Name: isDead
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+<<<<<<< HEAD
+    m_DefaultBool: 0
+=======
+    m_DefaultBool: 1
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+    m_Controller: {fileID: 9100000}
+  - m_Name: isDamage
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: isAttacking
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+    m_Controller: {fileID: 0}
+  - m_Name: isIDLE
+========
+    m_Controller: {fileID: 9100000}
+  - m_Name: isFight
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
+    m_Controller: {fileID: 9100000}
+  - m_Name: Combo
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+    m_Controller: {fileID: 9100000}
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+  - m_Name: isFight
+========
+  - m_Name: isIDLE
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+    m_Controller: {fileID: 0}
+  - m_Name: canDash
+========
+    m_Controller: {fileID: 9100000}
+  - m_Name: Preparation
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+    m_Controller: {fileID: 9100000}
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+  - m_Name: isSekondAttack
+========
+  - m_Name: canDash
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+    m_Controller: {fileID: 0}
+  - m_Name: Jump
+========
+    m_Controller: {fileID: 9100000}
+  - m_Name: isdashing
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+    m_Controller: {fileID: 0}
+========
+    m_Controller: {fileID: 9100000}
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+    m_Controller: {fileID: 9100000}
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_AnimatorLayers:
+  - serializedVersion: 5
+    m_Name: Base Layer
+    m_StateMachine: {fileID: 5361608337899342167}
+    m_Mask: {fileID: 0}
+    m_Motions: []
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 0
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+========
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+--- !u!1102 &500313262652650331
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EnemyAttack
+  m_Speed: 0.8
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -7342202936228269212}
+<<<<<<< HEAD
+=======
+  - {fileID: -9168826485136788655}
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: b55bda99e326aa44eac746d806dd5a71, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+--- !u!1101 &1349165906463632136
+AnimatorStateTransition:
+========
+--- !u!1102 &1103194172340512549
+AnimatorState:
+  serializedVersion: 6
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+--- !u!1101 &1349165906463632136
+AnimatorStateTransition:
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+=======
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8992586623416065618}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0.012410803
+  m_ExitTime: 0.97819084
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+<<<<<<< HEAD
+========
+  m_Name: Dash
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 6286922923353673944}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 33d3b983fae599e41841850bdf087769, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+--- !u!1101 &2430511980771073785
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8446308312222030855}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+<<<<<<< HEAD
+  m_TransitionDuration: 0.24502468
+  m_TransitionOffset: 0
+  m_ExitTime: 0.80535096
+=======
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 1.0135134
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 0
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+--- !u!1102 &2750651562434201053
+AnimatorState:
+  serializedVersion: 6
+========
+--- !u!1101 &3009978196202393236
+AnimatorStateTransition:
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+--- !u!1101 &4749153162633960988
+AnimatorStateTransition:
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+=======
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8992586623416065618}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.98630625
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+========
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Name: Pain
+  m_Speed: 0.5
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 1349165906463632136}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 6977be91e87c28a49841a6daf9f0b2ef, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+<<<<<<< HEAD
+========
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: isAttacking
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8992586623416065618}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.08179736
+  m_TransitionOffset: 0
+  m_ExitTime: 0.934562
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &3037175160301040604
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isdashing
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1103194172340512549}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.039989054
+  m_TransitionOffset: 0
+  m_ExitTime: 0.9285093
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+--- !u!1107 &5361608337899342167
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Base Layer
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: 8992586623416065618}
+<<<<<<< HEAD
+    m_Position: {x: 220, y: 210, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 8446308312222030855}
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+    m_Position: {x: -10, y: -120, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 2750651562434201053}
+    m_Position: {x: 540, y: -30, z: 0}
+  - serializedVersion: 1
+=======
+    m_Position: {x: 490, y: 160, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 8446308312222030855}
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+    m_Position: {x: 290, y: 310, z: 0}
+========
+    m_Position: {x: -10, y: -120, z: 0}
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+  - serializedVersion: 1
+    m_State: {fileID: -2982989126158409189}
+    m_Position: {x: 472.5543, y: -21.677246, z: 0}
+  - serializedVersion: 1
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Monsters/Bugai.controller
+    m_State: {fileID: -373525879941233853}
+    m_Position: {x: 0, y: 280, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions:
+  - {fileID: 2430511980771073785}
+  - {fileID: 7888568793651715322}
+  - {fileID: -539654938661744101}
+========
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+    m_State: {fileID: 500313262652650331}
+    m_Position: {x: 190, y: -60, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -5267310829705179582}
+    m_Position: {x: 350, y: 270, z: 0}
+<<<<<<< HEAD
+  - serializedVersion: 1
+    m_State: {fileID: -8259439340128241191}
+    m_Position: {x: -100, y: 220, z: 0}
+========
+    m_Position: {x: -40, y: 190, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 500313262652650331}
+    m_Position: {x: 280, y: -70, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -3125523496506258424}
+    m_Position: {x: 560, y: 310, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1103194172340512549}
+    m_Position: {x: 430, y: 110, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 8036318065933786414}
+    m_Position: {x: 90, y: -160, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -5244354048218570841}
+    m_Position: {x: -350, y: 70, z: 0}
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_ChildStateMachines: []
+  m_AnyStateTransitions:
+  - {fileID: 2430511980771073785}
+  - {fileID: -8200489322491477239}
+  - {fileID: -5055903734539839150}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+  - {fileID: -5496350015060404281}
+  - {fileID: 8652065349750005394}
+========
+  - {fileID: -320616850165321076}
+  - {fileID: -1842587659522319633}
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 0, y: 0, z: 0}
+  m_EntryPosition: {x: 700, y: 200, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: -3125523496506258424}
+--- !u!1101 &6286922923353673944
+=======
+  - {fileID: -5496350015060404281}
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: -140, y: 150, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 8992586623416065618}
+--- !u!1101 &7888568793651715322
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+<<<<<<< HEAD
+  - m_ConditionMode: 2
+    m_ConditionEvent: isdashing
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -3125523496506258424}
+=======
+  - m_ConditionMode: 1
+    m_ConditionEvent: isDamage
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -2982989126158409189}
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+<<<<<<< HEAD
+  m_TransitionDuration: 0.108819425
+  m_TransitionOffset: 0
+  m_ExitTime: 0.7924477
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1102 &8036318065933786414
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pain
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 3009978196202393236}
+  - {fileID: -3571981155406478529}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 3597b85d954e6d1459730ad6960908d4, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+=======
+  m_TransitionDuration: 0.053022444
+  m_TransitionOffset: 0
+  m_ExitTime: 0.9180773
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 0
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+--- !u!1102 &8446308312222030855
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Dead
+  m_Speed: 1
+  m_CycleOffset: 0
+<<<<<<< HEAD
+  m_Transitions: []
+=======
+  m_Transitions:
+  - {fileID: 8636203815038087744}
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+<<<<<<< HEAD
+  m_Motion: {fileID: 7400000, guid: 8e2fe7e2a3d649449830ef08b7888234, type: 2}
+=======
+  m_Motion: {fileID: 7400000, guid: d3055c3a06110e74082b433063fef058, type: 2}
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+<<<<<<< HEAD
+--- !u!1101 &8652065349750005394
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Jump
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isAttacking
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: isDamage
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -8259439340128241191}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.15445864
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75000006
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 0
+--- !u!1101 &8949904845365423628
+=======
+--- !u!1101 &8636203815038087744
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+<<<<<<< HEAD
+    m_ConditionEvent: Jump
+=======
+    m_ConditionEvent: isDead
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8992586623416065618}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+<<<<<<< HEAD
+  m_ExitTime: 0.8125
+  m_HasExitTime: 1
+=======
+  m_ExitTime: 0.97196263
+  m_HasExitTime: 0
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1102 &8992586623416065618
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<<< HEAD:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/EnemyController.controller
+  m_Name: Idle
+  m_Speed: 1
+========
+  m_Name: Walking
+  m_Speed: 1.3
+>>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85:Civil strife/Assets/MainAssets/Animator/AnimatorControllers/Character/Human/Trian.controller
+=======
+  m_Name: Idle
+  m_Speed: 1
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+<<<<<<< HEAD
+  m_Motion: {fileID: 7400000, guid: ea70b10419981c2498329ca33ef317fd, type: 2}
+=======
+  m_Motion: {fileID: 7400000, guid: 6915b4cff3da15140a798b10d773e2e0, type: 2}
+>>>>>>> 8c535e139b9908e7d4b885de4a0367bbd91b7f85
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 

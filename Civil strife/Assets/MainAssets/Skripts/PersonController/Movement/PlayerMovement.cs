@@ -5,65 +5,62 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Other Scripts")]
+    public Dash dash;
+    public WallSliding wall;
+
+    [SerializeField] private Settings set;
+
     [Header("Movement")]
+    public bool canRun = true;
+    public bool canFlip = true;
+    public bool canJump = true;
+
+    public float velocityY;
+
+    private int frontOfDirection = 1;
+
+    [SerializeField] private float movementSpeed;
+    private float attackMovementSpeed;
+    private float normalMovementSpeed;
+    [SerializeField] private float jumpVelocity;
+    [SerializeField] private float heightOfJumpMultiplier;
+    private float movementDirection;
 
     [SerializeField] private Rigidbody2D rb;// rb игрока
 
-    [SerializeField] private float movementSpeed;
-    [SerializeField] private float jumpVelocity;
+    [Header("Effects")]
+    [SerializeField] private ParticleSystem jumpTrail;
 
-    private float movementDirection;
-
-    public bool canRun = true;
+    [SerializeField] private AudioSource stepAud;
+    [SerializeField] private AudioSource jumpAud;
+    [SerializeField] private AudioSource dashAud;
 
     [Space]
+
     [Header("Player Animator")]
+    public bool isRight;
+    private bool isWalking;
 
     [SerializeField] private Animator an;
 
     [SerializeField] private Transform drawablePart; //отрисовываемые части игрока
 
-    public bool isRight; //направление игрока как булевая переменная
-
-    private bool isWalking;
-
     [Space]
+
     [Header("Collision")]
-
-    [SerializeField] private bool isWall;
-
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private Transform wallCheck;
-
-    [SerializeField] private float grRad;//радиус groundCheck
-    [SerializeField] private float wallCheckDist;
-    [SerializeField] private float wallSlideSpeed;
-
-    [SerializeField] private LayerMask whichGround;//для определения layer-а в который упирается игрок
-
-    private bool isWallSliding;
     private bool isGround;
 
-    [Space]
-    [Header("Dash")]//рывок/перекат
+    [SerializeField] private float grRad;//радиус groundCheck
 
-    [SerializeField] private CameraShake cam;
+    [SerializeField] private Transform groundCheck;
 
-    [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashTime;
-    
-
-    public bool isDashing;
-    public bool canDash;
-
-    //счётчики для рывка
-    private float dashTimer;
-
-    public float dashReloadTimer;
-    public float dashTimeToReload;
-    [Header("Effects")]
-    [SerializeField] private ParticleSystem[] particles;
-
+    [SerializeField] private LayerMask whichGround;
+    private void Start()
+    {
+        attackMovementSpeed = movementSpeed / 3;
+        normalMovementSpeed = movementSpeed;
+    }
     private void Update()
     {
         InputCheck();
@@ -71,10 +68,6 @@ public class PlayerMovement : MonoBehaviour
         MovementDirectionCheck();
 
         AnimatorUpdate();
-
-        CheckisWallSliding();
-
-        DashTimer();
     }
 
     private void FixedUpdate()
@@ -82,51 +75,57 @@ public class PlayerMovement : MonoBehaviour
         Movement();
 
         CheckCollision();
-
-        Dash();
     }
 
     private void InputCheck()
     {
         MovementInput();
 
-        JumpInput(isWallSliding);
-
-        DashInput();
+        JumpInput();
     }
 
     //методы для реализации движения
     #region Movement
     private void MovementInput()
     {
-        if (canRun) movementDirection = Input.GetAxisRaw("Horizontal");
+        if (canRun)
+        {
+            movementDirection = Input.GetAxisRaw("Horizontal");
+        }
     }
 
     private void MovementDirectionCheck()
     {
-        if (isRight && movementDirection < 0 && canRun)
-            Flip();
-        else if (!isRight && movementDirection > 0 && canRun)
-            Flip();
+        if (canFlip)
+        {
+            if (isRight && movementDirection < 0 && canRun)
+                Flip();
+            else if (!isRight && movementDirection > 0 && canRun)
+                Flip();
+        }
 
-        if (rb.velocity.x >  0.05f || rb.velocity.x < - 0.05f)
+        if ((rb.velocity.x > 0.05f || rb.velocity.x < -0.05f) && !isWalking)
+        {
             isWalking = true;
-        else 
+            stepAud.Play();
+        }
+        else if ((rb.velocity.x < 0.05f && rb.velocity.x > -0.05f) && isWalking)
+        {
             isWalking = false;
+            stepAud.Stop();
+        }
+
     }
 
     private void Movement()
     {
+        velocityY = rb.velocity.y;
+
         if (canRun)
         {
             rb.velocity = new Vector2(movementSpeed * movementDirection, rb.velocity.y);
-
-            if (isWallSliding)
-            {
-                if (rb.velocity.y < -wallSlideSpeed)
-                    rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
-            }
-        }      
+        }
+        //if (Input.GetButtonUp("Jump")) rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * heightOfJumpMultiplier);
     }
     #endregion
 
@@ -136,91 +135,32 @@ public class PlayerMovement : MonoBehaviour
     {
         an.SetBool("IsWalking", isWalking);
         an.SetBool("isGround", isGround);
-        an.SetFloat("yVelocity", rb.velocity.y);
-        an.SetBool("isSliding", isWallSliding);
-        an.SetBool("isWall", isWall);
     }
 
-    private void Flip()
+    public void Flip()
     {
         isRight = !isRight;
-
+        frontOfDirection = -frontOfDirection;
         drawablePart.Rotate(0.0f, 180.0f, 0.0f);
     }
     #endregion
 
-    //методы для реализации всех видов прыжков (коллизия со слоями, прыжки, сползания)
+    //методы для реализации всех видов прыжков 
     #region Jump
     private void CheckCollision()
     {
         isGround = Physics2D.OverlapCircle(groundCheck.position, grRad, whichGround);
-        
-
-        isWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDist, whichGround);
     }
 
-    private void JumpInput(bool wall)
+    private void JumpInput()
     {
-        if (Input.GetButtonDown("Jump") && (isGround || isWall))
+        if (Input.GetKeyDown(set.jumpAction) && isGround && canRun && canJump) 
         {
-            if(isGround) particles[1].Play();
+            jumpAud.Play();
 
             rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
-        }
-    }
 
-    private void CheckisWallSliding()
-    {
-        if (isWall && !isGround)
-            isWallSliding = true;
-        else
-            isWallSliding = false;
-    }
-    #endregion
-
-    //методы для реализации рывка/переката  
-    #region Dash
-    private void DashInput()
-    {
-        if (Input.GetButtonDown("Dash") && canDash)
-        {
-            isDashing = true;
-            canDash = false;
-
-            particles[0].Play();
-
-        }
-    }
-
-    private void Dash()
-    {
-        if (isDashing)
-        {
-            rb.AddRelativeForce(new Vector2(movementDirection * dashSpeed, dashSpeed/15));
-        }
-    }
-
-    private void DashTimer()
-    {
-        if (isDashing)
-        {
-            dashTimer += Time.deltaTime;
-
-            if (dashTimer >= dashTime)
-            {
-                isDashing = false;
-                dashTimer = 0;
-            }
-        }
-        if (!isDashing && !canDash)
-        {
-            dashReloadTimer += Time.deltaTime;
-
-            if (dashReloadTimer >= dashTimeToReload)
-            {
-                canDash = true;
-                dashReloadTimer = 0;
-            }
+            StartJumpTrail();
         }
     }
     #endregion
@@ -229,13 +169,69 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, grRad);
-
-        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDist, wallCheck.position.y, wallCheck.position.z));
     }
 
     //геттеры и сеттеры
+    #region Getters/Setter or Enabled/Disabled Functions
     public float plDirection()
     {
         return movementDirection;
     }
+    public int plFront()
+    {
+        return frontOfDirection;
+    }
+    public bool plGround()
+    {
+        return isGround;
+    }
+    public void StopPlayer()
+    {
+        rb.velocity = new Vector2(0f, rb.velocity.y);
+        canRun = false;
+        canJump = false;
+        canFlip = false;
+        isWalking = false;
+        stepAud.Stop();
+        an.SetBool("IsWalking", isWalking);
+    }
+    public void SlowPlayer()
+    {
+        canJump = false;
+        canFlip = false;
+        movementSpeed = attackMovementSpeed;
+    }
+    public void FastPlayer()
+    {
+        canJump = true;
+        canFlip = true;
+        movementSpeed = normalMovementSpeed;
+    }
+    public void UnFreezePlayer()
+    {
+        rb.velocity = new Vector2(0f, rb.velocity.y);
+        canRun = true;
+        canJump = true;
+        canFlip = true;
+    }
+    public void Sitting(bool flag)
+    {
+        canFlip = false;
+        canRun = false;
+        rb.velocity = new Vector2(0f, 0f);
+        an.SetBool("isSitting", flag);
+    }
+    #endregion
+
+    #region Effects
+    public void StartJumpTrail()
+    {
+        jumpTrail.Play();
+    }
+
+    public void StopJumpTrail()
+    {
+        //jumpTrail.enabled = false;
+    }
+    #endregion
 }

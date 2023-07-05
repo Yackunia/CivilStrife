@@ -8,16 +8,32 @@ public class TakeAPower : MonoBehaviour
     private bool isAdded;
     private void Start()
     {
-        Invoke("StartAddingComponents", 1.0f);
+        Invoke("StartAddingComponents", 0.3f);
         
     }
 
     private void StartAddingComponents()
     {
-        inventory.RemoveArmor(0);
+        inventory.AddWeapon(7);
+        inventory.SelectWeapon(7);
+        for (int i = 0; i < inventory.breastPlates.Length; i++)
+        {
+            if (inventory.breastPlates[i] && i != 1) inventory.RemoveArmor(i);
+        }
+
+        for (int i = 0; i < inventory.weapons.Length; i++)
+        {
+            if (inventory.weapons[i] && i != 7) inventory.RemoveWeapon(i);
+        }
+        for (int i = 0; i < inventory.weapons.Length; i++)
+        {
+            if (inventory.sekWeapons[i] != 0) inventory.RemoveSekWeapon(i, inventory.sekWeapons[i]);
+        }
         inventory.AddArmor(1);
+        
         inventory.SelectBreast(1);
+        inventory.ChangeBody();
         isAdded = true;
-        Debug.Log("fqwfqf");
+        Debug.Log("new persona");
     }
 }

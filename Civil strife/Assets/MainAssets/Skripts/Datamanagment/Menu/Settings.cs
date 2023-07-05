@@ -30,6 +30,7 @@ public class Settings : MonoBehaviour
 
     private void Start()
     {
+        OutputActions();
         Load();
         OutputActions();
     }

@@ -4,9 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - DestrObj
   - Berry
+  - Stand
+  - EnemyS
+  - EnemyV
+  - NPC
+  - Enemy
+  - Mish
   layers:
   - Default
   - TransparentFX
@@ -21,11 +26,11 @@ TagManager:
   - NotCol
   - OnlyEnemy
   - DestrObjCanColl
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerDash
+  - Platform
+  - DestrObjEnenmyCantColl
+  - Fire
+  - Met
   - 
   - 
   - 
@@ -41,9 +46,30 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 226039919
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: Walls
+    uniqueID: 3022689311
+    locked: 0
+  - name: BackSprites
     uniqueID: 701302135
+    locked: 0
+  - name: Enemys
+    uniqueID: 2814024589
+    locked: 0
+  - name: Player
+    uniqueID: 3314804365
+    locked: 0
+  - name: ForeSprites
+    uniqueID: 1007577383
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1904755301
+    locked: 0
+  - name: HUD
+    uniqueID: 944909213
     locked: 0

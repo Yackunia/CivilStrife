@@ -15,27 +15,25 @@ public class PlayerIndicators : MonoBehaviour
 
     public PlayerHealth playerHealth;
     public PlayerMovement playerMove;
+    public Stands stands;
 
 
     private void Start()
     {
         maxHP = playerHealth.maxHP;
-        staminaMax = playerMove.dashTimeToReload;
+        staminaMax = stands.staminaMax;
     }
 
     private void Update()
     {
-        stamina = playerMove.dashReloadTimer;
         hp = playerHealth.healthPoint;
+        stamina = stands.stamina;
         DrawIndicators();
     }
 
     private void DrawIndicators()
     {
         healthFieldDrawable.localScale = new Vector2(hp/maxHP, 1);
-
-        if(!playerMove.canDash) staminaFieldDrawable.localScale = new Vector2(stamina / staminaMax, 1);
-        else staminaFieldDrawable.localScale = new Vector2(staminaMax / staminaMax, 1);
-
+        staminaFieldDrawable.localScale = new Vector2(stamina / staminaMax, 1);
     }
 }

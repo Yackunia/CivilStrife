@@ -5,29 +5,29 @@ using System.Runtime.Serialization.Formatters.Binary;
 public static class SaveData
 {
     #region PlayerData
-    public static void SavePlayerData(PlayerInventar player)
+    public static void SavePlayerData(PlayerInventory player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
 
-        string path = Application.persistentDataPath + "/lol.log";
+        string path = Application.persistentDataPath + "/playerData";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PlayerStats data = new PlayerStats(player);
+        PlayerData data = new PlayerData(player);
 
         formatter.Serialize(stream, data);
         stream.Close();
         Debug.Log("Save");
     }
 
-    public static PlayerStats LoadPlayerData()
+    public static PlayerData LoadPlayerData()
     {
-        string path = Application.persistentDataPath + "/lol.log";
+        string path = Application.persistentDataPath + "/playerData";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            PlayerStats data = formatter.Deserialize(stream) as PlayerStats;
+            PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
             Debug.Log("LoadComplete");
 
@@ -35,16 +35,14 @@ public static class SaveData
         }
         else
         {
-            Debug.LogError("NotFind" + path);
+            Debug.LogError("NotFind" + path);   
             return null;
         }
 
     }
-
-
-    public static PlayerStats DestroyPlayerData()
+    public static PlayerData DestroyPlayerData()
     {
-        string path = Application.persistentDataPath + "/lol.log";
+        string path = Application.persistentDataPath + "/playerData";
         if (File.Exists(path))
         {
             File.Delete(path);
@@ -58,78 +56,36 @@ public static class SaveData
             return null;
         }
     }
-    public static PlayerStats DestroyQuestsInfo()
-    {
-        string path = Application.persistentDataPath + "/lolipop1.log";
-        if (File.Exists(path))
-        {
-            File.Delete(path);
-            Debug.Log("DestroyComplete");
 
-        }
-        else
-        {
-            Debug.LogError("NotFind" + path);
-        }
-
-        string path2 = Application.persistentDataPath + "/lolipop2.log";
-        if (File.Exists(path2))
-        {
-            File.Delete(path2);
-            Debug.Log("DestroyComplete");
-
-            return null;
-        }
-        else
-        {
-            Debug.LogError("NotFind" + path2);
-            return null;
-        }
-    }
-    public static PlayerStats DestroyInventory()
-    {
-        string path = Application.persistentDataPath + "/loli.log";
-        if (File.Exists(path))
-        {
-            File.Delete(path);
-            Debug.Log("DestroyComplete");
-
-            return null;
-        }
-        else
-        {
-            Debug.LogError("NotFind" + path);
-            return null;
-        }
-    }
     #endregion
 
-    #region EnemyData
-    public static void SaveEnemyData(EnemySaving enemy, int id)
+    #region Scene's Data
+    public static void SaveSceneData(SceneData sceneData)
     {
         BinaryFormatter formatter = new BinaryFormatter();
 
-        string path = Application.persistentDataPath + "/enemyScene" + id + ".log";
+        string path = Application.persistentDataPath + "/scene" + sceneData.idOfScene;
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        EnemyData data = new EnemyData(enemy);
+        SceneDataContainer data = new SceneDataContainer(sceneData);
 
         formatter.Serialize(stream, data);
         stream.Close();
-        Debug.Log("Save "+id +" scene");
+        Debug.Log("Save " + sceneData.idOfScene + " scene's data");
     }
 
-    public static EnemyData LoadEnemyData(int id)
+    public static SceneDataContainer LoadScenesData(int id)
     {
-        string path = Application.persistentDataPath + "/enemyScene" + id + ".log";
+        string path = Application.persistentDataPath + "/scene" + id;
+
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            EnemyData data = formatter.Deserialize(stream) as EnemyData;
+            SceneDataContainer data = formatter.Deserialize(stream) as SceneDataContainer;
             stream.Close();
-            Debug.Log("Load of " + id + " scene Complete");
+            Debug.Log("Load " + id + " scene's data Complete");
 
             return data;
         }
@@ -140,15 +96,86 @@ public static class SaveData
         }
 
     }
-
-
-    public static EnemySaving DestroyEnemyData(int id)
+    public static SceneData DestroySceneData(int id)
     {
-        string path = Application.persistentDataPath + "/enemyScene" + id + ".log";
+        string path = Application.persistentDataPath + "/scene" + id;
+
         if (File.Exists(path))
         {
             File.Delete(path);
-            Debug.Log("Destroy of " + id + " scene Complete");
+            Debug.Log("Destroy " + id + " scene Complete");
+
+            return null;
+        }
+        else
+        {
+            Debug.LogError("NotFind" + path);
+            return null;
+        }
+    }
+
+    public static bool CheckSceneData(int id)
+    {
+        string path = Application.persistentDataPath + "/SceneSaves/scene" + id;
+
+        if (File.Exists(path))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    #endregion
+
+    #region SettingsData
+    public static void SaveSettingsData(Settings settingsData)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        
+
+        string path = Application.persistentDataPath + "/settings";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        SettingsData data = new SettingsData(settingsData);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+        Debug.Log("Save settings data");
+    }
+
+    public static SettingsData LoadSettingsData()
+    {
+        string path = Application.persistentDataPath + "/settings";
+
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            SettingsData data = formatter.Deserialize(stream) as SettingsData;
+            stream.Close();
+            Debug.Log("Load settings data");
+
+            return data;
+        }
+        else
+        {
+            Debug.LogError("NotFind" + path);
+            return null;
+        }
+
+    }
+    public static SettingsData DestroySettingsData()
+    {
+        string path = Application.persistentDataPath + "/settings";
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            Debug.Log("Destroy settings data Complete");
 
             return null;
         }
@@ -159,6 +186,4 @@ public static class SaveData
         }
     }
     #endregion
-
-   
 }

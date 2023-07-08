@@ -5411,7 +5411,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944720908001183227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 7.1399994, y: 2, z: 0}
+=======
+  m_LocalPosition: {x: 7.1399956, y: 2, z: 0}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6331,6 +6335,10 @@ GameObject:
   - component: {fileID: 944720908786785544}
   - component: {fileID: 944720908786785546}
   - component: {fileID: 944720908786785545}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 4684037962999122300}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -6396,6 +6404,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< Updated upstream
+=======
+--- !u!114 &4684037962999122300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944720908786785551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60ad1e67df73a4449d9582729b61772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &944720908893435080
 GameObject:
   m_ObjectHideFlags: 0
@@ -6425,7 +6448,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944720908893435080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -31.805252, y: 6.039248, z: 0}
+=======
+  m_LocalPosition: {x: 5.4057503, y: 11.706302, z: 0}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7674,6 +7701,10 @@ GameObject:
   - component: {fileID: 944720909706628320}
   - component: {fileID: 944720909706628322}
   - component: {fileID: 944720909706628321}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 2933076106666869150}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -7739,6 +7770,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< Updated upstream
+=======
+--- !u!114 &2933076106666869150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944720909706628327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60ad1e67df73a4449d9582729b61772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &958482385659113255
 GameObject:
   m_ObjectHideFlags: 0
@@ -14239,6 +14285,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< Updated upstream
       - m_Target: {fileID: 2093293089935395483}
         m_TargetAssemblyTypeName: Armor, Assembly-CSharp
         m_MethodName: SetArmorObjParameters
@@ -14251,6 +14298,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1917848837924789408
 GameObject:
   m_ObjectHideFlags: 0
@@ -16024,6 +16073,10 @@ GameObject:
   - component: {fileID: 8806137883133718211}
   - component: {fileID: 1454601212093949966}
   - component: {fileID: 6255908779231505060}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 8158134196675175175}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Breastplate
   m_TagString: Untagged
@@ -16145,6 +16198,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+<<<<<<< Updated upstream
+=======
+--- !u!114 &8158134196675175175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358115783680560591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60ad1e67df73a4449d9582729b61772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &2361966426095094135
 GameObject:
   m_ObjectHideFlags: 0
@@ -20369,6 +20437,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< Updated upstream
       - m_Target: {fileID: 2093293089935395483}
         m_TargetAssemblyTypeName: Armor, Assembly-CSharp
         m_MethodName: SetArmorObjParameters
@@ -20381,6 +20450,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> Stashed changes
 --- !u!1 &3018806913687144576
 GameObject:
   m_ObjectHideFlags: 0
@@ -22488,6 +22559,10 @@ GameObject:
   - component: {fileID: 5441778349286392625}
   - component: {fileID: 3525018699918101798}
   - component: {fileID: 3320181439581911617}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 5629177877394620508}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: ActiveAbility
   m_TagString: Untagged
@@ -22610,6 +22685,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+<<<<<<< Updated upstream
+=======
+--- !u!114 &5629177877394620508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3377327725046740877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60ad1e67df73a4449d9582729b61772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &3378500546165106283
 GameObject:
   m_ObjectHideFlags: 0
@@ -26807,6 +26897,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< Updated upstream
       - m_Target: {fileID: 2093293089935395483}
         m_TargetAssemblyTypeName: Armor, Assembly-CSharp
         m_MethodName: SetArmorObjParameters
@@ -26819,6 +26910,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> Stashed changes
 --- !u!1 &3924547831565374226
 GameObject:
   m_ObjectHideFlags: 0
@@ -32329,6 +32422,10 @@ GameObject:
   - component: {fileID: 4940758138290251550}
   - component: {fileID: 535553899559404309}
   - component: {fileID: 9172788852740228793}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 2146277579330691857}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Helmet
   m_TagString: Untagged
@@ -32450,6 +32547,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+<<<<<<< Updated upstream
+=======
+--- !u!114 &2146277579330691857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4772541873931440950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60ad1e67df73a4449d9582729b61772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &4777637410703391840
 GameObject:
   m_ObjectHideFlags: 0
@@ -35768,6 +35880,10 @@ GameObject:
   - component: {fileID: 5412491447618117118}
   - component: {fileID: 5412491447618117117}
   - component: {fileID: 1498721734174987318}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 2382572131834152076}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: weaponImage
   m_TagString: Untagged
@@ -35889,6 +36005,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+<<<<<<< Updated upstream
+=======
+--- !u!114 &2382572131834152076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5412491447618117107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60ad1e67df73a4449d9582729b61772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &5412491447708371965
 GameObject:
   m_ObjectHideFlags: 0
@@ -36972,7 +37103,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< Updated upstream
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> Stashed changes
 --- !u!224 &5412491448130696401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38464,7 +38599,11 @@ MonoBehaviour:
   sekWeaponId: 0
   moneyCount: 0
   activeAbilitysId: 0
+<<<<<<< Updated upstream
   sekWeapons: 080000000100000002000000
+=======
+  sekWeapons: 0c0000000100000002000000
+>>>>>>> Stashed changes
   activeAbilitys: 05000000
   weaponParent: {fileID: 1297927476072684809}
   sekWeaponParent: {fileID: 7107291998374424602}
@@ -38714,8 +38853,15 @@ MonoBehaviour:
   - {x: 52.07, y: -4.11}
   loader: {fileID: 846622598506355043}
   sceneData: {fileID: 0}
+<<<<<<< Updated upstream
   pl_Health: {fileID: 944720909460609943}
   weaponManager: {fileID: 6200804402476345637}
+=======
+  slovar: {fileID: 944720908596316277}
+  pl_Health: {fileID: 944720909460609943}
+  weaponManager: {fileID: 6200804402476345637}
+  attacker: {fileID: 3184609823078733932}
+>>>>>>> Stashed changes
   armor: {fileID: 2093293089935395483}
   spawnText: {fileID: 5743883743256032855, guid: 328132bbe3562e94585a7a322cb2ce73, type: 3}
   spawntextParent: {fileID: 944720909192405967}
@@ -38967,6 +39113,10 @@ GameObject:
   - component: {fileID: 5412491449358966644}
   - component: {fileID: 5412491449358966635}
   - component: {fileID: 6657637788220010219}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 4904230388539393037}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: sekWeaponImage
   m_TagString: Untagged
@@ -38981,7 +39131,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5412491449358966633}
+<<<<<<< Updated upstream
   m_LocalRotation: {x: -0, y: -0, z: -0.4401088, w: 0.8979445}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+>>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -0.8300001, y: 0.8300001, z: 0.83000016}
   m_ConstrainProportionsScale: 0
@@ -38989,10 +39143,17 @@ RectTransform:
   - {fileID: 4682243955918885195}
   m_Father: {fileID: 4245724074626299981}
   m_RootOrder: 1
+<<<<<<< Updated upstream
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -52.222}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 267.4, y: 165.8}
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 300, y: 182}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 96.5066, y: 204.7599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5412491449358966644
@@ -39089,6 +39250,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+<<<<<<< Updated upstream
+=======
+--- !u!114 &4904230388539393037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5412491449358966633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60ad1e67df73a4449d9582729b61772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &5415764569098597962
 GameObject:
   m_ObjectHideFlags: 0
@@ -40619,6 +40795,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< Updated upstream
       - m_Target: {fileID: 2093293089935395483}
         m_TargetAssemblyTypeName: Armor, Assembly-CSharp
         m_MethodName: SetArmorObjParameters
@@ -40631,6 +40808,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> Stashed changes
 --- !u!1 &5716897679375417888
 GameObject:
   m_ObjectHideFlags: 0
@@ -41413,6 +41592,10 @@ GameObject:
   - component: {fileID: 5827572397235208626}
   - component: {fileID: 3739873492696294618}
   - component: {fileID: 2941075374378880149}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 8951333471436874972}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: BootsAndBlood
   m_TagString: Untagged
@@ -41534,6 +41717,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+<<<<<<< Updated upstream
+=======
+--- !u!114 &8951333471436874972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830375314718766340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60ad1e67df73a4449d9582729b61772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &5836221877882856833
 GameObject:
   m_ObjectHideFlags: 0
@@ -45956,7 +46154,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< Updated upstream
   m_IsActive: 1
+=======
+  m_IsActive: 0
+>>>>>>> Stashed changes
 --- !u!224 &5713188323520397369
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54416,6 +54618,10 @@ GameObject:
   - component: {fileID: 8191094501073594072}
   - component: {fileID: 3506242816639314676}
   - component: {fileID: 4023670711729457559}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 5497585213293968288}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Stand
   m_TagString: Untagged
@@ -54537,6 +54743,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+<<<<<<< Updated upstream
+=======
+--- !u!114 &5497585213293968288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7642797610560657350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60ad1e67df73a4449d9582729b61772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &7657794613061195882
 GameObject:
   m_ObjectHideFlags: 0
@@ -55610,7 +55831,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7829517334636814567}
+<<<<<<< Updated upstream
   m_LocalRotation: {x: -0, y: 0, z: -0.4401088, w: 0.8979445}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+>>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -0.76138514, y: 0.76138514, z: 0.7613853}
   m_ConstrainProportionsScale: 0
@@ -55620,8 +55845,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.20385244}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 78.40735, y: 91.091034}
   m_SizeDelta: {x: 316.6984, y: 107.95679}
+=======
+  m_AnchoredPosition: {x: 43.750935, y: 92}
+  m_SizeDelta: {x: 247.7475, y: 107.9568}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.50000083}
 --- !u!222 &3207536569323414956
 CanvasRenderer:
@@ -61030,6 +61260,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< Updated upstream
       - m_Target: {fileID: 2093293089935395483}
         m_TargetAssemblyTypeName: Armor, Assembly-CSharp
         m_MethodName: SetArmorObjParameters
@@ -61042,6 +61273,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> Stashed changes
 --- !u!1 &8705147659867495673
 GameObject:
   m_ObjectHideFlags: 0
@@ -64829,11 +65062,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8182968759610988148, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: 0.00048226118
       objectReference: {fileID: 0}
     - target: {fileID: -8182968759610988148, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: -0.0019999146
+=======
+      value: 0.000459373
+      objectReference: {fileID: 0}
+    - target: {fileID: -8182968759610988148, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: -0.0019983053
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -8182968759610988148, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -64841,7 +65082,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8182968759610988148, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 0.9279999
+=======
+      value: 0.9279996
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -8182968759610988148, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_BoneTransforms.Array.size
@@ -64945,11 +65190,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7463505794692670043, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: 0.18499756
       objectReference: {fileID: 0}
     - target: {fileID: -7463505794692670043, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.046070576
+=======
+      value: 0.18496704
+      objectReference: {fileID: 0}
+    - target: {fileID: -7463505794692670043, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.04607153
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -7463505794692670043, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -64957,7 +65210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7463505794692670043, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 2.00314
+=======
+      value: 2.0031395
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -7463505794692670043, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_BoneTransforms.Array.size
@@ -65017,6 +65274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6329599691775637571, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.0000056922436
       objectReference: {fileID: 0}
     - target: {fileID: -6329599691775637571, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
@@ -65026,6 +65284,17 @@ PrefabInstance:
     - target: {fileID: -6329599691775637571, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
       value: 0.4949981
+=======
+      value: -0.000009924173
+      objectReference: {fileID: 0}
+    - target: {fileID: -6329599691775637571, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.00084614754
+      objectReference: {fileID: 0}
+    - target: {fileID: -6329599691775637571, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 0.49500993
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -6329599691775637571, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.y
@@ -65045,11 +65314,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5347659755936034737, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.000051409006
       objectReference: {fileID: 0}
     - target: {fileID: -5347659755936034737, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.0015099645
+=======
+      value: -0.000039964914
+      objectReference: {fileID: 0}
+    - target: {fileID: -5347659755936034737, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0015128255
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -5347659755936034737, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -65061,11 +65338,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4188657868304940906, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.00036263466
       objectReference: {fileID: 0}
     - target: {fileID: -4188657868304940906, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.0000009536743
+=======
+      value: -0.00038552284
+      objectReference: {fileID: 0}
+    - target: {fileID: -4188657868304940906, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.000002861023
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -4188657868304940906, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -65093,7 +65378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3244315863460714403, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
+<<<<<<< Updated upstream
       value: -0.0015299916
+=======
+      value: -0.001529038
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -3244315863460714403, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -65105,11 +65394,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2253906258584454952, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: 0.0013772845
       objectReference: {fileID: 0}
     - target: {fileID: -2253906258584454952, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: -0.000000059604645
+=======
+      value: 0.0013849139
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253906258584454952, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.000001847744
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -2253906258584454952, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -65189,6 +65486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1419728075614409903, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.0007811785
       objectReference: {fileID: 0}
     - target: {fileID: -1419728075614409903, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
@@ -65202,6 +65500,21 @@ PrefabInstance:
     - target: {fileID: -1419728075614409903, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.y
       value: 0.73409
+=======
+      value: -0.00077182055
+      objectReference: {fileID: 0}
+    - target: {fileID: -1419728075614409903, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0009097457
+      objectReference: {fileID: 0}
+    - target: {fileID: -1419728075614409903, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 0.5191781
+      objectReference: {fileID: 0}
+    - target: {fileID: -1419728075614409903, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.7340897
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -1165013461120599010, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_SortingLayer
@@ -65233,11 +65546,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -434869557852038404, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: 0.0010436475
       objectReference: {fileID: 0}
     - target: {fileID: -434869557852038404, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: -0.0007349849
+=======
+      value: 0.0010550916
+      objectReference: {fileID: 0}
+    - target: {fileID: -434869557852038404, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: -0.00073212385
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -434869557852038404, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -65321,11 +65642,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 664041745295235504, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.002273798
       objectReference: {fileID: 0}
     - target: {fileID: 664041745295235504, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.0016550422
+=======
+      value: -0.0023005009
+      objectReference: {fileID: 0}
+    - target: {fileID: 664041745295235504, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0016569495
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 664041745295235504, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -65357,11 +65686,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1489193320757855929, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: 0.5428829
       objectReference: {fileID: 0}
     - target: {fileID: 1489193320757855929, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: -0.930675
+=======
+      value: 0.5428486
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489193320757855929, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: -0.93067694
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1489193320757855929, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -65373,11 +65710,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1648605514132209952, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.0000038146973
       objectReference: {fileID: 0}
     - target: {fileID: 1648605514132209952, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.002135992
+=======
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648605514132209952, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0021352768
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1648605514132209952, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -65385,7 +65730,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1648605514132209952, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 0.967865
+=======
+      value: 0.96786463
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2015287661806188099, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_LocalScale.x
@@ -65485,6 +65834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3909762252657176087, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.0012881756
       objectReference: {fileID: 0}
     - target: {fileID: 3909762252657176087, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
@@ -65498,6 +65848,21 @@ PrefabInstance:
     - target: {fileID: 3909762252657176087, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.y
       value: 0.9750001
+=======
+      value: -0.0013104677
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909762252657176087, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0000028014183
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909762252657176087, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 0.54754007
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909762252657176087, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.975
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4196084487258313729, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_SortingLayer
@@ -65569,11 +65934,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5816541466056884363, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.000007659197
       objectReference: {fileID: 0}
     - target: {fileID: 5816541466056884363, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.0011559129
+=======
+      value: -0.00003054738
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816541466056884363, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0011585355
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5816541466056884363, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -65581,7 +65954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5816541466056884363, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 0.7562851
+=======
+      value: 0.75628626
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5833113751405791635, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_SortingLayer
@@ -65657,11 +66034,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8385707108810973408, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.0000037550926
       objectReference: {fileID: 0}
     - target: {fileID: 8385707108810973408, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: -0.00084900856
+=======
+      value: -0.000030457973
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385707108810973408, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: -0.000844717
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8385707108810973408, guid: 31765df18c51fa04d8513e32ed792945, type: 3}
       propertyPath: m_Bounds.m_Extent.x

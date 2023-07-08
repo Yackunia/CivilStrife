@@ -31,6 +31,40 @@ Transform:
   m_Father: {fileID: 3095001619724602777}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!1 &3364877011333616859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4391250484676183227}
+  m_Layer: 9
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4391250484676183227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3364877011333616859}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8667618766977722168}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &3514840453100754005
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +89,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3514840453100754005}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: -0.4701, z: 0}
+=======
+  m_LocalPosition: {x: 0, y: -0.418, z: 0}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114,7 +152,11 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5305fac03d99eab4fa71ae1617eca255, type: 2}
+<<<<<<< Updated upstream
   m_CullingMode: 2
+=======
+  m_CullingMode: 1
+>>>>>>> Stashed changes
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -157,7 +199,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd3032f0273c02469e9dc66e76a40e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   currentDirection: 1
+=======
+  canFlip: 1
+>>>>>>> Stashed changes
   isIdle: 0
   isRight: 0
   chaseSpeed: 3
@@ -165,7 +211,23 @@ MonoBehaviour:
   drawObject: {fileID: 679618262195367079}
   anotherEnemys:
     serializedVersion: 2
+<<<<<<< Updated upstream
     m_Bits: 512
+=======
+    m_Bits: 66048
+  isWall: 0
+  canJump: 1
+  isJumping: 0
+  isJumper: 1
+  wallDistance: 0.5
+  jumpHeight: 12
+  wallCheck: {fileID: 3514840453100754006}
+  whichWall:
+    serializedVersion: 2
+    m_Bits: 8
+  grRad: 0.1
+  groundCheck: {fileID: 4391250484676183227}
+>>>>>>> Stashed changes
   damage: 4
   attackRad: 0.6
   attackDistance: 4
@@ -251,7 +313,11 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 3514840453231984101}
   m_Enabled: 1
   m_Density: 1
+<<<<<<< Updated upstream
   m_Material: {fileID: 0}
+=======
+  m_Material: {fileID: 6200000, guid: 529550732c1f41c4cbbfeb8c997fa649, type: 2}
+>>>>>>> Stashed changes
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -842,6 +908,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< Updated upstream
 --- !u!1 &8667618765922802426
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +940,8 @@ Transform:
   m_Father: {fileID: 8667618766977722168}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &8667618766093391036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1159,11 @@ Transform:
   m_Children:
   - {fileID: 3514840453915498916}
   - {fileID: 3514840453100754006}
+<<<<<<< Updated upstream
   - {fileID: 8667618765922802425}
+=======
+  - {fileID: 4391250484676183227}
+>>>>>>> Stashed changes
   m_Father: {fileID: 3514840453231984106}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1131,7 +1204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8182968759610988148, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: 0.00036484003
+=======
+      value: 0.00035512447
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -8182968759610988148, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -1139,7 +1216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8182968759610988148, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
+<<<<<<< Updated upstream
       value: 0.861575
+=======
+      value: 0.8615695
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -8182968759610988148, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.y
@@ -1211,11 +1292,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7463505794692670043, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: 0.00061011314
       objectReference: {fileID: 0}
     - target: {fileID: -7463505794692670043, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.00094509125
+=======
+      value: 0.00059485435
+      objectReference: {fileID: 0}
+    - target: {fileID: -7463505794692670043, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0009448528
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -7463505794692670043, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -1223,6 +1312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7463505794692670043, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 1.7090547
       objectReference: {fileID: 0}
     - target: {fileID: -7057775002512442506, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
@@ -1232,6 +1322,17 @@ PrefabInstance:
     - target: {fileID: -7057775002512442506, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: -0.002065003
+=======
+      value: 1.709055
+      objectReference: {fileID: 0}
+    - target: {fileID: -7057775002512442506, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: -0.000015199184
+      objectReference: {fileID: 0}
+    - target: {fileID: -7057775002512442506, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: -0.0020649433
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -7057775002512442506, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -1243,11 +1344,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6961116827233276535, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.00061905384
       objectReference: {fileID: 0}
     - target: {fileID: -6961116827233276535, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.000000059604645
+=======
+      value: -0.0006200075
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961116827233276535, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: -0.00000011920929
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -6961116827233276535, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -1255,7 +1364,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6961116827233276535, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 0.735
+=======
+      value: 0.73500013
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -6608256576500224932, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_SortingLayer
@@ -1267,11 +1380,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6329599691775637571, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: 0.000034034252
       objectReference: {fileID: 0}
     - target: {fileID: -6329599691775637571, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.0008340478
+=======
+      value: 0.000050246716
+      objectReference: {fileID: 0}
+    - target: {fileID: -6329599691775637571, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.00083488226
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -6329599691775637571, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -1279,7 +1400,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6329599691775637571, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 0.966555
+=======
+      value: 0.9665549
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -5811660419880882145, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_SortingLayer
@@ -1295,7 +1420,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5463172490577948521, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
+<<<<<<< Updated upstream
       value: 0.0004504919
+=======
+      value: 0.00045001507
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -5463172490577948521, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -1327,7 +1456,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1004147087088255637, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
+<<<<<<< Updated upstream
       value: 0.00228405
+=======
+      value: 0.0022845268
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -1004147087088255637, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -1335,6 +1468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1004147087088255637, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 1.1577148
       objectReference: {fileID: 0}
     - target: {fileID: -811447350346595474, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
@@ -1348,6 +1482,21 @@ PrefabInstance:
     - target: {fileID: -811447350346595474, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
       value: 0.5434651
+=======
+      value: 1.1577156
+      objectReference: {fileID: 0}
+    - target: {fileID: -811447350346595474, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: -0.0015265346
+      objectReference: {fileID: 0}
+    - target: {fileID: -811447350346595474, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.0018099546
+      objectReference: {fileID: 0}
+    - target: {fileID: -811447350346595474, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 0.5434635
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -811447350346595474, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.y
@@ -1359,7 +1508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 794875341549979832, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
+<<<<<<< Updated upstream
       value: 0.0017150044
+=======
+      value: 0.0017148256
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 794875341549979832, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -1371,6 +1524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 815685813013867358, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: 0.000104248524
       objectReference: {fileID: 0}
     - target: {fileID: 815685813013867358, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
@@ -1384,6 +1538,21 @@ PrefabInstance:
     - target: {fileID: 815685813013867358, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.y
       value: 0.68900025
+=======
+      value: 0.00010496378
+      objectReference: {fileID: 0}
+    - target: {fileID: 815685813013867358, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: -0.0005301833
+      objectReference: {fileID: 0}
+    - target: {fileID: 815685813013867358, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 0.524195
+      objectReference: {fileID: 0}
+    - target: {fileID: 815685813013867358, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.68900007
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1457509257439840231, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_SortingLayer
@@ -1407,7 +1576,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2895587016024430518, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
+<<<<<<< Updated upstream
       value: -0.0010544658
+=======
+      value: -0.0010549426
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2895587016024430518, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -1451,7 +1624,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8385707108810973408, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.001405865
+=======
+      value: -0.0014049113
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8385707108810973408, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -1467,11 +1644,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8483054499551801297, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.x
+<<<<<<< Updated upstream
       value: -0.0019191504
       objectReference: {fileID: 0}
     - target: {fileID: 8483054499551801297, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.0002850294
+=======
+      value: -0.001920104
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483054499551801297, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.00028455257
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8483054499551801297, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Extent.x

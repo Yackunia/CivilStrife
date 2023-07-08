@@ -8,4 +8,9 @@ public class Menu : MonoBehaviour
     {
         Cursor.visible = true;
     }
+
+    public void NewGame()
+    {
+        SaveData.CreateSaveFolders();
+    }
 }

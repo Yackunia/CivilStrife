@@ -26,6 +26,11 @@ public class CutSceneStopper : MonoBehaviour
     public void SetPauseMenu()
     {
         StopMenu.SetActive(!StopMenu.activeSelf);
+<<<<<<< Updated upstream
+=======
+        Cursor.visible = StopMenu.activeSelf;
+
+>>>>>>> Stashed changes
         if (Time.timeScale == 1) Time.timeScale = 0;
         else Time.timeScale = 1;
     }

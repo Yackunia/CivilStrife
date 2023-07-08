@@ -4,12 +4,36 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveData
 {
+    #region Folder Create
+
+    public static void CreateSaveFolders()
+    {
+        CreateDataFolder("/SceneData");
+        CreateDataFolder("/PlayerData");
+        CreateDataFolder("/SettingsData");
+    }
+
+    private static void CreateDataFolder(string name)
+    {
+        string folderPath = Application.persistentDataPath + name;
+        Directory.CreateDirectory(folderPath);
+        Debug.Log(name + " Folder was creating");
+    }
+
+    #endregion
+
+
+
     #region PlayerData
     public static void SavePlayerData(PlayerInventory player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
 
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/playerData";
+=======
+        string path = Application.persistentDataPath + "/PlayerData/playerData";
+>>>>>>> Stashed changes
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(player);
@@ -21,7 +45,11 @@ public static class SaveData
 
     public static PlayerData LoadPlayerData()
     {
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/playerData";
+=======
+        string path = Application.persistentDataPath + "/PlayerData/playerData";
+>>>>>>> Stashed changes
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -42,7 +70,11 @@ public static class SaveData
     }
     public static PlayerData DestroyPlayerData()
     {
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/playerData";
+=======
+        string path = Application.persistentDataPath + "/PlayerData/playerData";
+>>>>>>> Stashed changes
         if (File.Exists(path))
         {
             File.Delete(path);
@@ -64,7 +96,11 @@ public static class SaveData
     {
         BinaryFormatter formatter = new BinaryFormatter();
 
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/scene" + sceneData.idOfScene;
+=======
+        string path = Application.persistentDataPath + "/SceneData/scene" + sceneData.idOfScene;
+>>>>>>> Stashed changes
         FileStream stream = new FileStream(path, FileMode.Create);
 
         SceneDataContainer data = new SceneDataContainer(sceneData);
@@ -76,7 +112,11 @@ public static class SaveData
 
     public static SceneDataContainer LoadScenesData(int id)
     {
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/scene" + id;
+=======
+        string path = Application.persistentDataPath + "/SceneData/scene" + id;
+>>>>>>> Stashed changes
 
         if (File.Exists(path))
         {
@@ -98,7 +138,11 @@ public static class SaveData
     }
     public static SceneData DestroySceneData(int id)
     {
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/scene" + id;
+=======
+        string path = Application.persistentDataPath + "/SceneData/scene" + id;
+>>>>>>> Stashed changes
 
         if (File.Exists(path))
         {
@@ -116,7 +160,11 @@ public static class SaveData
 
     public static bool CheckSceneData(int id)
     {
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/SceneSaves/scene" + id;
+=======
+        string path = Application.persistentDataPath + "/SceneData/scene" + id;
+>>>>>>> Stashed changes
 
         if (File.Exists(path))
         {
@@ -136,7 +184,11 @@ public static class SaveData
 
         
 
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/settings";
+=======
+        string path = Application.persistentDataPath + "/SettingsData/settings";
+>>>>>>> Stashed changes
         FileStream stream = new FileStream(path, FileMode.Create);
 
         SettingsData data = new SettingsData(settingsData);
@@ -148,7 +200,11 @@ public static class SaveData
 
     public static SettingsData LoadSettingsData()
     {
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/settings";
+=======
+        string path = Application.persistentDataPath + "/SettingsData/settings";
+>>>>>>> Stashed changes
 
         if (File.Exists(path))
         {
@@ -170,7 +226,11 @@ public static class SaveData
     }
     public static SettingsData DestroySettingsData()
     {
+<<<<<<< Updated upstream
         string path = Application.persistentDataPath + "/settings";
+=======
+        string path = Application.persistentDataPath + "/SettingsData/settings";
+>>>>>>> Stashed changes
 
         if (File.Exists(path))
         {

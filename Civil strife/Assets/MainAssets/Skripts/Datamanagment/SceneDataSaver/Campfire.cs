@@ -66,6 +66,10 @@ public class Campfire : MonoBehaviour
             health.healthPoint = health.maxHP;
             invent.armorData = invent.armor.valueMax;
             invent.SetCamp(id[0], id[1]);
+<<<<<<< Updated upstream
+=======
+            invent.SetInvBut(true);
+>>>>>>> Stashed changes
             slovar.isSitting = true;
             scene.Respawn();
         }

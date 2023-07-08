@@ -44,6 +44,10 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private Image bootsImage;
     [SerializeField] private Image standsImage;
     [SerializeField] private Image abilityImage;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     //front Sprites
     [SerializeField] private Sprite[] weaponSprite;
     [SerializeField] private Sprite[] sekWeaponSprite;
@@ -119,9 +123,18 @@ public class PlayerInventory : MonoBehaviour
     //Ура, ебаные данные кончились
     [SerializeField] private Loader loader;
     [SerializeField] private SceneData sceneData;
+<<<<<<< Updated upstream
     [Header("Player")]
     [SerializeField] private PlayerHealth pl_Health;
     [SerializeField] private WeaponManager weaponManager;
+=======
+    [SerializeField] private Slovar slovar;
+
+    [Header("Player")]
+    [SerializeField] private PlayerHealth pl_Health;
+    [SerializeField] private WeaponManager weaponManager;
+    [SerializeField] private PlayerAttackSistem attacker;
+>>>>>>> Stashed changes
     public Armor armor;
 
     [SerializeField] private GameObject spawnText;
@@ -131,6 +144,11 @@ public class PlayerInventory : MonoBehaviour
 
     private void Start()
     {
+<<<<<<< Updated upstream
+=======
+        SetInvBut(false);
+
+>>>>>>> Stashed changes
         pl_Transform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         sceneData = GameObject.Find("SceneData").GetComponent<SceneData>();
 
@@ -196,6 +214,10 @@ public class PlayerInventory : MonoBehaviour
         bootsId = data.bootsId;
         weaponId = data.weaponId;
         moneyCount = data.moneyCount;
+<<<<<<< Updated upstream
+=======
+        sekWeaponId = data.sekWeaponId;
+>>>>>>> Stashed changes
 
         sekWeapons = data.sekWeapons;
         activeAbilitys = data.activeAbilitys;
@@ -517,6 +539,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void SelectWeapon(int id)
     {
+<<<<<<< Updated upstream
         if (weapons[id])
         {
             weaponId = id;
@@ -527,6 +550,20 @@ public class PlayerInventory : MonoBehaviour
     public void SelectSekWeapon(int id)
     {
         if (sekWeapons[id] > 0)
+=======
+        if (weapons[id] && !attacker.plAttacking())
+        {
+            weaponId = id;
+            OutputAllWeapons(weaponSprite[weaponId]);
+
+            weaponManager.SetweaponSprite(weaponId);
+
+        }
+    }
+    public void SelectSekWeapon(int id)
+    {
+        if (sekWeapons[id] > 0) 
+>>>>>>> Stashed changes
         {
             sekWeaponId = id;
             for (int i = 0; i < sekWeaponImage.Length; i++)
@@ -550,8 +587,15 @@ public class PlayerInventory : MonoBehaviour
         {
             breastPlateId = id;
             breastImage.sprite = breastSprite[breastPlateId];
+<<<<<<< Updated upstream
         }
         ChangeBody();
+=======
+            ChangeBody();
+            armor.SetArmorObjParameters();
+        }
+        
+>>>>>>> Stashed changes
     }
     public void SelectStand(int id)
     {
@@ -576,8 +620,13 @@ public class PlayerInventory : MonoBehaviour
         {
             bootsId = id;
             bootsImage.sprite = bootsSprite[bootsId];
+<<<<<<< Updated upstream
         }
         ChangeBody();
+=======
+            ChangeBody();
+        }
+>>>>>>> Stashed changes
     }
     #endregion
 
@@ -804,4 +853,15 @@ public class PlayerInventory : MonoBehaviour
     }
     
     #endregion
+<<<<<<< Updated upstream
+=======
+
+    public void SetInvBut(bool flag)
+    {
+        breastImage.GetComponent<Button>().interactable = flag;
+        abilityImage.GetComponent<Button>().interactable = flag;
+        helmetImage.GetComponent<Button>().interactable = flag;
+        bootsImage.GetComponent<Button>().interactable = flag;
+    }
+>>>>>>> Stashed changes
 }

@@ -12,9 +12,15 @@ public class EnemyV : MonoBehaviour
     private bool canSeePlayer;
     private bool seePlayer;
     private bool canRun = true;
+<<<<<<< Updated upstream
     private bool canFlip = true;
 
     [SerializeField] private int currentDirection = 1; // временно сериализую для дебага случая с нулевым enDirection()
+=======
+    [SerializeField] private bool canFlip = true; //временно сериализую для дэша босса
+
+    private int currentDirection = 1; 
+>>>>>>> Stashed changes
 
     private float spawnPoint;
 
@@ -33,7 +39,33 @@ public class EnemyV : MonoBehaviour
     [SerializeField] private Transform drawObject;
 
     [SerializeField] protected LayerMask anotherEnemys;
+<<<<<<< Updated upstream
     
+=======
+
+    [Header("Jump")]
+
+    [SerializeField] private bool isWall;
+    [SerializeField] private bool canJump = true;
+    [SerializeField] private bool isJumping;
+
+    [SerializeField] private bool isJumper;
+
+    [SerializeField] private float wallDistance;
+    [SerializeField] private float jumpHeight;
+
+    [SerializeField] private Transform wallCheck;
+
+    [SerializeField] private LayerMask whichWall;
+
+    [Header("Collision")]
+    private bool isGround;
+
+    [SerializeField] private float grRad;//радиус groundCheck
+
+    [SerializeField] private Transform groundCheck;
+
+>>>>>>> Stashed changes
     [Header("Attack System")]
     //variables of attack system
 
@@ -158,6 +190,11 @@ public class EnemyV : MonoBehaviour
 
         if (!isAlive) rb.velocity = new Vector2(0f, rb.velocity.y);
 
+<<<<<<< Updated upstream
+=======
+        CheckToJump();
+        Jumping();
+>>>>>>> Stashed changes
     }
     private void CheckIsSeePlayer()
     {
@@ -180,6 +217,18 @@ public class EnemyV : MonoBehaviour
         canSeePlayer = Physics2D.Raycast(plCheck.position, transform.right, plSeeDistance * currentDirection, playerLayer) && isAlive || Physics2D.Raycast(plCheck.position, transform.right, -plSeeDistance * currentDirection / 2, playerLayer) && isAlive;
         canHurtPlayer = Physics2D.Raycast(plCheck.position,transform.right, attackDistance * currentDirection, playerLayer);
         canHurtObj = Physics2D.Raycast(plCheck.position, transform.right, attackDistance * currentDirection, destrObjLayer);
+<<<<<<< Updated upstream
+=======
+
+        Invoke("CheckJumpLayer", 1f);
+    }
+
+    private void CheckJumpLayer()
+    {
+        isWall = Physics2D.Raycast(wallCheck.position, transform.right, wallDistance * currentDirection, whichWall);
+        isGround = Physics2D.OverlapCircle(groundCheck.position, grRad, whichWall);
+
+>>>>>>> Stashed changes
     }
     #endregion
 
@@ -234,6 +283,53 @@ public class EnemyV : MonoBehaviour
     }
     #endregion
 
+<<<<<<< Updated upstream
+=======
+    #region Jump
+
+    private void CheckToJump()
+    {
+        if (isWall && !isAttacking && isAlive && canJump && isJumper && !isHearting && isGround)
+        {
+            StartJump();
+        }
+    }
+
+    private void StartJump()
+    {
+        DizableCombat();
+
+        isGround = false;
+        isWall = false;
+
+        canFlip = false;
+        isJumping = true;
+        canJump = false;
+
+        an.SetBool("Jump", isJumping); 
+    }
+
+    private void Jumping()
+    {
+        if (isJumping)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+        }
+    }
+
+    private void StopJump()
+    {
+        isJumping = false;
+        canJump = true;
+        EnableCombat();
+        canFlip = true;
+
+        an.SetBool("Jump", isJumping);
+    }
+
+    #endregion
+
+>>>>>>> Stashed changes
     #region Attack System
     private void CheckToAttack()
     {
@@ -396,7 +492,12 @@ public class EnemyV : MonoBehaviour
 
     protected void DizableCombat()
     {
+<<<<<<< Updated upstream
         EndAttack();      
+=======
+        EndAttack();
+        canAttack = false;
+>>>>>>> Stashed changes
     }
 
     protected void EnableCombat()
@@ -467,5 +568,12 @@ public class EnemyV : MonoBehaviour
         Gizmos.DrawWireSphere(new Vector2(transform.position.x + patroolDistance, transform.position.y), 1f);
 
         Gizmos.DrawLine(enemysCheck.position, new Vector3(enemysCheck.position.x + attackDistance *0.6f * currentDirection, enemysCheck.position.y, plCheck.position.z));
+<<<<<<< Updated upstream
+=======
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallDistance * currentDirection, wallCheck.position.y, wallCheck.position.z));
+        Gizmos.DrawWireSphere(groundCheck.position, grRad);
+>>>>>>> Stashed changes
     }
 }

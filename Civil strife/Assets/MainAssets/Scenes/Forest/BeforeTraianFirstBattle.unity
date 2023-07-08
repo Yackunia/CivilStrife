@@ -1104,7 +1104,11 @@ Transform:
   - {fileID: 1673261256}
   - {fileID: 107935227}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 4
+=======
+  m_RootOrder: 5
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &101407477
 GameObject:
@@ -1798,7 +1802,11 @@ Transform:
   - {fileID: 1979734205}
   - {fileID: 525629354}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 7
+=======
+  m_RootOrder: 8
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &242913824 stripped
 Transform:
@@ -1977,6 +1985,13 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 7896225928020261212, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 407b5613435d2f849bdca55dc1b6d918, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 8249054569142991387, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4071,7 +4086,11 @@ Transform:
   m_Children:
   - {fileID: 35140734}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 3
+=======
+  m_RootOrder: 4
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &684346695
 GameObject:
@@ -5613,13 +5632,20 @@ Transform:
   - {fileID: 758365273}
   - {fileID: 1212728836}
   - {fileID: 1339537163}
+<<<<<<< Updated upstream
+=======
+  - {fileID: 8473348250246584257}
+>>>>>>> Stashed changes
   - {fileID: 205591720}
   - {fileID: 1235833298}
   - {fileID: 1686156932}
   - {fileID: 1093591325}
   - {fileID: 481790728}
   - {fileID: 1197694323}
+<<<<<<< Updated upstream
   - {fileID: 8473348250246584257}
+=======
+>>>>>>> Stashed changes
   - {fileID: 2052672315}
   - {fileID: 723638460}
   - {fileID: 1379549295}
@@ -5629,7 +5655,11 @@ Transform:
   - {fileID: 1887691972}
   - {fileID: 687860429}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 8
+=======
+  m_RootOrder: 9
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1024339523
 PrefabInstance:
@@ -5834,6 +5864,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
+=======
+--- !u!1001 &1070222355
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 50.464237
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.310111
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.29049745
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.95687574
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950650489157562889, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 146.224
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029037660995058117, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+      propertyPath: m_Name
+      value: expSword Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df929c9cafeca3b499e3b8a62a43761d, type: 3}
+>>>>>>> Stashed changes
 --- !u!4 &1093591325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2430360967456040588, guid: 131f061dddcecae468957f1d4090b886, type: 3}
@@ -5932,7 +6022,11 @@ Transform:
   - {fileID: 754439280}
   - {fileID: 633634573}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 2
+=======
+  m_RootOrder: 3
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1145919716
 GameObject:
@@ -6469,7 +6563,11 @@ Transform:
   - {fileID: 309353734}
   - {fileID: 1724650995}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 1
+=======
+  m_RootOrder: 2
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1201298105
 PrefabInstance:
@@ -8885,7 +8983,11 @@ Transform:
   - {fileID: 2040370110}
   - {fileID: 998748062}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 5
+=======
+  m_RootOrder: 7
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1586197156
 GameObject:
@@ -12559,7 +12661,11 @@ Transform:
   - {fileID: 8473348251455950344}
   - {fileID: 8473348250622661655}
   m_Father: {fileID: 1012453684}
+<<<<<<< Updated upstream
   m_RootOrder: 16
+=======
+  m_RootOrder: 10
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8473348250246584259
 GameObject:

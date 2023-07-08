@@ -18065,7 +18065,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8444671841264362157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0.543, z: 0}
+=======
+  m_LocalPosition: {x: 0, y: -0.569, z: 0}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21525,7 +21529,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7703108ff6c510d4780b1d309c96fe93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   currentDirection: 1
+=======
+  canFlip: 1
+>>>>>>> Stashed changes
   isIdle: 1
   isRight: 1
   chaseSpeed: 2
@@ -21534,6 +21542,21 @@ MonoBehaviour:
   anotherEnemys:
     serializedVersion: 2
     m_Bits: 512
+<<<<<<< Updated upstream
+=======
+  isWall: 0
+  canJump: 1
+  isJumping: 0
+  isJumper: 0
+  wallDistance: 0.8
+  jumpHeight: 5
+  wallCheck: {fileID: 3890393940892396128}
+  whichWall:
+    serializedVersion: 2
+    m_Bits: 8
+  grRad: 0.1
+  groundCheck: {fileID: 3502725565858785468}
+>>>>>>> Stashed changes
   damage: 8
   attackRad: 1.1
   attackDistance: 3.5
@@ -21546,15 +21569,24 @@ MonoBehaviour:
     m_Bits: 64
   destrObjLayer:
     serializedVersion: 2
+<<<<<<< Updated upstream
     m_Bits: 0
+=======
+    m_Bits: 36864
+>>>>>>> Stashed changes
   plSeeDistance: 11
   plSeeDistanceBack: 2
   patroolDistance: 5
   plCheck: {fileID: 6126977445785737112}
   enemysCheck: {fileID: 1466016003}
   health: 150
+<<<<<<< Updated upstream
   knockSpeedX: 1
   knockSpeedY: 0
+=======
+  knockSpeedX: 2
+  knockSpeedY: 2
+>>>>>>> Stashed changes
   canv: {fileID: 2679260373326045641}
   healthFieldDrawable: {fileID: 7418326493379190850}
   money: {fileID: 9039606162969647626, guid: fece3ee8cd329854b9781894fc75d9c6, type: 3}
@@ -21569,13 +21601,24 @@ MonoBehaviour:
   walkAudio: {fileID: 7418326493141013456}
   isRespawn: 0
   sceneData: {fileID: 74552247}
+<<<<<<< Updated upstream
+=======
+  isRunning: 0
+  isCoolDown: 0
+>>>>>>> Stashed changes
   runTimer: 0
   runRebootTimer: 0
   rebootError: 0
   canRunning: 0
+<<<<<<< Updated upstream
   runSpeed: 18
   runTime: 0.35
   runRebootTime: 6
+=======
+  runSpeed: 15
+  runTime: 0.4
+  runRebootTime: 7
+>>>>>>> Stashed changes
   rebootErrorMax: 3
 --- !u!114 &8731075188635757739
 MonoBehaviour:
@@ -21598,17 +21641,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 7418326492306337841}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 2d2763a9f306ea64f8cc871b49b12a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   needToRotatePlayer: 0
   neetToEnemyVRotate: 0
   neetToEnemySRotate: 1
+=======
+  m_Script: {fileID: 11500000, guid: 38a0e470dde2d35438595ff96534b80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needToRotatePlayer: 0
+  neetToEnemyVRotate: 1
+  neetToEnemySRotate: 0
+>>>>>>> Stashed changes
   canHurtEnemy: 0
   damageValue: 4
   enemyV: {fileID: 8731075188635757738}
   enemyS: {fileID: 0}
+<<<<<<< Updated upstream
   en: {fileID: 0}
+=======
+  tr: {fileID: 8731075188635757738}
+>>>>>>> Stashed changes
 --- !u!1001 &8869045666589133220
 PrefabInstance:
   m_ObjectHideFlags: 0

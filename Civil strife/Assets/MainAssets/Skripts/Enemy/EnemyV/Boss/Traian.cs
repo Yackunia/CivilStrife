@@ -7,8 +7,14 @@ public class Traian : EnemyV
     private bool isSekondPhase;
 
     [Header("Run")]
+<<<<<<< Updated upstream
     private bool isRunning;
     private bool isPreparation;
+=======
+    public bool isRunning;
+    private bool isPreparation;
+    [SerializeField] private bool isCoolDown; //временно сериализую
+>>>>>>> Stashed changes
 
     [SerializeField] private float runTimer;
     [SerializeField] private float runRebootTimer;
@@ -23,6 +29,10 @@ public class Traian : EnemyV
     [SerializeField] private float rebootErrorMax;
 
     #region Ovveride
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     protected override void Start()
     {
         base.Start();
@@ -41,6 +51,15 @@ public class Traian : EnemyV
         base.UpdAnim();
         anEnemy().SetBool("isdashing", isRunning);
     }
+<<<<<<< Updated upstream
+=======
+
+    protected override void Damage(float damage)
+    {
+        if (!isPreparation && !isRunning) base.Damage(damage);
+    }
+
+>>>>>>> Stashed changes
     protected override void StartAttack()
     {
         base.StartAttack();
@@ -56,6 +75,7 @@ public class Traian : EnemyV
     #endregion
     private void SekAttack()
     {
+<<<<<<< Updated upstream
         if (isSekondPhase) anEnemy().SetBool("Combo", true);
         else
         {
@@ -63,6 +83,28 @@ public class Traian : EnemyV
             if (x == 3) anEnemy().SetBool("Combo", true);
         }
     }
+=======
+        if (isSekondPhase)
+        {
+            StartSekAttack();
+        }
+
+        else
+        {
+            int x = Random.Range(0, 3);
+            if (x == 3)
+            {
+                StartSekAttack();
+            }
+        }
+    }
+
+    private void StartSekAttack()
+    {
+        anEnemy().SetBool("Combo", true);
+        StopEnemy();
+    }
+>>>>>>> Stashed changes
     private void CheckSekPhase()
     {
         if (enHealth() < enMaxHealth() / 1.5f && !isSekondPhase)
@@ -112,6 +154,7 @@ public class Traian : EnemyV
         gameObject.layer = 12;
     }
 
+<<<<<<< Updated upstream
     private void StopRun()
     {
         gameObject.layer = 9;
@@ -119,6 +162,16 @@ public class Traian : EnemyV
         StopEnemy();
         UnFreezeEnemy();
         EnableCombat();
+=======
+    public void StopRun()
+    {
+        gameObject.layer = 9;
+
+        StopRunUnscheduled();
+        StopEnemy();
+
+        RunCoolDown();
+>>>>>>> Stashed changes
     }
     public void StopRunUnscheduled()
     {
@@ -141,4 +194,22 @@ public class Traian : EnemyV
             }
         }
     }
+<<<<<<< Updated upstream
+=======
+
+    private void RunCoolDown()
+    {
+        isCoolDown = true;
+        anEnemy().SetBool("isdashing", isRunning);
+        anEnemy().SetBool("CoolDown", isCoolDown);
+    }
+
+    private void StopCoolDown()
+    {
+        isCoolDown = false;
+        UnFreezeEnemy();
+        EnableCombat();
+        anEnemy().SetBool("CoolDown", isCoolDown);
+    }
+>>>>>>> Stashed changes
 }

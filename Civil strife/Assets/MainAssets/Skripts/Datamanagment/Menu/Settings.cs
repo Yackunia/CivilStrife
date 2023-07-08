@@ -30,7 +30,10 @@ public class Settings : MonoBehaviour
 
     private void Start()
     {
+<<<<<<< Updated upstream
         OutputActions();
+=======
+>>>>>>> Stashed changes
         Load();
         OutputActions();
     }

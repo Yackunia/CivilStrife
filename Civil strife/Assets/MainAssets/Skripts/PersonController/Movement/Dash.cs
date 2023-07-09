@@ -71,9 +71,12 @@ public class Dash : MonoBehaviour
         canDash = true;
 
         move.UnFreezePlayer();
+        attacker.DisableCombat();
         attacker.EnableCombat();
 
         player.layer = 6;
+
+        Debug.Log("StopDash");
     }
 
     private void InputCheck()

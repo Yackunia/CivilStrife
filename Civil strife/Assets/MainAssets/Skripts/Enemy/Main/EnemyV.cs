@@ -188,6 +188,7 @@ public class EnemyV : MonoBehaviour
         if (!seePlayer && canSeePlayer)
         {
             seePlayer = true;
+            isIdle = false;
         }
     }
     protected virtual void UpdAnim()
@@ -195,7 +196,7 @@ public class EnemyV : MonoBehaviour
         an.SetBool("isDead",!isAlive);
         an.SetBool("isDamage", isHearting);
         an.SetBool("isAttacking", isAttacking);
-        
+        an.SetBool("isFight", !isIdle);
     }
     private void CheckLayerStats()
     {

@@ -251,19 +251,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1709536987522772695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   open: {fileID: 0}
   leafParticle: {fileID: 1476498710758360204, guid: 0fa0ae3e78e9ff34ca85e06eed503865, type: 3}
   deadPart: {fileID: 0}
-  life: 6
+  life: 20
   damageAudio: {fileID: 810548009201426802}
   deathAudio: {fileID: 220900362536783005}
   isRig: 0
   knockSpeedX: 0
   sceneData: {fileID: 0}
-  isRespawn: 1
+  isRespawn: 0
 --- !u!1 &1709536987916368040
 GameObject:
   m_ObjectHideFlags: 0

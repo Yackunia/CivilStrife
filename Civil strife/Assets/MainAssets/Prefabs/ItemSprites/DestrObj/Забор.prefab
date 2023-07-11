@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1501949646380701948}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (1)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,19 +122,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 233961162893579842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   open: {fileID: 0}
   leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
   deadPart: {fileID: 0}
-  life: 11
+  life: 20
   damageAudio: {fileID: 1824953868426302839}
   deathAudio: {fileID: 8450993748811927576}
   isRig: 0
   knockSpeedX: 0
   sceneData: {fileID: 0}
-  isRespawn: 1
+  isRespawn: 0
 --- !u!1 &408575748052921529
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 8706424086718819919}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (1)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,19 +257,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 408575748052921529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   open: {fileID: 0}
   leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
   deadPart: {fileID: 0}
-  life: 11
+  life: 20
   damageAudio: {fileID: 1824953868426302839}
   deathAudio: {fileID: 8450993748811927576}
   isRig: 0
   knockSpeedX: 0
   sceneData: {fileID: 0}
-  isRespawn: 1
+  isRespawn: 0
 --- !u!1 &906250398573258288
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 9119011132842824413}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (1)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,19 +391,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 906250398573258288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   open: {fileID: 0}
   leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
   deadPart: {fileID: 0}
-  life: 11
+  life: 20
   damageAudio: {fileID: 1824953868426302839}
   deathAudio: {fileID: 8450993748811927576}
   isRig: 0
   knockSpeedX: 0
   sceneData: {fileID: 0}
-  isRespawn: 1
+  isRespawn: 0
 --- !u!1 &1162167592214840647
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 4071805250523413387}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (1)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,19 +738,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4842706301066853327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   open: {fileID: 0}
   leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
   deadPart: {fileID: 0}
-  life: 11
+  life: 20
   damageAudio: {fileID: 1824953868426302839}
   deathAudio: {fileID: 8450993748811927576}
   isRig: 0
   knockSpeedX: 0
   sceneData: {fileID: 0}
-  isRespawn: 1
+  isRespawn: 0
 --- !u!1 &5054377330276216746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 1417338157985681460}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (1)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1124,19 +1124,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 6376609228922733024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   open: {fileID: 0}
   leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
   deadPart: {fileID: 0}
-  life: 11
+  life: 20
   damageAudio: {fileID: 1824953868426302839}
   deathAudio: {fileID: 8450993748811927576}
   isRig: 0
   knockSpeedX: 0
   sceneData: {fileID: 0}
-  isRespawn: 1
+  isRespawn: 0
 --- !u!1 &6723992858293563185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 4882545994911306066}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (1)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1259,19 +1259,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 6723992858293563185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   open: {fileID: 0}
   leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
   deadPart: {fileID: 0}
-  life: 11
+  life: 20
   damageAudio: {fileID: 1824953868426302839}
   deathAudio: {fileID: 8450993748811927576}
   isRig: 0
   knockSpeedX: 0
   sceneData: {fileID: 0}
-  isRespawn: 1
+  isRespawn: 0
 --- !u!1 &7676985133487855664
 GameObject:
   m_ObjectHideFlags: 0

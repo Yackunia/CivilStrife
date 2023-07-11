@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -59,11 +60,7 @@ public class PlayerAttackSistem : MonoBehaviour
 
         if (Input.GetKeyDown(set.attackAction) && isCombat && !isFirstAttack && !canCombo && isAttacking)
         {
-            canCombo = true;
-            an.SetBool("IsCombo", true);
-            an.SetBool("next", next);
-            next = !next;
-            move.canFlip = false;
+            ResumeAttack();
         }
 
         if (Input.GetKeyDown(set.attackAction) && isCombat && !isFirstAttack && canCombo && needToTake && isAttacking)
@@ -77,6 +74,19 @@ public class PlayerAttackSistem : MonoBehaviour
         }
     }
 
+    private void ResumeAttack()
+    {
+        canCombo = true;
+        an.SetBool("IsCombo", true);
+        an.SetBool("next", next);
+        next = !next;
+        move.canFlip = false;
+        
+    }
+    private void PlayAttackSound()
+    {
+        kickAudio.Play();
+    }
     private void StartCombo()
     {
         canCombo = false;
@@ -131,7 +141,6 @@ public class PlayerAttackSistem : MonoBehaviour
     private void CheckAttackHitBox()
     {
         Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(atHitBoxPosition.position, attackRad, isDamageable);
-        kickAudio.Play();
 
         foreach (Collider2D col in detectedObjs)
         {

@@ -18,7 +18,6 @@ public class WallSliding : MonoBehaviour
     private bool isWall;
     private bool isWallSliding;
     private bool isStay = true;
-    private bool isGroundLay;
 
     [SerializeField] private float wallDistance;
 
@@ -188,7 +187,7 @@ public class WallSliding : MonoBehaviour
         if (isClimbing)
         {
             transform.position = Vector2.Lerp(startPosition, climbPosition, progress);
-            progress += hidSpeed;;
+            progress += hidSpeed; ;
         }
     }
 
@@ -262,19 +261,8 @@ public class WallSliding : MonoBehaviour
         move.StopPlayer();
         DisableWall();
         attacker.DisableCombat();
-        if (flag) rb.velocity = new Vector2(-move.plDirection() * 4f, 10f); 
+        if (flag) rb.velocity = new Vector2(-move.plDirection() * 4f, 10f);
         isFalling = true;
-    }
-    private void StopFall()
-    {
-        move.UnFreezePlayer();
-        if (!stands.isUsingStand)
-        {
-            EnableClimb();
-            EnableWall();
-            attacker.EnableCombat();
-            move.dash.EnableDash();
-        }
     }
     private void CheckFallGround()
     {
@@ -284,42 +272,58 @@ public class WallSliding : MonoBehaviour
 
     private void CheckStopFall()
     {
-        StopFall();
+        if (isFalling && move.plGround())
+        {
+            if (rb.velocity.y * -1 <= maxValue)
+            {
+                move.UnFreezePlayer();
+                if (!stands.isUsingStand)
+                {
+                    EnableClimb();
+                    EnableWall();
+                    attacker.EnableCombat();
+                    move.dash.EnableDash();
+                }
+            }
+            else
+            {
+                FailOnGround();
+            }
+
+            isFalling = false;
+        }
     }
 
-	private void GroundDamage()
-	{
+    private void GroundDamage()
+    {
         if (move.plGround() && rb.velocity.y * -1 >= maxValue)
         {
-            LayOnGround();
+            FailOnGround();
         }
-	}
+    }
 
-	private void LayOnGround()
-	{
-        isGroundLay = true;
+    private void FailOnGround()
+    {
         move.StopPlayer();
         attacker.DisableCombat();
         move.dash.DisableDash();
         an.SetBool("isGroundFail", true);
-	}
+    }
 
     private void EndLayOnGround()
     {
-        isGroundLay = false;
         an.SetBool("isGroundFail", false);
         move.UnFreezePlayer();
-        isFalling = false;
         if (!stands.isUsingStand)
         {
             attacker.EnableCombat();
             move.dash.EnableDash();
             EnableClimb();
             EnableWall();
-        }  
+        }
     }
 
-	public void DisableClimb()
+    public void DisableClimb()
     {
         rb.isKinematic = false;
         isHanging = false;

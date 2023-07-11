@@ -280,10 +280,10 @@ GameObject:
   - component: {fileID: 20879234}
   - component: {fileID: 20879237}
   - component: {fileID: 20879236}
-  - component: {fileID: 20879235}
+  - component: {fileID: 20879238}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (3)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,28 +304,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &20879235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20879233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &20879236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -404,6 +382,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &20879238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20879233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1 &27243117
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,10 +887,10 @@ GameObject:
   - component: {fileID: 63673825}
   - component: {fileID: 63673828}
   - component: {fileID: 63673827}
-  - component: {fileID: 63673826}
+  - component: {fileID: 63673829}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (10)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -911,28 +911,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &63673826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63673824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &63673827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1011,6 +989,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &63673829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63673824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!4 &72620509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1709536988060623599, guid: 63f69875f11f74b449f9e981bb957a7f, type: 3}
@@ -1156,10 +1156,10 @@ GameObject:
   - component: {fileID: 87285623}
   - component: {fileID: 87285626}
   - component: {fileID: 87285625}
-  - component: {fileID: 87285624}
+  - component: {fileID: 87285627}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (11)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1180,28 +1180,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &87285624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87285622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &87285625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1280,6 +1258,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &87285627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87285622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1001 &87546105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1356,10 +1356,10 @@ GameObject:
   - component: {fileID: 87702469}
   - component: {fileID: 87702472}
   - component: {fileID: 87702471}
-  - component: {fileID: 87702470}
+  - component: {fileID: 87702473}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (2)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1380,28 +1380,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &87702470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87702468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &87702471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1480,6 +1458,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &87702473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87702468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1 &91217624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,7 +1829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: withRespawn.Array.size
-      value: 86
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: withRespawn.Array.data[0]
@@ -2221,7 +2221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.size
-      value: 86
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[0]
@@ -2250,19 +2250,19 @@ PrefabInstance:
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[6]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 916895631}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[7]
       value: 
-      objectReference: {fileID: 916895631}
+      objectReference: {fileID: 1233366590}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[8]
       value: 
-      objectReference: {fileID: 1233366590}
+      objectReference: {fileID: 1128144403}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[9]
       value: 
-      objectReference: {fileID: 1128144403}
+      objectReference: {fileID: 316093985}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithoutRespawn.Array.size
       value: 10
@@ -2270,303 +2270,303 @@ PrefabInstance:
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[10]
       value: 
-      objectReference: {fileID: 316093985}
+      objectReference: {fileID: 533467853}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[11]
       value: 
-      objectReference: {fileID: 533467853}
+      objectReference: {fileID: 1670195015}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[12]
       value: 
-      objectReference: {fileID: 1670195015}
+      objectReference: {fileID: 78295640}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[13]
       value: 
-      objectReference: {fileID: 78295640}
+      objectReference: {fileID: 1595560350}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[14]
       value: 
-      objectReference: {fileID: 1595560350}
+      objectReference: {fileID: 718986493}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[15]
       value: 
-      objectReference: {fileID: 718986493}
+      objectReference: {fileID: 355360197}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[16]
       value: 
-      objectReference: {fileID: 355360197}
+      objectReference: {fileID: 1844892588}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[17]
       value: 
-      objectReference: {fileID: 1844892588}
+      objectReference: {fileID: 1008280979}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[18]
       value: 
-      objectReference: {fileID: 1008280979}
+      objectReference: {fileID: 397136573}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[19]
       value: 
-      objectReference: {fileID: 397136573}
+      objectReference: {fileID: 2033603300}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[20]
       value: 
-      objectReference: {fileID: 2033603300}
+      objectReference: {fileID: 650879217}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[21]
       value: 
-      objectReference: {fileID: 650879217}
+      objectReference: {fileID: 363876610}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[22]
       value: 
-      objectReference: {fileID: 363876610}
+      objectReference: {fileID: 1415005334}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[23]
       value: 
-      objectReference: {fileID: 1415005334}
+      objectReference: {fileID: 1845900431}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[24]
       value: 
-      objectReference: {fileID: 1845900431}
+      objectReference: {fileID: 959381800}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[25]
       value: 
-      objectReference: {fileID: 959381800}
+      objectReference: {fileID: 1532997247}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[26]
       value: 
-      objectReference: {fileID: 1532997247}
+      objectReference: {fileID: 2111481610}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[27]
       value: 
-      objectReference: {fileID: 2111481610}
+      objectReference: {fileID: 1512300721}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[28]
       value: 
-      objectReference: {fileID: 1512300721}
+      objectReference: {fileID: 2050616931}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[29]
       value: 
-      objectReference: {fileID: 2050616931}
+      objectReference: {fileID: 1839102523}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[30]
       value: 
-      objectReference: {fileID: 1839102523}
+      objectReference: {fileID: 440129354}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[31]
       value: 
-      objectReference: {fileID: 440129354}
+      objectReference: {fileID: 1055116079}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[32]
       value: 
-      objectReference: {fileID: 1055116079}
+      objectReference: {fileID: 1719548355}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[33]
       value: 
-      objectReference: {fileID: 1719548355}
+      objectReference: {fileID: 1446259929}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[34]
       value: 
-      objectReference: {fileID: 1446259929}
+      objectReference: {fileID: 273061709}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[35]
       value: 
-      objectReference: {fileID: 273061709}
+      objectReference: {fileID: 865954569}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[36]
       value: 
-      objectReference: {fileID: 865954569}
+      objectReference: {fileID: 697511226}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[37]
       value: 
-      objectReference: {fileID: 697511226}
+      objectReference: {fileID: 639370514}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[38]
       value: 
-      objectReference: {fileID: 639370514}
+      objectReference: {fileID: 7762074}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[39]
       value: 
-      objectReference: {fileID: 7762074}
+      objectReference: {fileID: 81207286}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[40]
       value: 
-      objectReference: {fileID: 81207286}
+      objectReference: {fileID: 198721315}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[41]
       value: 
-      objectReference: {fileID: 198721315}
+      objectReference: {fileID: 1996063097}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[42]
       value: 
-      objectReference: {fileID: 1996063097}
+      objectReference: {fileID: 1996063096}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[43]
       value: 
-      objectReference: {fileID: 1996063096}
+      objectReference: {fileID: 1996063095}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[44]
       value: 
-      objectReference: {fileID: 1996063095}
+      objectReference: {fileID: 1996063094}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[45]
       value: 
-      objectReference: {fileID: 1996063094}
+      objectReference: {fileID: 1996063093}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[46]
       value: 
-      objectReference: {fileID: 1996063093}
+      objectReference: {fileID: 1996063092}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[47]
       value: 
-      objectReference: {fileID: 1996063092}
+      objectReference: {fileID: 1189494430}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[48]
       value: 
-      objectReference: {fileID: 1189494430}
+      objectReference: {fileID: 1189494429}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[49]
       value: 
-      objectReference: {fileID: 1189494429}
+      objectReference: {fileID: 1189494428}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[50]
       value: 
-      objectReference: {fileID: 1189494428}
+      objectReference: {fileID: 1189494427}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[51]
       value: 
-      objectReference: {fileID: 1189494427}
+      objectReference: {fileID: 1189494426}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[52]
       value: 
-      objectReference: {fileID: 1189494426}
+      objectReference: {fileID: 1189494425}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[53]
       value: 
-      objectReference: {fileID: 1189494425}
+      objectReference: {fileID: 561297970}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[54]
       value: 
-      objectReference: {fileID: 561297970}
+      objectReference: {fileID: 561297969}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[55]
       value: 
-      objectReference: {fileID: 561297969}
+      objectReference: {fileID: 561297968}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[56]
       value: 
-      objectReference: {fileID: 561297968}
+      objectReference: {fileID: 561297967}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[57]
       value: 
-      objectReference: {fileID: 561297967}
+      objectReference: {fileID: 561297966}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[58]
       value: 
-      objectReference: {fileID: 561297966}
+      objectReference: {fileID: 561297965}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[59]
       value: 
-      objectReference: {fileID: 561297965}
+      objectReference: {fileID: 540188409}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[60]
       value: 
-      objectReference: {fileID: 540188409}
+      objectReference: {fileID: 540188408}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[61]
       value: 
-      objectReference: {fileID: 540188408}
+      objectReference: {fileID: 540188407}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[62]
       value: 
-      objectReference: {fileID: 540188407}
+      objectReference: {fileID: 540188406}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[63]
       value: 
-      objectReference: {fileID: 540188406}
+      objectReference: {fileID: 540188405}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[64]
       value: 
-      objectReference: {fileID: 540188405}
+      objectReference: {fileID: 540188404}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[65]
       value: 
-      objectReference: {fileID: 540188404}
+      objectReference: {fileID: 87702468}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[66]
       value: 
-      objectReference: {fileID: 87702468}
+      objectReference: {fileID: 20879233}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[67]
       value: 
-      objectReference: {fileID: 20879233}
+      objectReference: {fileID: 455862654}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[68]
       value: 
-      objectReference: {fileID: 455862654}
+      objectReference: {fileID: 1437121015}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[69]
       value: 
-      objectReference: {fileID: 1437121015}
+      objectReference: {fileID: 815861707}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[70]
       value: 
-      objectReference: {fileID: 815861707}
+      objectReference: {fileID: 813181071}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[71]
       value: 
-      objectReference: {fileID: 813181071}
+      objectReference: {fileID: 907813635}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[72]
       value: 
-      objectReference: {fileID: 907813635}
+      objectReference: {fileID: 306535116}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[73]
       value: 
-      objectReference: {fileID: 306535116}
+      objectReference: {fileID: 63673824}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[74]
       value: 
-      objectReference: {fileID: 63673824}
+      objectReference: {fileID: 87285622}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[75]
       value: 
-      objectReference: {fileID: 87285622}
+      objectReference: {fileID: 1785563644}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[76]
       value: 
-      objectReference: {fileID: 1785563644}
+      objectReference: {fileID: 1708682503}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[77]
       value: 
-      objectReference: {fileID: 1708682503}
+      objectReference: {fileID: 1449227515}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[78]
       value: 
-      objectReference: {fileID: 1449227515}
+      objectReference: {fileID: 1825829986}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[79]
       value: 
-      objectReference: {fileID: 1825829986}
+      objectReference: {fileID: 316317837}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[80]
       value: 
-      objectReference: {fileID: 316317837}
+      objectReference: {fileID: 309666795}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[81]
       value: 
-      objectReference: {fileID: 309666795}
+      objectReference: {fileID: 545323213}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[82]
       value: 
-      objectReference: {fileID: 545323213}
+      objectReference: {fileID: 612431680}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[83]
       value: 
-      objectReference: {fileID: 612431680}
+      objectReference: {fileID: 1335758133}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[84]
       value: 
-      objectReference: {fileID: 1335758133}
+      objectReference: {fileID: 1234673669}
     - target: {fileID: 3864161441538974856, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: objectsWithRespawn.Array.data[85]
       value: 
@@ -2625,7 +2625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8222804619193992654, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8222804619193992654, guid: a0af37a437f839a4987491e707f0b0d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3971,10 +3971,10 @@ GameObject:
   - component: {fileID: 306535117}
   - component: {fileID: 306535120}
   - component: {fileID: 306535119}
-  - component: {fileID: 306535118}
+  - component: {fileID: 306535121}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (9)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3995,28 +3995,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &306535118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306535116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &306535119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4095,6 +4073,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &306535121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306535116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!4 &306978795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8192217265897883386, guid: 6a7d5686488bb884b993d705c58f435d, type: 3}
@@ -4111,10 +4111,10 @@ GameObject:
   - component: {fileID: 309666796}
   - component: {fileID: 309666799}
   - component: {fileID: 309666798}
-  - component: {fileID: 309666797}
+  - component: {fileID: 309666800}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (17)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4135,28 +4135,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &309666797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309666795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &309666798
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4235,6 +4213,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &309666800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309666795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1001 &316093983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4313,10 +4313,10 @@ GameObject:
   - component: {fileID: 316317838}
   - component: {fileID: 316317841}
   - component: {fileID: 316317840}
-  - component: {fileID: 316317839}
+  - component: {fileID: 316317842}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (16)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4337,28 +4337,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &316317839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 316317837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &316317840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4437,6 +4415,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &316317842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316317837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1 &316428445
 GameObject:
   m_ObjectHideFlags: 0
@@ -5898,10 +5898,10 @@ GameObject:
   - component: {fileID: 455862655}
   - component: {fileID: 455862658}
   - component: {fileID: 455862657}
-  - component: {fileID: 455862656}
+  - component: {fileID: 455862659}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (4)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5922,28 +5922,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &455862656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455862654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &455862657
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6022,6 +6000,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &455862659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455862654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1001 &465618087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6126,7 +6126,7 @@ Transform:
   - {fileID: 1844892587}
   - {fileID: 1008280978}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &475970520 stripped
 Transform:
@@ -8120,7 +8120,7 @@ Transform:
   - {fileID: 1788338657}
   - {fileID: 672215493}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &639370513
 PrefabInstance:
@@ -8706,7 +8706,7 @@ Transform:
   - {fileID: 1124148970}
   - {fileID: 348383101}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &711066499 stripped
 Transform:
@@ -9326,10 +9326,10 @@ GameObject:
   - component: {fileID: 813181072}
   - component: {fileID: 813181075}
   - component: {fileID: 813181074}
-  - component: {fileID: 813181073}
+  - component: {fileID: 813181076}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (7)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9350,28 +9350,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &813181073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813181071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &813181074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9450,6 +9428,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &813181076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813181071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1 &813499138
 GameObject:
   m_ObjectHideFlags: 0
@@ -9545,10 +9545,10 @@ GameObject:
   - component: {fileID: 815861708}
   - component: {fileID: 815861711}
   - component: {fileID: 815861710}
-  - component: {fileID: 815861709}
+  - component: {fileID: 815861712}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (6)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9569,28 +9569,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &815861709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815861707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &815861710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9669,6 +9647,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &815861712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815861707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1 &827679086
 GameObject:
   m_ObjectHideFlags: 0
@@ -9700,7 +9700,7 @@ Transform:
   - {fileID: 270511282}
   - {fileID: 1627197134}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &828547085
 GameObject:
@@ -10317,10 +10317,10 @@ GameObject:
   - component: {fileID: 907813636}
   - component: {fileID: 907813639}
   - component: {fileID: 907813638}
-  - component: {fileID: 907813637}
+  - component: {fileID: 907813640}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (8)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10341,28 +10341,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &907813637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907813635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &907813638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10441,6 +10419,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &907813640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907813635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1001 &912401220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11822,7 +11822,7 @@ Transform:
   - {fileID: 742611540}
   - {fileID: 1398629326}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1124148970 stripped
 Transform:
@@ -13205,7 +13205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1277119324
 PrefabInstance:
@@ -14123,10 +14123,10 @@ GameObject:
   - component: {fileID: 1437121016}
   - component: {fileID: 1437121019}
   - component: {fileID: 1437121018}
-  - component: {fileID: 1437121017}
+  - component: {fileID: 1437121020}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (5)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14147,28 +14147,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1437121017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437121015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &1437121018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14247,6 +14225,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1437121020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437121015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1 &1438261107
 GameObject:
   m_ObjectHideFlags: 0
@@ -14471,10 +14471,10 @@ GameObject:
   - component: {fileID: 1449227516}
   - component: {fileID: 1449227519}
   - component: {fileID: 1449227518}
-  - component: {fileID: 1449227517}
+  - component: {fileID: 1449227520}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (14)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14495,28 +14495,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1449227517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449227515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &1449227518
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14595,6 +14573,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1449227520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449227515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1 &1457877285
 GameObject:
   m_ObjectHideFlags: 0
@@ -14962,7 +14962,7 @@ Transform:
   - {fileID: 127454422}
   - {fileID: 968817150}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1495923021
 PrefabInstance:
@@ -15312,7 +15312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3071103185175823927, guid: 2f4b757707dea80438cb82f613087967, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3071103185175823927, guid: 2f4b757707dea80438cb82f613087967, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16282,10 +16282,10 @@ GameObject:
   - component: {fileID: 1708682504}
   - component: {fileID: 1708682507}
   - component: {fileID: 1708682506}
-  - component: {fileID: 1708682505}
+  - component: {fileID: 1708682508}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (13)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16306,28 +16306,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1708682505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708682503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &1708682506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16406,6 +16384,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1708682508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708682503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!4 &1714814575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6235201408603485869, guid: 9ffd7d3b2317c014b9de7c1d471eb26f, type: 3}
@@ -17198,10 +17198,10 @@ GameObject:
   - component: {fileID: 1785563645}
   - component: {fileID: 1785563648}
   - component: {fileID: 1785563647}
-  - component: {fileID: 1785563646}
+  - component: {fileID: 1785563649}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (12)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17222,28 +17222,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1785563646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785563644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &1785563647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17322,6 +17300,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1785563649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785563644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1001 &1788338655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17653,10 +17653,10 @@ GameObject:
   - component: {fileID: 1825829987}
   - component: {fileID: 1825829990}
   - component: {fileID: 1825829989}
-  - component: {fileID: 1825829988}
+  - component: {fileID: 1825829991}
   m_Layer: 7
   m_Name: "\u0437\u0430\u0431\u043E\u0440 (15)"
-  m_TagString: Untagged
+  m_TagString: DestrObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17677,28 +17677,6 @@ Transform:
   m_Father: {fileID: 540188401}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1825829988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825829986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc80c737772e4b4c8ab1016726df3b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 11
-  damageAudio: {fileID: 540188403}
-  deathAudio: {fileID: 540188402}
-  isRig: 0
-  knockSpeedX: 0
-  sceneData: {fileID: 0}
-  isRespawn: 1
 --- !u!61 &1825829989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17777,6 +17755,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1825829991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825829986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 0}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 0}
+  life: 20
+  damageAudio: {fileID: 540188403}
+  deathAudio: {fileID: 540188402}
+  isRig: 0
+  knockSpeedX: 0
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1 &1830894032
 GameObject:
   m_ObjectHideFlags: 0
@@ -17973,7 +17973,7 @@ Transform:
   - {fileID: 1405335440}
   - {fileID: 880025159}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1844892586
 PrefabInstance:
@@ -18785,7 +18785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3071103185175823927, guid: 2f4b757707dea80438cb82f613087967, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3071103185175823927, guid: 2f4b757707dea80438cb82f613087967, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18912,9 +18912,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.5704346
       objectReference: {fileID: 0}
+    - target: {fileID: 5412491449146973128, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8249054569142991387, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8249054569142991387, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19686,7 +19690,7 @@ Transform:
   - {fileID: 1891720241}
   - {fileID: 2017664655}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2032676870
 PrefabInstance:
@@ -20569,6 +20573,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &5814443740104973
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.1132176
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.0195322
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223766, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814443991223767, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
+      propertyPath: m_Name
+      value: MiddleMusic (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bde0915a322455042bc74cfdb3e75344, type: 3}
 --- !u!1001 &8663802712715525603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20582,7 +20643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8663802713450132734, guid: dd646457a0233c549b31541aa4bdb825, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8663802713450132734, guid: dd646457a0233c549b31541aa4bdb825, type: 3}
       propertyPath: m_LocalPosition.x

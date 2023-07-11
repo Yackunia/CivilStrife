@@ -23,7 +23,7 @@ public class Dash : MonoBehaviour
     [Header("Dash Data")]
     public bool canDoDash;
 
-    private bool isDashing;
+    public bool isDashing;
     [SerializeField] private bool canDash = true;
 
     private float dashTimer;
@@ -36,6 +36,16 @@ public class Dash : MonoBehaviour
     {
         InputCheck();
         Dashing();
+
+        Invoke("CheckEndLayer", 0.5f);
+    }
+
+    private void CheckEndLayer()
+    {
+        if (!isDashing && player.layer != 6)
+        {
+            player.layer = 6;
+        }
     }
 
     private void Dashing()
@@ -52,17 +62,17 @@ public class Dash : MonoBehaviour
                 an.SetBool("isDashing", false);
                 rb.velocity = new Vector2 (0, 0);
             }
-            if (wall.plIsWall() || !move.plGround())
+            if (wall.plIsWall())
             {
                 StopDash();
-                if (!wall.plIsWall()) wall.Fall(false);
-                else wall.Fall(true);
+                wall.Fall();
             }
+            if (!move.plGround()) StopDash();
         }
 
     }
 
-    private void StopDash()
+    public void StopDash()
     {
         an.SetBool("isDashing", false);
         isDashing = false;
@@ -75,8 +85,6 @@ public class Dash : MonoBehaviour
         attacker.EnableCombat();
 
         player.layer = 6;
-
-        Debug.Log("StopDash");
     }
 
     private void InputCheck()

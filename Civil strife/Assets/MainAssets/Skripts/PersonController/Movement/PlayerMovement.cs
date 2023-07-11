@@ -108,7 +108,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isWalking = true;
             stepAud.Play();
-            Debug.Log("1212");
         }
         else if ((rb.velocity.x < 0.05f && rb.velocity.x > -0.05f) && isWalking)
         {

@@ -18,15 +18,20 @@ public class WallSliding : MonoBehaviour
     private bool isWall;
     private bool isWallSliding;
     private bool isStay = true;
-    private bool isLayOnGround;
     private bool needToLayOnGround;
-
+    private bool onAir;
 
     [SerializeField] private float wallDistance;
 
     [SerializeField] private Transform wallCheck;
 
     [SerializeField] private LayerMask whichWall;
+
+    [SerializeField] private AudioSource fallAudio;
+    [SerializeField] private AudioSource jumpAudio;
+    [SerializeField] private AudioSource climbAudio;
+    [SerializeField] private AudioSource hiddenAudio;
+
 
     [Header("Sliding")]
     private bool isJumping;
@@ -90,7 +95,7 @@ public class WallSliding : MonoBehaviour
             TakePlatform();
         }
 
-        if (isWall && canWallSliding && !attacker.plAttacking() && isStay && !move.plGround())
+        if (isWall && canWallSliding && !attacker.plAttacking() && isStay && !move.plGround() && !move.dash.isDashing)
         {
             isStay = false;
             StartWallSliding();
@@ -99,10 +104,13 @@ public class WallSliding : MonoBehaviour
     private void StartWallSliding()
     {
         isWallSliding = true;
+        an.SetBool("isWall", isWallSliding);
+
         move.StopPlayer();
         attacker.DisableCombat();
-        an.SetBool("isWall", isWallSliding);
         move.StartJumpTrail();
+
+        fallAudio.Play();
     }
     private void WallSlide()
     {
@@ -140,6 +148,8 @@ public class WallSliding : MonoBehaviour
         move.Flip();
         isJumping = true;
         an.SetBool("isWall", false);
+
+        jumpAudio.Play();   
     }
     private void Jumping()
     {
@@ -174,6 +184,8 @@ public class WallSliding : MonoBehaviour
         rb.isKinematic = true;
         hidPosition = Physics2D.Raycast(wallCheck.position, transform.right, wallDistance * move.plDirection(), whichPlatform).collider.transform.position;
         startPosition = transform.position;
+
+        hiddenAudio.Play(); 
     }
     private void MoveToHidPoint()
     {
@@ -209,6 +221,8 @@ public class WallSliding : MonoBehaviour
         progress = 0;
         startPosition = transform.position;
         climbPosition = wallUpPoint.position;
+
+        climbAudio.Play();
     }
     private void EndClimb()
     {
@@ -227,7 +241,7 @@ public class WallSliding : MonoBehaviour
 
     private void CheckToFall()
     {
-        if (isHanging && Input.GetAxis("Up") < 0 && !isClimbing) Fall(true);
+        if (isHanging && Input.GetAxis("Up") < 0 && !isClimbing) Fall();
     }
     #endregion
 
@@ -251,7 +265,7 @@ public class WallSliding : MonoBehaviour
         isWall = false;
         isStay = true;
     }
-    public void Fall(bool flag)
+    public void Fall()
     {
         rb.isKinematic = false;
         isHanging = false;
@@ -264,13 +278,28 @@ public class WallSliding : MonoBehaviour
         move.StopPlayer();
         DisableWall();
         attacker.DisableCombat();
-        if (flag) rb.velocity = new Vector2(-move.plDirection() * 4f, 10f);
+        rb.velocity = new Vector2(-move.plDirection() * 4f, 10f);
         isFalling = true;
     }
     private void CheckFallGround()
     {
         GroundDamage();
         CheckStopFall();
+        CheckIsOnAir();
+    }
+
+    private void CheckIsOnAir()
+    {
+        if (!move.plGround() && !onAir)
+        {
+            onAir = true;   
+        }
+
+        if (move.plGround() && onAir) 
+        {  
+            onAir = false;
+            
+        }
     }
 
     private void CheckStopFall()
@@ -281,7 +310,7 @@ public class WallSliding : MonoBehaviour
         }
     }
 
-    private void StopFall()
+    public void StopFall()
     {
         move.UnFreezePlayer();
         if (!stands.isUsingStand)
@@ -296,7 +325,7 @@ public class WallSliding : MonoBehaviour
 
     private void GroundDamage()
     {
-        if (!move.plGround() && rb.velocity.y * -1f > maxValueOfVeclocityY)
+        if (onAir && rb.velocity.y * -1f > maxValueOfVeclocityY)
         {
             needToLayOnGround = true;
         }

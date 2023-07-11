@@ -55,7 +55,6 @@ public class Knife : MonoBehaviour
             inv.AddSekWeapon(id, 1);
 
             Destroy(gameObject);
-            Debug.Log("qffq");
         }
     }
 }

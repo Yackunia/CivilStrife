@@ -110,7 +110,7 @@ public class WallSliding : MonoBehaviour
         attacker.DisableCombat();
         move.StartJumpTrail();
 
-        fallAudio.Play();
+        climbAudio.Play();
     }
     private void WallSlide()
     {
@@ -241,7 +241,12 @@ public class WallSliding : MonoBehaviour
 
     private void CheckToFall()
     {
-        if (isHanging && Input.GetAxis("Up") < 0 && !isClimbing) Fall();
+        if (isHanging && Input.GetAxis("Up") < 0 && !isClimbing)
+        {
+            Fall();
+
+            jumpAudio.Play();
+        }
     }
     #endregion
 
@@ -298,7 +303,8 @@ public class WallSliding : MonoBehaviour
         if (move.plGround() && onAir) 
         {  
             onAir = false;
-            
+
+            fallAudio.Play();
         }
     }
 

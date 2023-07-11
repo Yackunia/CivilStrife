@@ -115,6 +115,11 @@ public class PlayerMovement : MonoBehaviour
             stepAud.Stop();
         }
 
+        if (!isGround)
+        {
+            stepAud.Stop();
+            isWalking = false;
+        }
     }
 
     private void Movement()

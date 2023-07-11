@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyV : MonoBehaviour
@@ -115,6 +116,7 @@ public class EnemyV : MonoBehaviour
     [SerializeField] private AudioSource painAud;
     [SerializeField] private AudioSource deathAud;
     [SerializeField] private AudioSource kickAud;
+    [SerializeField] private AudioSource HitBoxAud;
     [SerializeField] private AudioSource walkAudio;
 
     [Header("Saves")]
@@ -336,7 +338,9 @@ public class EnemyV : MonoBehaviour
             {
                 col.transform.SendMessage("Damage", damage * enDirection());
             }
-        }   
+
+            if (HitBoxAud.IsPrefabInstance()) HitBoxAud.Play();
+        }
     }
     protected virtual void EndAttack()
     {

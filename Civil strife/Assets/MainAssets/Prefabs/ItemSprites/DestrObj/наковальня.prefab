@@ -266,9 +266,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7533185222830885141}
   - component: {fileID: 7533185222830885142}
-  - component: {fileID: 7579408583908266397}
   - component: {fileID: 1555160502058538060}
   - component: {fileID: 4569111749578046052}
+  - component: {fileID: 7579408583908266397}
+  - component: {fileID: -4756326836352878521}
   m_Layer: 12
   m_Name: "\u043D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u044F"
   m_TagString: DestrObj
@@ -345,28 +346,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7579408583908266397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7533185222830885143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 0}
-  leafParticle: {fileID: 1476498710758360204, guid: 0fa0ae3e78e9ff34ca85e06eed503865, type: 3}
-  deadPart: {fileID: 0}
-  life: 120
-  damageAudio: {fileID: 5489192776005716252}
-  deathAudio: {fileID: 5066552672742575896}
-  isRig: 1
-  knockSpeedX: 2
-  sceneData: {fileID: 0}
-  isRespawn: 0
 --- !u!61 &1555160502058538060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -414,3 +393,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7579408583908266397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533185222830885143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: -4756326836352878521}
+  leafParticle: {fileID: 1476498710758360204, guid: 0fa0ae3e78e9ff34ca85e06eed503865, type: 3}
+  deadPart: {fileID: 8416929288849009147}
+  life: 120
+  damageAudio: {fileID: 5489192776005716252}
+  deathAudio: {fileID: 5066552672742575896}
+  isRig: 1
+  knockSpeedX: 2
+  sceneData: {fileID: 0}
+  isRespawn: 0
+--- !u!114 &-4756326836352878521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533185222830885143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6775aef1b02b12f429ff00afe5a64773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomValue: 1
+  dropPrefs:
+  - {fileID: 5325839249622747539, guid: 0fa0ae3e78e9ff34ca85e06eed503865, type: 3}
+  toHide:
+  - {fileID: 1644154935162856859}

@@ -74,13 +74,14 @@ public class DestrObj : MonoBehaviour
 
 			Destroy(gameObject);
 
-			open.DropPrize();
 			deadPart.parent = null;
 			deathAudio.enabled = true;
 			deathAudio.Play();
-		}
 
-		else if (shakeDuration > 0 && !isRig)
+            open.DropPrize();
+        }
+
+        else if (shakeDuration > 0 && !isRig)
 		{
 			transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
 

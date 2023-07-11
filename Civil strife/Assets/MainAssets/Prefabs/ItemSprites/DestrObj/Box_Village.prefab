@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2213183757994064862}
   - component: {fileID: 4839508689100614160}
   - component: {fileID: 2678257082771551056}
-  - component: {fileID: 8933157937312318485}
   - component: {fileID: 1911164925649399148}
+  - component: {fileID: 8933157937312318485}
   m_Layer: 12
   m_Name: Box_Village
   m_TagString: DestrObj
@@ -137,28 +137,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8933157937312318485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889447093257668083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: {fileID: 1911164925649399148}
-  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
-  deadPart: {fileID: 0}
-  life: 23
-  damageAudio: {fileID: 8480036452974732089}
-  deathAudio: {fileID: 5753207060309622292}
-  isRig: 1
-  knockSpeedX: 2
-  sceneData: {fileID: 0}
-  isRespawn: 0
 --- !u!114 &1911164925649399148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6775aef1b02b12f429ff00afe5a64773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomValue: 40
+  randomValue: 100
   dropPrefs:
   - {fileID: 6292927560234414430, guid: 6be8928ebb44688469770f0f84a064fb, type: 3}
   - {fileID: 7134503888304195151, guid: 8f05945b29b33af4fa807e7079f82208, type: 3}
@@ -212,6 +190,28 @@ MonoBehaviour:
   - {fileID: 1889447093257668083}
   - {fileID: 1889447093257668083}
   - {fileID: 1889447093257668083}
+--- !u!114 &8933157937312318485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889447093257668083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dbab6c90849f41a04a652de886673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: {fileID: 1911164925649399148}
+  leafParticle: {fileID: 2999072420754868772, guid: a9c7c62379a0ed24097699549b7bb369, type: 3}
+  deadPart: {fileID: 6299790666355723780}
+  life: 23
+  damageAudio: {fileID: 8480036452974732089}
+  deathAudio: {fileID: 5753207060309622292}
+  isRig: 1
+  knockSpeedX: 2
+  sceneData: {fileID: 0}
+  isRespawn: 0
 --- !u!1 &2061832026590225283
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WallSliding : MonoBehaviour
 {
-    public float maxValue;
+    public float maxValueOfVeclocityY;
 
     [SerializeField] private PlayerMovement move;
     [SerializeField] private PlayerAttackSistem attacker;
@@ -18,6 +18,9 @@ public class WallSliding : MonoBehaviour
     private bool isWall;
     private bool isWallSliding;
     private bool isStay = true;
+    private bool isLayOnGround;
+    private bool needToLayOnGround;
+
 
     [SerializeField] private float wallDistance;
 
@@ -272,31 +275,33 @@ public class WallSliding : MonoBehaviour
 
     private void CheckStopFall()
     {
-        if (isFalling && move.plGround())
+        if (isFalling && move.plGround() && !needToLayOnGround)
         {
-            if (rb.velocity.y * -1 <= maxValue)
-            {
-                move.UnFreezePlayer();
-                if (!stands.isUsingStand)
-                {
-                    EnableClimb();
-                    EnableWall();
-                    attacker.EnableCombat();
-                    move.dash.EnableDash();
-                }
-            }
-            else
-            {
-                FailOnGround();
-            }
-
-            isFalling = false;
+            StopFall();
         }
+    }
+
+    private void StopFall()
+    {
+        move.UnFreezePlayer();
+        if (!stands.isUsingStand)
+        {
+            EnableClimb();
+            EnableWall();
+            attacker.EnableCombat();
+            move.dash.EnableDash();
+        }
+        isFalling = false;
     }
 
     private void GroundDamage()
     {
-        if (move.plGround() && rb.velocity.y * -1 >= maxValue)
+        if (!move.plGround() && rb.velocity.y * -1f > maxValueOfVeclocityY)
+        {
+            needToLayOnGround = true;
+        }
+
+        if (move.plGround() && needToLayOnGround)
         {
             FailOnGround();
         }
@@ -304,6 +309,10 @@ public class WallSliding : MonoBehaviour
 
     private void FailOnGround()
     {
+        StopFall();
+
+        needToLayOnGround = false;
+
         move.StopPlayer();
         attacker.DisableCombat();
         move.dash.DisableDash();

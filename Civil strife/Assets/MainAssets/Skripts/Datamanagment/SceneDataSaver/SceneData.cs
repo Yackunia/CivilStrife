@@ -44,7 +44,7 @@ public class SceneData : MonoBehaviour
         {
             if (objectsWithRespawn[i].transform.tag == "EnemyV") objectsWithRespawn[i].GetComponent<EnemyV>().SetIdOfSceneObj(i, true);
             else if (objectsWithRespawn[i].transform.tag == "EnemyS") objectsWithRespawn[i].GetComponent<EnemyS>().SetIdOfSceneObj(i, true);
-            else if (objectsWithRespawn[i].transform.tag == "DestrObj") objectsWithRespawn[i].GetComponent<DestrObj>().SetIdOfSceneObj(i, true);
+            else if (objectsWithRespawn[i].transform.tag == "DestrObj" || objectsWithRespawn[i].transform.tag == "Mish") objectsWithRespawn[i].GetComponent<DestrObj>().SetIdOfSceneObj(i, true);
         }
 
         for (int i = 0; i < objectsWithoutRespawn.Length; i++)

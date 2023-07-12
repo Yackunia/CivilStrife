@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vlad Lovch Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3514840453231984101, guid: c0d044c81e5362c4891d358ad8f3fb4f, type: 3}
+      propertyPath: m_Layer
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 3514840453231984106, guid: c0d044c81e5362c4891d358ad8f3fb4f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -171,6 +175,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1455485393755889338, guid: e20ff7ed511a8bd459ea2c04af146c2f, type: 3}
+    - target: {fileID: 3895044906877378364, guid: c0d044c81e5362c4891d358ad8f3fb4f, type: 3}
+      propertyPath: targLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895044906877378364, guid: c0d044c81e5362c4891d358ad8f3fb4f, type: 3}
+      propertyPath: anotherEnemys.m_Bits
+      value: 262144
+      objectReference: {fileID: 0}
     - target: {fileID: 3920688743687295684, guid: c0d044c81e5362c4891d358ad8f3fb4f, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: -0.0074647963

@@ -300,7 +300,7 @@ public class WallSliding : MonoBehaviour
             onAir = true;   
         }
 
-        if (move.plGround() && onAir) 
+        if (move.plGround() && onAir && !isClimbing) 
         {  
             onAir = false;
 

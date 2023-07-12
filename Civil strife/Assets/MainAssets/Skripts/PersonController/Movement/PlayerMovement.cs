@@ -180,6 +180,11 @@ public class PlayerMovement : MonoBehaviour
     #region Getters/Setter or Enabled/Disabled Functions
     public float plDirection()
     {
+        if (movementDirection == 0)
+        {
+            return frontOfDirection;
+        }
+
         return movementDirection;
     }
     public int plFront()

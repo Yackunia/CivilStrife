@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class EnemyS : MonoBehaviour
 {
-    [Header("PlayerSkripts")]
-    private PlayerMovement plMove;
+    public bool isGismos;
 
     [Header("Partool / Chase")]
     //variables needed to implement the Movement of the enemy
 
     private bool canSeeAnotherEnemy;
-    private bool seePlayer;
-    private bool canSeePlayer;
+    private bool seeTarget;
+    private bool canSeeTarget;
     private bool canRun = true;
     private bool canFlip = true;
 
@@ -18,9 +17,7 @@ public class EnemyS : MonoBehaviour
 
     private float spawnPoint;
 
-    private string playerTag = "Player";
-
-    private Transform pl;
+    private Transform target;
 
     private Rigidbody2D rb;
 
@@ -32,17 +29,17 @@ public class EnemyS : MonoBehaviour
 
     [SerializeField] private Transform drawObject;
 
-    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private LayerMask targetLayer;
     [SerializeField] private LayerMask anotherEnemys;
 
     [Header("Raycusts")]
     //variables required for raycasts to work
 
-    [SerializeField] private float plSeeDistance;
-    [SerializeField] private float plSeeDistanceBack;
+    [SerializeField] private float targetSeeDistance;
+    [SerializeField] private float targetSeeDistanceBack;
     [SerializeField] private float patroolDistance;
 
-    [SerializeField] private Transform plCheck;
+    [SerializeField] private Transform targetCheck;
     [SerializeField] private Transform enemysCheck;
 
     [Header("Animations")]
@@ -105,16 +102,10 @@ public class EnemyS : MonoBehaviour
 
     private void SetAllStartParameters()
     {
-        SetPlayer();
         SetEnemyModificators();
         SetEnemySimpleParameters();
     }
 
-    private void SetPlayer()
-    {
-        pl = GameObject.FindGameObjectWithTag(playerTag).transform;
-        plMove = pl.GetComponent<PlayerMovement>();
-    }
 
     private void SetEnemyModificators()
     {
@@ -133,7 +124,7 @@ public class EnemyS : MonoBehaviour
     private void CheckWhatToDo()
     {
         CheckIsSeePlayer();
-        if (!seePlayer) Patrol();
+        if (!seeTarget) Patrol();
         else ChasePlayer();
 
         if (!isAlive) rb.velocity = new Vector2(0f, rb.velocity.y);
@@ -141,11 +132,31 @@ public class EnemyS : MonoBehaviour
 
     private void CheckIsSeePlayer()
     {
-        if (!seePlayer && canSeePlayer)
+        if (!seeTarget && canSeeTarget)
         {
-            seePlayer = true;
-            isIdle = false;
-            an.SetBool("isIdle", false);
+            StartFight();
+        }
+    }
+    private void StartFight()
+    {
+        FindTarget();
+        seeTarget = true;
+        isIdle = false;
+
+    }
+
+    private void FindTarget()
+    {
+        Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(transform.position, targetSeeDistance + .5f, targetLayer);
+        foreach (Collider2D col in detectedObjs)
+        {
+            if (col.transform != transform)
+            {
+                target = col.transform;
+                Debug.Log(target.name);
+
+                break;
+            }
         }
     }
 
@@ -157,8 +168,8 @@ public class EnemyS : MonoBehaviour
     }
     private void CheckLayerStats()
     {
-        canSeeAnotherEnemy = Physics2D.Raycast(enemysCheck.position, transform.right, plSeeDistance * currentDirection * 0.1f, anotherEnemys);
-        canSeePlayer = Physics2D.Raycast(plCheck.position, transform.right, plSeeDistance * currentDirection, playerLayer) && isAlive || Physics2D.Raycast(plCheck.position, transform.right, -plSeeDistanceBack * currentDirection, playerLayer) && isAlive;
+        canSeeAnotherEnemy = Physics2D.Raycast(enemysCheck.position, transform.right, targetSeeDistance * currentDirection * 0.1f, anotherEnemys);
+        canSeeTarget = Physics2D.Raycast(targetCheck.position, transform.right, targetSeeDistance * currentDirection, targetLayer) && isAlive || Physics2D.Raycast(targetCheck.position, transform.right, -targetSeeDistanceBack * currentDirection / 2, targetLayer) && isAlive;
     }
 
     #region Movement
@@ -188,8 +199,8 @@ public class EnemyS : MonoBehaviour
     private void ChaseFlip()
     {
         var enemyX = transform.position.x;
-        var playerX = pl.position.x;
-        if ((enemyX < playerX - 1f && currentDirection == -1) || (enemyX > playerX + 1f && currentDirection == 1))
+        var targetX = target.position.x;
+        if ((enemyX < targetX - 1f && currentDirection == -1) || (enemyX > targetX + 1f && currentDirection == 1))
         {
             Flip();
         }
@@ -222,7 +233,7 @@ public class EnemyS : MonoBehaviour
 
         DamageCalculation(damage);
 
-        KnockEffect();
+        KnockEffect(damage);
         BloodEffect();
         DamageSoundEffect();
     }
@@ -269,15 +280,16 @@ public class EnemyS : MonoBehaviour
     private void BloodEffect()
     {
         particle.Play();
-        Instantiate(bloodPrefs[Random.Range(0, bloodPrefs.Length)], plCheck.position, Quaternion.identity, null);
+        Instantiate(bloodPrefs[Random.Range(0, bloodPrefs.Length)], targetCheck.position, Quaternion.identity, null);
     }
 
-    private void KnockEffect()
+    private void KnockEffect(float damage)
     {
-        if (plMove.isRight) knockSpeedX = Mathf.Abs(knockSpeedX);
+        if (damage < 0) knockSpeedX = Mathf.Abs(knockSpeedX);
         else knockSpeedX = -1 * Mathf.Abs(knockSpeedX);
 
-        if (isAlive) rb.velocity = new Vector2(knockSpeedX, knockSpeedY);
+        if (isAlive)
+            rb.velocity = new Vector2(knockSpeedX, knockSpeedY);
     }
 
     private void DamageSoundEffect()
@@ -303,7 +315,7 @@ public class EnemyS : MonoBehaviour
     {
         StopEnemy();
         DamageCalculation(0);
-        KnockEffect();
+        KnockEffect(-currentDirection);
     }
     #endregion
 
@@ -364,7 +376,7 @@ public class EnemyS : MonoBehaviour
 
     protected bool IsSeePlayer()
     {
-        return seePlayer;
+        return seeTarget;
     }
 
     protected bool enHearting()
@@ -375,31 +387,36 @@ public class EnemyS : MonoBehaviour
 
     protected virtual void OnDrawGizmos()
     {
-        Gizmos.color = Color.white;
-        if (!isRight)
+        if (isGismos)
         {
-            Gizmos.DrawLine(plCheck.position, new Vector3(plCheck.position.x + plSeeDistance, plCheck.position.y, plCheck.position.z));
-            Gizmos.color = Color.black;
-            Gizmos.DrawLine(plCheck.position, new Vector3(plCheck.position.x + -plSeeDistanceBack, plCheck.position.y, plCheck.position.z));
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(enemysCheck.position, new Vector3(enemysCheck.position.x + plSeeDistance * 0.1f, enemysCheck.position.y, plCheck.position.z));
-        }
-        else
-        {
-            Gizmos.DrawLine(plCheck.position, new Vector3(plCheck.position.x - plSeeDistance, plCheck.position.y, plCheck.position.z));
-            Gizmos.color = Color.black;
-            Gizmos.DrawLine(plCheck.position, new Vector3(plCheck.position.x + plSeeDistanceBack, plCheck.position.y, plCheck.position.z));
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(enemysCheck.position, new Vector3(enemysCheck.position.x - plSeeDistance * 0.1f, enemysCheck.position.y, plCheck.position.z));
+            Gizmos.color = Color.white;
+            if (!isRight)
+            {
+                Gizmos.DrawLine(targetCheck.position, new Vector3(targetCheck.position.x + targetSeeDistance, targetCheck.position.y, targetCheck.position.z));
+                Gizmos.color = Color.black;
+                Gizmos.DrawLine(targetCheck.position, new Vector3(targetCheck.position.x + -targetSeeDistanceBack, targetCheck.position.y, targetCheck.position.z));
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(enemysCheck.position, new Vector3(enemysCheck.position.x + targetSeeDistance * 0.1f, enemysCheck.position.y, targetCheck.position.z));
+            }
+            else
+            {
+                Gizmos.DrawLine(targetCheck.position, new Vector3(targetCheck.position.x - targetSeeDistance, targetCheck.position.y, targetCheck.position.z));
+                Gizmos.color = Color.black;
+                Gizmos.DrawLine(targetCheck.position, new Vector3(targetCheck.position.x + targetSeeDistanceBack, targetCheck.position.y, targetCheck.position.z));
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(enemysCheck.position, new Vector3(enemysCheck.position.x - targetSeeDistance * 0.1f, enemysCheck.position.y, targetCheck.position.z));
 
-        }
+            }
 
-        Gizmos.color = Color.yellow;
-        if (!isIdle)
-        {
-            Gizmos.DrawWireSphere(new Vector2(transform.position.x - patroolDistance, transform.position.y), 1f);
-            Gizmos.DrawWireSphere(new Vector2(transform.position.x + patroolDistance, transform.position.y), 1f);
-        }
+            Gizmos.color = Color.yellow;
+            if (!isIdle)
+            {
+                Gizmos.DrawWireSphere(new Vector2(transform.position.x - patroolDistance, transform.position.y), 1f);
+                Gizmos.DrawWireSphere(new Vector2(transform.position.x + patroolDistance, transform.position.y), 1f);
+            }
 
-    }
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireSphere(transform.position, targetSeeDistance + .5f);
+        }
+    }     
 }

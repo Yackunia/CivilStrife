@@ -127,11 +127,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd3032f0273c02469e9dc66e76a40e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canSeeAnotherEnemy: 0
+  canSeeTarget: 0
+  seeTarget: 0
+  canRun: 1
   canFlip: 1
+  currentDirection: 1
   isIdle: 0
   isRight: 0
   chaseSpeed: 2
   patroolSpeed: 1
+  attackSpeed: 1.3
   drawObject: {fileID: 4634638628340267571}
   anotherEnemys:
     serializedVersion: 2
@@ -148,24 +154,30 @@ MonoBehaviour:
     m_Bits: 8
   grRad: 0.1
   groundCheck: {fileID: 3942809039893572732}
+  canHurtObj: 0
+  canAttack: 1
+  isAttacking: 0
   damage: 5
   attackRad: 0.6
-  attackDistance: 3
+  attackDistance: 2.4
+  attackDistanceError: 0
+  attackDistanceErrorMax: 1.2
   attackHitBoxPos: {fileID: 9199593843690673117}
   otherObjLayer:
     serializedVersion: 2
     m_Bits: 640
-  playerLayer:
+  targLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 262208
   destrObjLayer:
     serializedVersion: 2
     m_Bits: 4096
-  plSeeDistance: 6
+  targetSeeDistance: 11
   plSeeDistanceBack: 2
   patroolDistance: 4
-  plCheck: {fileID: 3080480120277603726}
-  enemysCheck: {fileID: 4617182456672307842}
+  targetsCheck: {fileID: 3080480120277603726}
+  otherEnemyCheck: {fileID: 4617182456672307842}
+  isAlive: 1
   health: 35
   knockSpeedX: 3
   knockSpeedY: 11
@@ -180,6 +192,7 @@ MonoBehaviour:
   painAud: {fileID: 7083803515601101172}
   deathAud: {fileID: 7083803515807850819}
   kickAud: {fileID: 7083803516415739457}
+  HitBoxAud: {fileID: 0}
   walkAudio: {fileID: 0}
   isRespawn: 1
   sceneData: {fileID: 0}
@@ -255,7 +268,8 @@ MonoBehaviour:
   needToRotatePlayer: 0
   neetToEnemyVRotate: 1
   neetToEnemySRotate: 0
-  canHurtEnemy: 0
+  canHurtEnemy: 1
+  canHurtPlayer: 1
   damageValue: 5
   enemyV: {fileID: 3173579959522038550}
   enemyS: {fileID: 0}

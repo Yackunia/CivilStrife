@@ -2204,6 +2204,7 @@ MonoBehaviour:
   neetToEnemyVRotate: 0
   neetToEnemySRotate: 0
   canHurtEnemy: 0
+  canHurtPlayer: 0
   damageValue: 8
   enemyV: {fileID: 0}
   enemyS: {fileID: 0}
@@ -12115,11 +12116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 944720908001183204, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.1399994
+      value: -25.48
       objectReference: {fileID: 0}
     - target: {fileID: 944720908001183204, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 4.76
       objectReference: {fileID: 0}
     - target: {fileID: 944720908893435062, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
       propertyPath: field of view
@@ -12127,11 +12128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 944720908893435081, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.139988
+      value: -15.48716
       objectReference: {fileID: 0}
     - target: {fileID: 944720908893435081, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9108124
+      value: 4.7599926
       objectReference: {fileID: 0}
     - target: {fileID: 944720908928959119, guid: e05c6b56af72afc4f9d7ba27a47fc946, type: 3}
       propertyPath: shakeAmount
@@ -21064,6 +21065,7 @@ MonoBehaviour:
   neetToEnemyVRotate: 1
   neetToEnemySRotate: 0
   canHurtEnemy: 0
+  canHurtPlayer: 0
   damageValue: 8
   enemyV: {fileID: 8731075188635757738}
   enemyS: {fileID: 0}
@@ -24438,11 +24440,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7703108ff6c510d4780b1d309c96fe93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canSeeAnotherEnemy: 0
+  canSeeTarget: 0
+  seeTarget: 0
+  canRun: 1
   canFlip: 1
+  currentDirection: 1
   isIdle: 1
   isRight: 1
   chaseSpeed: 2
   patroolSpeed: 1
+  attackSpeed: 0
   drawObject: {fileID: 1693089901}
   anotherEnemys:
     serializedVersion: 2
@@ -24459,24 +24467,30 @@ MonoBehaviour:
     m_Bits: 8
   grRad: 0.1
   groundCheck: {fileID: 3502725565858785468}
+  canHurtObj: 0
+  canAttack: 1
+  isAttacking: 0
   damage: 8
   attackRad: 1.1
   attackDistance: 3.5
+  attackDistanceError: 0
+  attackDistanceErrorMax: 0
   attackHitBoxPos: {fileID: 1052375787515096629}
   otherObjLayer:
     serializedVersion: 2
-    m_Bits: 0
-  playerLayer:
+    m_Bits: 128
+  targLayer:
     serializedVersion: 2
     m_Bits: 64
   destrObjLayer:
     serializedVersion: 2
-    m_Bits: 36864
-  plSeeDistance: 11
+    m_Bits: 4096
+  targetSeeDistance: 11
   plSeeDistanceBack: 2
   patroolDistance: 5
-  plCheck: {fileID: 6126977445785737112}
-  enemysCheck: {fileID: 1466016003}
+  targetsCheck: {fileID: 6126977445785737112}
+  otherEnemyCheck: {fileID: 1466016003}
+  isAlive: 1
   health: 150
   knockSpeedX: 2
   knockSpeedY: 2
@@ -24491,6 +24505,7 @@ MonoBehaviour:
   painAud: {fileID: 7418326492660267450}
   deathAud: {fileID: 7418326492259729556}
   kickAud: {fileID: 7038471063813046360}
+  HitBoxAud: {fileID: 7038471063813046360}
   walkAudio: {fileID: 7418326493141013456}
   isRespawn: 0
   sceneData: {fileID: 74552247}
@@ -24532,6 +24547,7 @@ MonoBehaviour:
   neetToEnemyVRotate: 1
   neetToEnemySRotate: 0
   canHurtEnemy: 0
+  canHurtPlayer: 0
   damageValue: 4
   enemyV: {fileID: 8731075188635757738}
   enemyS: {fileID: 0}

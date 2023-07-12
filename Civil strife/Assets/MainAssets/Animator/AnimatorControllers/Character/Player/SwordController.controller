@@ -1175,7 +1175,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemyPain
+  m_Name: Damage
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1189,7 +1189,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6977be91e87c28a49841a6daf9f0b2ef, type: 2}
+  m_Motion: {fileID: 7400000, guid: c0eaa977948eb1f43a18bd3bbcf1fdfa, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1230,7 +1230,7 @@ AnimatorStateMachine:
     m_Position: {x: 480, y: -320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4987511053565490090}
-    m_Position: {x: 930, y: -80, z: 0}
+    m_Position: {x: 1070, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1351313164605046383}
     m_Position: {x: 1040, y: -330, z: 0}

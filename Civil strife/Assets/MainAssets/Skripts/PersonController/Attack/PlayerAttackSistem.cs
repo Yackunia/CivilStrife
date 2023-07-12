@@ -144,7 +144,7 @@ public class PlayerAttackSistem : MonoBehaviour
 
         foreach (Collider2D col in detectedObjs)
         {
-            col.transform.SendMessage("Damage", attackDamage);
+            col.transform.SendMessage("Damage", attackDamage * -move.plFront());
             cam.StartShake();
             stands.StaminaPlus();
         }

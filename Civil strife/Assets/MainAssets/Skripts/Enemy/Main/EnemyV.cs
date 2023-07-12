@@ -3,25 +3,20 @@ using UnityEngine;
 
 public class EnemyV : MonoBehaviour
 {
-    [Header("PlayerSkripts")]
-    private PlayerMovement plMove;
-
     [Header("Patrool / Chase")]
     //variables needed to implement the Movement of the enemy
 
-    private bool canSeeAnotherEnemy;
-    private bool canSeePlayer;
-    private bool seePlayer;
-    private bool canRun = true;
+    [SerializeField] private bool canSeeAnotherEnemy;
+    [SerializeField] private bool canSeeTarget;
+    [SerializeField] private bool seeTarget;
+    [SerializeField] private bool canRun = true;
     [SerializeField] private bool canFlip = true; //временно сериализую для дэша босса
 
-    private int currentDirection = 1; 
+    [SerializeField] private int currentDirection = 1; 
 
     private float spawnPoint;
 
-    private string playerTag = "Player";
-
-    private Transform pl;
+    private Transform target;
 
     private Rigidbody2D rb;
 
@@ -30,6 +25,8 @@ public class EnemyV : MonoBehaviour
 
     [SerializeField] private float chaseSpeed;
     [SerializeField] private float patroolSpeed;
+    [SerializeField] private float attackSpeed;
+
 
     [SerializeField] private Transform drawObject;
 
@@ -60,31 +57,34 @@ public class EnemyV : MonoBehaviour
     [Header("Attack System")]
     //variables of attack system
 
-    private bool canHurtPlayer;
-    private bool canHurtObj;    
-    private bool canAttack = true;
-    private bool isAttacking;
+    private bool canHurtTarget;
+    [SerializeField] private bool canHurtObj;    
+    [SerializeField] private bool canAttack = true;
+    [SerializeField] private bool isAttacking;
 
     [SerializeField] private int damage;
 
     [SerializeField] private float attackRad;
     [SerializeField] private float attackDistance;
+    [SerializeField] private float attackDistanceError;
+    [SerializeField] private float attackDistanceErrorMax;
+
 
     [SerializeField] private Transform attackHitBoxPos;
 
     [SerializeField] protected LayerMask otherObjLayer;
-    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private LayerMask targLayer;
     [SerializeField] private LayerMask destrObjLayer;
 
     [Header("Raycusts")]
     //variables required for raycasts to work
 
-    [SerializeField] private float plSeeDistance;
+    [SerializeField] private float targetSeeDistance;
     [SerializeField] private float plSeeDistanceBack;
     [SerializeField] private float patroolDistance;
 
-    [SerializeField] private Transform plCheck;
-    [SerializeField] private Transform enemysCheck;
+    [SerializeField] private Transform targetsCheck;
+    [SerializeField] private Transform otherEnemyCheck;
 
 
     [Header("Animator")]
@@ -93,7 +93,7 @@ public class EnemyV : MonoBehaviour
     [Header("Health System")]
 
     private bool isHearting;
-    private bool isAlive = true;
+    [SerializeField] private bool isAlive = true;
 
     private float healthMax;
 
@@ -143,15 +143,15 @@ public class EnemyV : MonoBehaviour
 
     private void SetAllStartParameters()
     {
-        SetPlayer();
-        SetEnemyModificators();
         SetEnemySimpleParameters();
+        SetEnemyModificators();
     }
 
     private void SetEnemySimpleParameters()
     {
         spawnPoint = transform.position.x;
         healthMax = health;
+        Debug.Log(healthMax);
     }
 
     private void SetEnemyModificators()
@@ -163,11 +163,6 @@ public class EnemyV : MonoBehaviour
         sceneData = GameObject.Find("SceneData").GetComponent<SceneData>();
     }
 
-    private void SetPlayer()
-    {
-        pl = GameObject.FindGameObjectWithTag(playerTag).transform;
-        plMove = pl.GetComponent<PlayerMovement>();
-    }
 
     #endregion
 
@@ -175,7 +170,7 @@ public class EnemyV : MonoBehaviour
     private void CheckWhatToDo()
     {
         CheckIsSeePlayer();
-        if (!seePlayer) Patrol();
+        if (!seeTarget) Patrol();
         else ChasePlayer();
 
         CheckToAttack();
@@ -184,29 +179,72 @@ public class EnemyV : MonoBehaviour
 
         CheckToJump();
         Jumping();
+
+        CheckToStopEnemy();
     }
-    private void CheckIsSeePlayer()
+
+    private void CheckToStopEnemy()
     {
-        if (!seePlayer && canSeePlayer)
+        if (canSeeAnotherEnemy && canRun && !isHearting && !isAttacking && !isJumping && !isWall && isAlive && seeTarget)
         {
-            seePlayer = true;
-            isIdle = false;
+            StopEnemy();
+        }
+
+        if (canSeeAnotherEnemy || isIdle) 
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
+        if (!canSeeAnotherEnemy && !canRun && !isHearting && !isAttacking && !isJumping && !isWall && isAlive)
+        {
+            Invoke("UnFreezeEnemy", .5f);
         }
     }
+
+    private void CheckIsSeePlayer()
+    {
+        if (!seeTarget && canSeeTarget)
+        {
+            StartFight();
+        }
+    }
+    private void StartFight()
+    {
+        FindTarget();
+        seeTarget = true;
+        isIdle = false;
+        
+    }
+
+    private void FindTarget()
+    {
+        Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(transform.position, 12f, targLayer);
+        foreach (Collider2D col in detectedObjs)
+        {
+            if (col.transform != transform)
+            {
+                target = col.transform;
+                Debug.Log(target.name);
+
+                break;
+            }
+        }
+    }
+
     protected virtual void UpdAnim()
     {
         an.SetBool("isDead",!isAlive);
         an.SetBool("isDamage", isHearting);
-        an.SetBool("isAttacking", isAttacking);
-        an.SetBool("isFight", !isIdle);
+        //an.SetBool("isAttacking", isAttacking);
+        an.SetBool("isIDLE", isIdle);
     }
     private void CheckLayerStats()
     {
-        canSeeAnotherEnemy = Physics2D.Raycast(enemysCheck.position, transform.right, attackDistance * currentDirection * 0.2f, anotherEnemys);
+        canSeeAnotherEnemy = Physics2D.Raycast(otherEnemyCheck.position, transform.right, attackDistance * currentDirection * 0.2f, anotherEnemys);
 
-        canSeePlayer = Physics2D.Raycast(plCheck.position, transform.right, plSeeDistance * currentDirection, playerLayer) && isAlive || Physics2D.Raycast(plCheck.position, transform.right, -plSeeDistance * currentDirection / 2, playerLayer) && isAlive;
-        canHurtPlayer = Physics2D.Raycast(plCheck.position,transform.right, attackDistance * currentDirection, playerLayer);
-        canHurtObj = Physics2D.Raycast(plCheck.position, transform.right, attackDistance * currentDirection, destrObjLayer);
+        canSeeTarget = Physics2D.Raycast(targetsCheck.position, transform.right, targetSeeDistance * currentDirection, targLayer) && isAlive || Physics2D.Raycast(targetsCheck.position, transform.right, -targetSeeDistance * currentDirection / 2, targLayer) && isAlive;
+        canHurtTarget = Physics2D.Raycast(targetsCheck.position,transform.right, (attackDistance + attackDistanceError) * currentDirection, targLayer);
+        canHurtObj = Physics2D.Raycast(targetsCheck.position, transform.right, attackDistance * currentDirection, destrObjLayer);
 
         Invoke("CheckJumpLayer", 1f);
     }
@@ -240,14 +278,15 @@ public class EnemyV : MonoBehaviour
     //преследование
     private void ChasePlayer()
     {
-        Move(chaseSpeed);
+        if (!isAttacking) Move(chaseSpeed);
+        else Move(attackSpeed);
         ChaseFlip();
     }
     protected void ChaseFlip()
     {
         var enemyX = transform.position.x;
-        var playerX = pl.position.x;
-        if ((enemyX < playerX - 1f && currentDirection == -1) || (enemyX > playerX + 1f && currentDirection == 1))
+        var targetX = target.position.x;
+        if ((enemyX < targetX - 1f && currentDirection == -1) || (enemyX > targetX + 1f && currentDirection == 1))
         {
             Flip();
         }
@@ -265,8 +304,8 @@ public class EnemyV : MonoBehaviour
 
     private void Move(float speed)
     {
-        if (canRun && !canSeeAnotherEnemy) rb.velocity = new Vector2(speed * currentDirection, rb.velocity.y);
-        else if (canRun) rb.velocity = new Vector2(0, rb.velocity.y);
+        if (canRun) rb.velocity = new Vector2(speed * currentDirection, rb.velocity.y);
+        //else rb.velocity = new Vector2(0, rb.velocity.y);
     }
     #endregion
 
@@ -317,26 +356,26 @@ public class EnemyV : MonoBehaviour
     #region Attack System
     private void CheckToAttack()
     {
-        if (canHurtPlayer && canAttack && !isAttacking || canHurtObj && canAttack && !isAttacking)
+        if (canHurtTarget && canAttack && !isAttacking || canHurtObj && canAttack && !isAttacking)
         {
             StartAttack();
         }
     }
     protected virtual void StartAttack()
     {
-        //rb.velocity = new Vector2(0f, 0f);
         isAttacking = true;
         canFlip = false;
         kickAud.Play();
+        an.SetBool("isAttacking", isAttacking);
     }
     private void CheckAttackHitBox()
     {
         if (isAlive)
         {
-            Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(attackHitBoxPos.position, attackRad, destrObjLayer + playerLayer + otherObjLayer);
+            Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(attackHitBoxPos.position, attackRad, destrObjLayer + targLayer + otherObjLayer);
             foreach (Collider2D col in detectedObjs)
             {
-                col.transform.SendMessage("Damage", damage * enDirection());
+                col.transform.SendMessage("Damage", damage * currentDirection);
             }
 
             if (HitBoxAud.IsPrefabInstance()) HitBoxAud.Play();
@@ -346,7 +385,9 @@ public class EnemyV : MonoBehaviour
     {
         isAttacking = false;
         canFlip = true;
-        an.SetBool("isAttacking", isAttacking);
+        an.SetBool("isAttacking", false);
+
+        attackDistanceError = Random.Range(0, attackDistanceErrorMax);
     }
     #endregion
 
@@ -359,9 +400,11 @@ public class EnemyV : MonoBehaviour
     {
         DamageCalculation(damage);
 
-        KnockEffect();
+        KnockEffect(damage);
         BloodEffect();
         DamageSoundEffect();
+
+        StartFight();
     }
 
     protected void DamageCalculation(float damage)
@@ -390,18 +433,32 @@ public class EnemyV : MonoBehaviour
         rb.velocity = new Vector2(0f, 0f);
         gameObject.layer = 10;
 
-        sceneData.SetObjDisabled(isRespawn, idInScene);
-
         var x = Instantiate(money, transform.position, Quaternion.identity, null);
         x.GetComponent<Rigidbody2D>().velocity = new Vector2(knockSpeedX / 3, knockSpeedY / 3);
 
         Destroy(hitZone);
+
+        CheckDeadHitBox();
+
         Destroy(this);
+
+        Debug.Log("Death");
+
+        sceneData.SetObjDisabled(isRespawn, idInScene);
     }
 
     protected virtual void EndPain()
     {
         isHearting = false;
+    }
+
+    private void CheckDeadHitBox()
+    {
+        Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(transform.position, 15f, targLayer);
+        foreach (Collider2D col in detectedObjs)
+        {
+            col.transform.SendMessage("StopFight");
+        }
     }
 
     #endregion
@@ -410,12 +467,12 @@ public class EnemyV : MonoBehaviour
     private void BloodEffect()
     {
         particle.Play();
-        Instantiate(bloodPrefs[Random.Range(0, bloodPrefs.Length)], plCheck.position, Quaternion.identity, null);
+        Instantiate(bloodPrefs[Random.Range(0, bloodPrefs.Length)], targetsCheck.position, Quaternion.identity, null);
     }
 
-    private void KnockEffect()
+    private void KnockEffect(float damage)
     {
-        if (plMove.isRight) knockSpeedX = Mathf.Abs(knockSpeedX);
+        if (damage > 0) knockSpeedX = Mathf.Abs(knockSpeedX);
         else knockSpeedX = -1 * Mathf.Abs(knockSpeedX);
 
         if (isAlive) 
@@ -443,7 +500,7 @@ public class EnemyV : MonoBehaviour
     {
         StopEnemy();
         DamageCalculation(0);
-        KnockEffect();
+        KnockEffect(currentDirection);
     }
     #endregion
 
@@ -451,11 +508,10 @@ public class EnemyV : MonoBehaviour
 
     private void StopFight()
     {
-        canRun = false;
-        rb.velocity = new Vector2(0f, rb.velocity.y);
+        seeTarget = false;
         isIdle = true;
-        an.SetBool("isIdle", true);
-        Destroy(this);
+        rb.velocity = Vector2.zero;
+        Debug.Log("StopFight");
     }
     #endregion
 
@@ -513,7 +569,7 @@ public class EnemyV : MonoBehaviour
 
     protected bool IsSeePlayer()
     {
-        return seePlayer;
+        return seeTarget;
     }
 
     protected bool enHearting()
@@ -530,29 +586,27 @@ public class EnemyV : MonoBehaviour
     {
         return healthMax;
     }
-
-    protected PlayerMovement plMovement()
-    {
-        return plMove;
-    }
     #endregion
 
     protected virtual void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attackHitBoxPos.position, attackRad);
         Gizmos.color = Color.white;
-        Gizmos.DrawLine(plCheck.position, new Vector3(plCheck.position.x + plSeeDistance * currentDirection, plCheck.position.y, plCheck.position.z) );
-        Gizmos.DrawLine(plCheck.position, new Vector3(plCheck.position.x + - plSeeDistance * currentDirection / 2, plCheck.position.y, plCheck.position.z));
+        Gizmos.DrawLine(targetsCheck.position, new Vector3(targetsCheck.position.x + targetSeeDistance * currentDirection, targetsCheck.position.y, targetsCheck.position.z) );
+        Gizmos.DrawLine(targetsCheck.position, new Vector3(targetsCheck.position.x + - targetSeeDistance * currentDirection / 2, targetsCheck.position.y, targetsCheck.position.z));
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(plCheck.position, new Vector3(plCheck.position.x + attackDistance * currentDirection, plCheck.position.y, plCheck.position.z));        
+        Gizmos.DrawLine(targetsCheck.position, new Vector3(targetsCheck.position.x + attackDistance * currentDirection, targetsCheck.position.y, targetsCheck.position.z));        
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(new Vector2(transform.position.x - patroolDistance,transform.position.y), 1f);
         Gizmos.DrawWireSphere(new Vector2(transform.position.x + patroolDistance, transform.position.y), 1f);
 
-        Gizmos.DrawLine(enemysCheck.position, new Vector3(enemysCheck.position.x + attackDistance *0.6f * currentDirection, enemysCheck.position.y, plCheck.position.z));
+        Gizmos.DrawLine(otherEnemyCheck.position, new Vector3(otherEnemyCheck.position.x + attackDistance *0.6f * currentDirection, otherEnemyCheck.position.y, otherEnemyCheck.position.z));
         Gizmos.color = Color.green;
 
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallDistance * currentDirection, wallCheck.position.y, wallCheck.position.z));
         Gizmos.DrawWireSphere(groundCheck.position, grRad);
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, 11f);
     }
 }

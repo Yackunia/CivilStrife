@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513200370952214843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 3.45, z: 0}
+  m_LocalPosition: {x: 0.2, y: -0.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60,7 +60,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8667618766977722168}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3514840453100754005
 GameObject:
@@ -91,7 +91,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8667618766977722168}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3514840453231984101
 GameObject:
@@ -123,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3514840453231984101}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
-  m_LocalPosition: {x: 45.42, y: 1.1, z: 0}
+  m_LocalPosition: {x: 45.347, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 2.316456, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -188,11 +188,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd3032f0273c02469e9dc66e76a40e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canSeeAnotherEnemy: 0
+  canSeeTarget: 0
+  seeTarget: 0
+  canRun: 1
   canFlip: 1
+  currentDirection: 1
   isIdle: 0
   isRight: 0
   chaseSpeed: 3
   patroolSpeed: 2
+  attackSpeed: 1.4
   drawObject: {fileID: 679618262195367079}
   anotherEnemys:
     serializedVersion: 2
@@ -209,24 +215,30 @@ MonoBehaviour:
     m_Bits: 8
   grRad: 0.1
   groundCheck: {fileID: 4391250484676183227}
+  canHurtObj: 0
+  canAttack: 1
+  isAttacking: 0
   damage: 4
-  attackRad: 0.6
-  attackDistance: 4
+  attackRad: 1
+  attackDistance: 2.5
+  attackDistanceError: 0
+  attackDistanceErrorMax: 2
   attackHitBoxPos: {fileID: 6249310359344989661}
   otherObjLayer:
     serializedVersion: 2
-    m_Bits: 640
-  playerLayer:
+    m_Bits: 128
+  targLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 262208
   destrObjLayer:
     serializedVersion: 2
     m_Bits: 4096
-  plSeeDistance: 6
+  targetSeeDistance: 11
   plSeeDistanceBack: 2
   patroolDistance: 4
-  plCheck: {fileID: 3514840453915498916}
-  enemysCheck: {fileID: 4113937078432854814}
+  targetsCheck: {fileID: 4113937078432854814}
+  otherEnemyCheck: {fileID: 3514840453915498916}
+  isAlive: 1
   health: 25
   knockSpeedX: 3.5
   knockSpeedY: 11
@@ -241,6 +253,7 @@ MonoBehaviour:
   painAud: {fileID: 8667618765482224990}
   deathAud: {fileID: 8667618765151743337}
   kickAud: {fileID: 8667618765759662699}
+  HitBoxAud: {fileID: 0}
   walkAudio: {fileID: 0}
   isRespawn: 1
   sceneData: {fileID: 0}
@@ -316,7 +329,8 @@ MonoBehaviour:
   needToRotatePlayer: 0
   neetToEnemyVRotate: 1
   neetToEnemySRotate: 0
-  canHurtEnemy: 0
+  canHurtEnemy: 1
+  canHurtPlayer: 1
   damageValue: 4
   enemyV: {fileID: 3895044906877378364}
   enemyS: {fileID: 0}
@@ -343,13 +357,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3514840453915498915}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.025, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: -1}
+  m_LocalPosition: {x: -1.27, y: 4.6, z: 0}
+  m_LocalScale: {x: -3.773585, y: 8.741345, z: 3.773585}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8667618766977722168}
-  m_RootOrder: 0
+  m_Father: {fileID: 679618262195367079}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8209774347842530441
 GameObject:
@@ -446,7 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4113937078432854814}
   m_Layer: 0
-  m_Name: EnemyEye (1)
+  m_Name: TargetEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,13 +473,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8515870236374727029}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: -1}
-  m_LocalPosition: {x: -1.6792442, y: 4.825223, z: 0}
-  m_LocalScale: {x: -3.773585, y: 8.741345, z: 3.773585}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.019, y: -0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 679618262195367079}
-  m_RootOrder: 15
+  m_Father: {fileID: 8667618766977722168}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8667618765151743339
 GameObject:
@@ -1022,6 +1036,7 @@ MonoBehaviour:
   neetToEnemyVRotate: 1
   neetToEnemySRotate: 0
   canHurtEnemy: 0
+  canHurtPlayer: 0
   damageValue: 4
   enemyV: {fileID: 3895044906877378364}
   enemyS: {fileID: 0}
@@ -1100,9 +1115,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3514840453915498916}
   - {fileID: 3514840453100754006}
   - {fileID: 4391250484676183227}
+  - {fileID: 4113937078432854814}
   m_Father: {fileID: 3514840453231984106}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1279,7 +1294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6329599691775637571, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.000050246716
+      value: 0.000034987926
       objectReference: {fileID: 0}
     - target: {fileID: -6329599691775637571, guid: 5ad6a800cf72b0b448bc2bfb36dde088, type: 3}
       propertyPath: m_Bounds.m_Center.y

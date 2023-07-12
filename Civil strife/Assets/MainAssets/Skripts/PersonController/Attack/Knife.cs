@@ -28,6 +28,8 @@ public class Knife : MonoBehaviour
         front = -pl.plFront();
         rb.velocity = new Vector2(speed * front, speed/2);
         rb.AddTorque(1000f);
+
+        damage *= -pl.plFront();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

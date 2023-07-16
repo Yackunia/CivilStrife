@@ -24,10 +24,10 @@ public class SceneData : MonoBehaviour
     {
         SetAllidOdObjonScene();
 
-        Load(idOfScene);
+        if(SaveData.CheckSceneData(idOfScene)) Load(idOfScene);
         for (int i = 0; i < withRespawn.Length; i++)
         {
-            if (!withRespawn[i] && !isRespawn) Destroy(objectsWithRespawn[i]);
+            if (!withRespawn[i] && !isRespawn) Destroy(objectsWithRespawn[i]);  
             else if (!withRespawn[i]) withRespawn[i] = true;
         }
         for (int i = 0; i < withoutRespawn.Length; i++)

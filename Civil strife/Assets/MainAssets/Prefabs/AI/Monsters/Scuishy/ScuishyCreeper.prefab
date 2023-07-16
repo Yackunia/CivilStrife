@@ -470,7 +470,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b634eda0438640d4db0ffee867d174f1, type: 2}
-  m_CullingMode: 2
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   knockSpeedX: 4
   knockSpeedY: 4
   canv: {fileID: 8722564388596663418}
-  hitBox: {fileID: 5733574078667191261}
+  hitZone: {fileID: 0}
   healthFieldDrawable: {fileID: 1274380294949219524}
   money: {fileID: 9039606162969647626, guid: fece3ee8cd329854b9781894fc75d9c6, type: 3}
   bloodPrefs:
@@ -541,8 +541,8 @@ MonoBehaviour:
   needToRotatePlayer: 0
   neetToEnemyVRotate: 0
   neetToEnemySRotate: 1
-  canHurtEnemy: 0
-  canHurtPlayer: 0
+  canHurtEnemy: 1
+  canHurtPlayer: 1
   damageValue: 4
   enemyV: {fileID: 0}
   enemyS: {fileID: 5733574078619730471}

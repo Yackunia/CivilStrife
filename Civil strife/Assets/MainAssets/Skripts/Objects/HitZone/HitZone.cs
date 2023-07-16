@@ -39,9 +39,12 @@ public class HitZone : MonoBehaviour
             else if (neetToEnemyVRotate) collision.transform.SendMessage("Damage", damageValue * enemyV.enDirection());
             else if (neetToEnemySRotate) collision.transform.SendMessage("Damage", damageValue * enemyS.enDirection());
         }
-        if (collision.transform.tag == "EnemyV" && canHurtEnemy || collision.transform.tag == "EnemyS" && canHurtEnemy)
+        if (collision.transform.tag == "EnemyV" && canHurtEnemy && collision.gameObject.layer != gameObject.layer || 
+            collision.transform.tag == "EnemyS" && canHurtEnemy && collision.gameObject.layer != gameObject.layer)
         {
-            collision.transform.SendMessage("Damage", damageValue);
+            if (needToRotatePlayer) collision.transform.SendMessage("Damage", damageValue * -move.plDirection());
+            else if (neetToEnemyVRotate) collision.transform.SendMessage("Damage", damageValue * enemyV.enDirection());
+            else if (neetToEnemySRotate) collision.transform.SendMessage("Damage", damageValue * enemyS.enDirection());
         }
     }
     protected virtual void HitCol(Collision2D collision)
@@ -52,9 +55,12 @@ public class HitZone : MonoBehaviour
             else if (neetToEnemyVRotate) collision.transform.SendMessage("Damage", damageValue * enemyV.enDirection());
             else if (neetToEnemySRotate) collision.transform.SendMessage("Damage", damageValue * enemyS.enDirection());
         }
-        if (collision.transform.tag == "EnemyV" && canHurtEnemy || collision.transform.tag == "EnemyS" && canHurtEnemy)
+        if (collision.transform.tag == "EnemyV" && canHurtEnemy && collision.gameObject.layer != gameObject.layer ||
+            collision.transform.tag == "EnemyS" && canHurtEnemy && collision.gameObject.layer != gameObject.layer)
         {
-            collision.transform.SendMessage("Damage", damageValue);
+            if (needToRotatePlayer) collision.transform.SendMessage("Damage", damageValue * -move.plDirection());
+            else if (neetToEnemyVRotate) collision.transform.SendMessage("Damage", damageValue * enemyV.enDirection());
+            else if (neetToEnemySRotate) collision.transform.SendMessage("Damage", damageValue * enemyS.enDirection());
         }
     }
 }

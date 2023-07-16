@@ -10,7 +10,7 @@ public class StartDialog : MonoBehaviour
     private bool canStartDialogue;
     private bool canShowHelp;
 
-    [SerializeField] private GameObject helpObj;
+    [SerializeField] protected GameObject helpObj;
     [SerializeField] private GameObject canvObj;
 
     [SerializeField] private Transform plFollow;
@@ -80,7 +80,7 @@ public class StartDialog : MonoBehaviour
         ConversationManager.Instance.StartConversation(thisConversation);
     }
 
-    public void EndDialog()
+    public virtual void EndDialog()
     {
         canShowHelp = true;
         helpObj.SetActive(true);

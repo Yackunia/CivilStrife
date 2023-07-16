@@ -59,7 +59,7 @@ public class EnemyS : MonoBehaviour
     [SerializeField] private float knockSpeedY;
 
     [SerializeField] private GameObject canv;
-    [SerializeField] private GameObject hitBox;
+    [SerializeField] private HitZone hitZone;
 
     [SerializeField] private Transform healthFieldDrawable;
 
@@ -111,6 +111,7 @@ public class EnemyS : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         an = gameObject.GetComponent<Animator>();
+        hitZone = gameObject.GetComponent<HitZone>();
         sceneData = GameObject.Find("SceneData").GetComponent<SceneData>();
     }
 
@@ -147,13 +148,25 @@ public class EnemyS : MonoBehaviour
 
     private void FindTarget()
     {
-        Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(transform.position, targetSeeDistance + .5f, targetLayer);
-        foreach (Collider2D col in detectedObjs)
+        RaycastHit2D[] raycastHit2Ds = Physics2D.RaycastAll(targetCheck.position, transform.right, (targetSeeDistance + 1) * currentDirection, targetLayer);
+
+        foreach (RaycastHit2D col in raycastHit2Ds)
         {
             if (col.transform != transform)
             {
                 target = col.transform;
-                Debug.Log(target.name);
+
+                break;
+            }
+        }
+
+        raycastHit2Ds = Physics2D.RaycastAll(targetCheck.position, transform.right, -targetSeeDistance * currentDirection,  targetLayer);
+
+        foreach (RaycastHit2D col in raycastHit2Ds)
+        {
+            if (col.transform != transform)
+            {
+                target = col.transform;
 
                 break;
             }
@@ -169,7 +182,7 @@ public class EnemyS : MonoBehaviour
     private void CheckLayerStats()
     {
         canSeeAnotherEnemy = Physics2D.Raycast(enemysCheck.position, transform.right, targetSeeDistance * currentDirection * 0.1f, anotherEnemys);
-        canSeeTarget = Physics2D.Raycast(targetCheck.position, transform.right, targetSeeDistance * currentDirection, targetLayer) && isAlive || Physics2D.Raycast(targetCheck.position, transform.right, -targetSeeDistanceBack * currentDirection / 2, targetLayer) && isAlive;
+        canSeeTarget = Physics2D.Raycast(targetCheck.position, transform.right, targetSeeDistance * currentDirection, targetLayer) && isAlive || Physics2D.Raycast(targetCheck.position, transform.right, -targetSeeDistanceBack * currentDirection, targetLayer) && isAlive;
     }
 
     #region Movement
@@ -236,6 +249,8 @@ public class EnemyS : MonoBehaviour
         KnockEffect(damage);
         BloodEffect();
         DamageSoundEffect();
+
+        StartFight();
     }
 
     private void DamageCalculation(float damage)
@@ -256,7 +271,7 @@ public class EnemyS : MonoBehaviour
 
     protected virtual void Death()
     {
-        hitBox.SetActive(false);
+        Destroy(hitZone);
 
         opening.DropPrize();
 
@@ -274,8 +289,19 @@ public class EnemyS : MonoBehaviour
         x.GetComponent<Rigidbody2D>().velocity = new Vector2(knockSpeedX / 3, knockSpeedY / 3);
 
         Destroy(this);
-    }
 
+        Destroy(hitZone);
+
+        CheckDeadHitBox();
+    }
+    protected void CheckDeadHitBox()
+    {
+        Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(transform.position, 15f, targetLayer);
+        foreach (Collider2D col in detectedObjs)
+        {
+            col.transform.SendMessage("StopFight");
+        }
+    }
     #region Effects
     private void BloodEffect()
     {
@@ -285,7 +311,7 @@ public class EnemyS : MonoBehaviour
 
     private void KnockEffect(float damage)
     {
-        if (damage < 0) knockSpeedX = Mathf.Abs(knockSpeedX);
+        if (damage > 0) knockSpeedX = Mathf.Abs(knockSpeedX);
         else knockSpeedX = -1 * Mathf.Abs(knockSpeedX);
 
         if (isAlive)
@@ -323,11 +349,13 @@ public class EnemyS : MonoBehaviour
 
     private void StopFight()
     {
-        canRun = false;
-        rb.velocity = new Vector2(0f, rb.velocity.y);
-        isIdle = true;
-        an.SetBool("isIdle", true);
-        Destroy(this);
+        target = null;
+
+        StopEnemy();
+        UnFreezeEnemy();
+        seeTarget = false;
+        //isIdle = true;
+        rb.velocity = Vector2.zero;
     }
     #endregion
 
@@ -414,9 +442,6 @@ public class EnemyS : MonoBehaviour
                 Gizmos.DrawWireSphere(new Vector2(transform.position.x - patroolDistance, transform.position.y), 1f);
                 Gizmos.DrawWireSphere(new Vector2(transform.position.x + patroolDistance, transform.position.y), 1f);
             }
-
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawWireSphere(transform.position, targetSeeDistance + .5f);
         }
     }     
 }

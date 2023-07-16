@@ -6,11 +6,11 @@ public class EnemyV : MonoBehaviour
     [Header("Patrool / Chase")]
     //variables needed to implement the Movement of the enemy
 
-    [SerializeField] private bool canSeeAnotherEnemy;
-    [SerializeField] private bool canSeeTarget;
-    [SerializeField] private bool seeTarget;
-    [SerializeField] private bool canRun = true;
-    [SerializeField] private bool canFlip = true; //временно сериализую для дэша босса
+     private bool canSeeAnotherEnemy;
+     private bool canSeeTarget;
+     private bool seeTarget;
+    private bool canRun = true;
+    private bool canFlip = true; //временно сериализую для дэша босса
 
     [SerializeField] private int currentDirection = 1; 
 
@@ -20,11 +20,11 @@ public class EnemyV : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    [SerializeField] private bool isIdle;
+    [SerializeField] protected bool isIdle;
     [SerializeField] private bool isRight;
 
     [SerializeField] private float chaseSpeed;
-    [SerializeField] private float patroolSpeed;
+    [SerializeField] protected float patroolSpeed;
     [SerializeField] private float attackSpeed;
 
 
@@ -34,9 +34,9 @@ public class EnemyV : MonoBehaviour
 
     [Header("Jump")]
 
-    [SerializeField] private bool isWall;
-    [SerializeField] private bool canJump = true;
-    [SerializeField] private bool isJumping;
+    private bool isWall;
+    private bool canJump = true;
+    private bool isJumping;
 
     [SerializeField] private bool isJumper;
 
@@ -58,22 +58,22 @@ public class EnemyV : MonoBehaviour
     //variables of attack system
 
     private bool canHurtTarget;
-    [SerializeField] private bool canHurtObj;    
-    [SerializeField] private bool canAttack = true;
+    private bool canHurtObj;    
+    private bool canAttack = true;
     [SerializeField] private bool isAttacking;
 
     [SerializeField] private int damage;
 
     [SerializeField] private float attackRad;
     [SerializeField] private float attackDistance;
-    [SerializeField] private float attackDistanceError;
+    private float attackDistanceError;
     [SerializeField] private float attackDistanceErrorMax;
 
 
     [SerializeField] private Transform attackHitBoxPos;
 
     [SerializeField] protected LayerMask otherObjLayer;
-    [SerializeField] private LayerMask targLayer;
+    [SerializeField] protected LayerMask targLayer;
     [SerializeField] private LayerMask destrObjLayer;
 
     [Header("Raycusts")]
@@ -93,7 +93,7 @@ public class EnemyV : MonoBehaviour
     [Header("Health System")]
 
     private bool isHearting;
-    [SerializeField] private bool isAlive = true;
+    private bool isAlive = true;
 
     private float healthMax;
 
@@ -151,7 +151,6 @@ public class EnemyV : MonoBehaviour
     {
         spawnPoint = transform.position.x;
         healthMax = health;
-        Debug.Log(healthMax);
     }
 
     private void SetEnemyModificators()
@@ -208,7 +207,7 @@ public class EnemyV : MonoBehaviour
             StartFight();
         }
     }
-    private void StartFight()
+    protected void StartFight()
     {
         FindTarget();
         seeTarget = true;
@@ -218,14 +217,34 @@ public class EnemyV : MonoBehaviour
 
     private void FindTarget()
     {
-        Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(transform.position, 12f, targLayer);
-        foreach (Collider2D col in detectedObjs)
+        RaycastHit2D[] raycastHit2Ds = Physics2D.RaycastAll(targetsCheck.position, transform.right, (targetSeeDistance + 1) * currentDirection, targLayer);
+
+        bool flag = true;
+
+        foreach (RaycastHit2D col in raycastHit2Ds)
         {
             if (col.transform != transform)
             {
                 target = col.transform;
-                Debug.Log(target.name);
 
+                flag = false;
+
+                break;
+            }
+        }
+
+        raycastHit2Ds = Physics2D.RaycastAll(targetsCheck.position, transform.right, -plSeeDistanceBack * currentDirection, targLayer);
+
+        foreach (RaycastHit2D col in raycastHit2Ds)
+        {
+            if (col.transform != transform && flag)
+            {
+                target = col.transform;
+
+                break;
+            }
+            if (flag == false)
+            {
                 break;
             }
         }
@@ -242,7 +261,7 @@ public class EnemyV : MonoBehaviour
     {
         canSeeAnotherEnemy = Physics2D.Raycast(otherEnemyCheck.position, transform.right, attackDistance * currentDirection * 0.2f, anotherEnemys);
 
-        canSeeTarget = Physics2D.Raycast(targetsCheck.position, transform.right, targetSeeDistance * currentDirection, targLayer) && isAlive || Physics2D.Raycast(targetsCheck.position, transform.right, -targetSeeDistance * currentDirection / 2, targLayer) && isAlive;
+        canSeeTarget = Physics2D.Raycast(targetsCheck.position, transform.right, targetSeeDistance * currentDirection, targLayer) && isAlive || Physics2D.Raycast(targetsCheck.position, transform.right, -plSeeDistanceBack * currentDirection, targLayer) && isAlive;
         canHurtTarget = Physics2D.Raycast(targetsCheck.position,transform.right, (attackDistance + attackDistanceError) * currentDirection, targLayer);
         canHurtObj = Physics2D.Raycast(targetsCheck.position, transform.right, attackDistance * currentDirection, destrObjLayer);
 
@@ -259,7 +278,7 @@ public class EnemyV : MonoBehaviour
 
     #region Movement
     //патрулирование
-    private void Patrol()
+    protected virtual void Patrol()
     {
         if (!isIdle)
         {
@@ -302,7 +321,7 @@ public class EnemyV : MonoBehaviour
         }
     }
 
-    private void Move(float speed)
+    protected void Move(float speed)
     {
         if (canRun) rb.velocity = new Vector2(speed * currentDirection, rb.velocity.y);
         //else rb.velocity = new Vector2(0, rb.velocity.y);
@@ -442,8 +461,6 @@ public class EnemyV : MonoBehaviour
 
         Destroy(this);
 
-        Debug.Log("Death");
-
         sceneData.SetObjDisabled(isRespawn, idInScene);
     }
 
@@ -452,7 +469,7 @@ public class EnemyV : MonoBehaviour
         isHearting = false;
     }
 
-    private void CheckDeadHitBox()
+    protected void CheckDeadHitBox()
     {
         Collider2D[] detectedObjs = Physics2D.OverlapCircleAll(transform.position, 15f, targLayer);
         foreach (Collider2D col in detectedObjs)
@@ -506,12 +523,17 @@ public class EnemyV : MonoBehaviour
 
     #region For Set Status of Behavior (PRIVATE)
 
-    private void StopFight()
+    protected virtual void StopFight()
     {
+        target = null;
+        
+        StopEnemy();
+        DizableCombat();
+        UnFreezeEnemy();
+        EnableCombat();
         seeTarget = false;
-        isIdle = true;
+        //isIdle = true;
         rb.velocity = Vector2.zero;
-        Debug.Log("StopFight");
     }
     #endregion
 
@@ -586,6 +608,12 @@ public class EnemyV : MonoBehaviour
     {
         return healthMax;
     }
+
+
+    protected void ChangeHealth(float hp)
+    {
+        health = hp;
+    }
     #endregion
 
     protected virtual void OnDrawGizmos()
@@ -606,7 +634,5 @@ public class EnemyV : MonoBehaviour
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallDistance * currentDirection, wallCheck.position.y, wallCheck.position.z));
         Gizmos.DrawWireSphere(groundCheck.position, grRad);
 
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, 11f);
     }
 }

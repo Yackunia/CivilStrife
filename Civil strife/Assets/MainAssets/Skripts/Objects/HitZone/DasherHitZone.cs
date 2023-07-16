@@ -14,7 +14,8 @@ public class DasherHitZone : HitZone
             en.DamageWithoutDamage();
             en.StopRunUnscheduled();
         }
-        if (collision.transform.tag == "EnemyV" && en.enRun() || collision.transform.tag == "EnemyS" && en.enRun())
+        if (collision.transform.tag == "EnemyV" && en.enRun() || 
+            collision.transform.tag == "EnemyS" && en.enRun())
         {
             en.DamageWithoutDamage();
             en.StopRunUnscheduled();

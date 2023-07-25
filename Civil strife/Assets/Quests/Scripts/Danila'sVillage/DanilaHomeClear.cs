@@ -12,6 +12,9 @@ public class DanilaHomeClear : MonoBehaviour
 
     [SerializeField] private Danila danila;
 
+    [SerializeField] private PlayerMovement movement;
+    [SerializeField] private PlayerAttackSistem attackSistem;
+
     private bool isDanila;
 
     private void Start()
@@ -72,5 +75,11 @@ public class DanilaHomeClear : MonoBehaviour
         sceneData.withoutRespawn[0] = false;
         sceneData.withoutRespawn[1] = true;
         sceneData.Save();
+
+        movement.UnFreezePlayer();
+        movement.wall.EnableClimb();
+        movement.wall.EnableWall();
+        movement.dash.EnableDash();
+        attackSistem.EnableCombat();
     }
 }

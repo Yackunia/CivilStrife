@@ -18,6 +18,7 @@ public class DanilaQuestsDialogue : StartDialog
         base.EndDialog();
         Destroy(this);
         Destroy(helpObj);
+        Debug.Log("Fuck");
     }
     public void AddSekWeapon()
     {

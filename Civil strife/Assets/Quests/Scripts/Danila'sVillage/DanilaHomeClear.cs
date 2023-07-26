@@ -15,6 +15,9 @@ public class DanilaHomeClear : MonoBehaviour
     [SerializeField] private PlayerMovement movement;
     [SerializeField] private PlayerAttackSistem attackSistem;
 
+    [SerializeField] private GameObject oldLoadPoints;
+    [SerializeField] private GameObject newLoadPoints; 
+
     private bool isDanila;
 
     private void Start()
@@ -71,15 +74,14 @@ public class DanilaHomeClear : MonoBehaviour
 
     public void EndQuest()
     {
-        dialogueEnd.StartQuestDialogue();
         sceneData.withoutRespawn[0] = false;
-        sceneData.withoutRespawn[1] = true;
+        sceneData.withoutRespawn[1] = false;
+        sceneData.withoutRespawn[2] = true;
+        sceneData.withoutRespawn[3] = true;
         sceneData.Save();
+        oldLoadPoints.SetActive(false);
+        newLoadPoints.SetActive(true);
 
-        movement.UnFreezePlayer();
-        movement.wall.EnableClimb();
-        movement.wall.EnableWall();
-        movement.dash.EnableDash();
-        attackSistem.EnableCombat();
+        dialogueEnd.EndDialog();
     }
 }

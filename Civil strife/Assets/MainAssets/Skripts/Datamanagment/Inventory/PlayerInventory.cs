@@ -25,7 +25,7 @@ public class PlayerInventory : MonoBehaviour
     public int[] sekWeapons;//save this
     public int[] activeAbilitys;//save this
 
-    public int[][] garbage;//save this
+    public int[] stuff;//save this
 
     [Header("inventory Output")]
     [SerializeField] private RectTransform weaponParent;
@@ -53,7 +53,6 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private Sprite[] bootsSprite;
     [SerializeField] private Sprite[] standsSprite;
     [SerializeField] private Sprite[] abilitySprite;
-    [SerializeField] private Sprite[] garbSprites;
 
     //downloadableObj
     [SerializeField] private GameObject[] weaponObjcts;
@@ -63,12 +62,13 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private GameObject[] bootsObjcts;
     [SerializeField] private GameObject[] stansObjcts;
     [SerializeField] private GameObject[] abilityObjcts;
+    [SerializeField] private GameObject[] stuffObjects;
 
     //CountOutputs
     [SerializeField] private Text[] moneyCountOutput;
     [SerializeField] private Text[] sekWeaponCountOutput;
     [SerializeField] private Text[] abilityCountOutput;
-    [SerializeField] private Text[] garbageCountOutput;
+    [SerializeField] private Text[] stuffCountOutput;
 
     [Header("Avatar")]
     [SerializeField] private SpriteRenderer[] bodyPart;
@@ -153,7 +153,7 @@ public class PlayerInventory : MonoBehaviour
         for (int i = 0; i < moneyCountOutput.Length; i++) moneyCountOutput[i].text = moneyCount.ToString();
         for (int i = 0; i < sekWeaponCountOutput.Length; i++) sekWeaponCountOutput[i].text = sekWeapons[sekWeaponId].ToString();
         for (int i = 0; i < abilityCountOutput.Length; i++) abilityCountOutput[i].text = activeAbilitys[activeAbilitysId].ToString();
-        //for (int i = 0; i < garbageCountOutput.Length; i++) garbageCountOutput[i].text = ga.ToString();
+        for (int i = 0; i < stuff.Length; i++) stuffCountOutput[i].text = stuff[i].ToString();
     }
 
     #region Save/Load Data
@@ -166,9 +166,6 @@ public class PlayerInventory : MonoBehaviour
 
         SetInventory();
     }
-
-    //private void LoadOnlyInventory
-
     private void SetRespawn()
     {
         pl_Transform.position = campPos[campId];
@@ -207,7 +204,7 @@ public class PlayerInventory : MonoBehaviour
         sekWeapons = data.sekWeapons;
         activeAbilitys = data.activeAbilitys;
 
-        garbage = data.garbage;
+        stuff = data.stuff;
 
         //bestiary
         isOpened = data.isOpened;
@@ -408,6 +405,14 @@ public class PlayerInventory : MonoBehaviour
         x.text = bootsObjcts[id].name + "у вас в инвентаре";
         SetAllBoots();
     }
+
+    public void AddStuff(int id, int count)
+    {
+        stuff[id] += count;
+        SetStuff(id, true);
+        var x = Instantiate(spawnText, spawntextParent).GetComponent<Text>();
+        x.text = stuffObjects[id].name + "у вас в инвентаре";
+    }
     public void AddMoney()
     {
         moneyCount += 1;
@@ -473,6 +478,11 @@ public class PlayerInventory : MonoBehaviour
 
         SetAllBoots();
     }
+    public void RemoveStuff(int id, int count)
+    {
+        stuff[id] -= count;
+        if (stuff[id] <= 0) SetStuff(id, false);
+    }
     public void RemoveMoney(int count)
     {
         moneyCount -= count;
@@ -507,6 +517,10 @@ public class PlayerInventory : MonoBehaviour
     public void SetBoots(int id, bool flag)
     {
         bootsObjcts[id].SetActive(flag);
+    }
+    public void SetStuff(int id, bool flag)
+    {
+        stuffObjects[id].SetActive(flag);
     }
     #endregion
 
@@ -603,6 +617,7 @@ public class PlayerInventory : MonoBehaviour
         SetAllStands();
         SetAllHelmets();
         SetAllBoots();
+        SetAllStuff();
     }
 
     private void SetALLWeapons()
@@ -694,7 +709,6 @@ public class PlayerInventory : MonoBehaviour
         abilityParent.sizeDelta = new Vector2(abilityParent.sizeDelta.x, parentHeight);
         abilityParent.localPosition = new Vector2(0f, parentHeight / 2);
     }
-
     private void SetAllBreastPlates()
     {
         var x = 0;
@@ -724,7 +738,6 @@ public class PlayerInventory : MonoBehaviour
         breastParent.sizeDelta = new Vector2(breastParent.sizeDelta.x, parentHeight);
         breastParent.localPosition = new Vector2(0f, parentHeight / 2);
     }
-
     private void SetAllStands()
     {
         var x = 0;
@@ -755,7 +768,6 @@ public class PlayerInventory : MonoBehaviour
         standsParent.sizeDelta = new Vector2(standsParent.sizeDelta.x, parentHeight);
         standsParent.localPosition = new Vector2(0f, parentHeight / 2);
     }
-
     private void SetAllHelmets()
     {
         var x = 0;
@@ -784,7 +796,6 @@ public class PlayerInventory : MonoBehaviour
         helmetParent.sizeDelta = new Vector2(helmetParent.sizeDelta.x, parentHeight);
         helmetParent.localPosition = new Vector2(0f, parentHeight / 2);
     }
-
     private void SetAllBoots()
     {
         var x = 0;
@@ -813,7 +824,16 @@ public class PlayerInventory : MonoBehaviour
         bootsParent.sizeDelta = new Vector2(bootsParent.sizeDelta.x, parentHeight);
         bootsParent.localPosition = new Vector2(0f, parentHeight / 2);
     }
-    
+
+    private void SetAllStuff()
+    {
+        for(int i = 0;i < stuff.Length;i++)
+        {
+            if (stuff[i] > 0) SetStuff(i, true);
+            else SetStuff(i, false);
+        }
+    }
+
     #endregion
 
     public void SetInvBut(bool flag)

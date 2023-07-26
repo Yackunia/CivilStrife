@@ -20,7 +20,7 @@ public class PlayerData
     public int[] sekWeapons;
     public int[] activeAbilitys;
 
-    public int[][] garbage;
+    public int[] stuff;
 
     //bestiary
     public bool[] isOpened;
@@ -59,7 +59,7 @@ public class PlayerData
         sekWeapons = data.sekWeapons;
         activeAbilitys = data.activeAbilitys;
 
-        garbage = data.garbage;
+        stuff = data.stuff;
 
         //bestiary
         isOpened = data.isOpened;

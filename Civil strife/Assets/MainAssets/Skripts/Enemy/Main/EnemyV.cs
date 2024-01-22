@@ -397,7 +397,7 @@ public class EnemyV : MonoBehaviour
                 col.transform.SendMessage("Damage", damage * currentDirection);
             }
 
-            if (HitBoxAud.IsPrefabInstance()) HitBoxAud.Play();
+            if (HitBoxAud != null) HitBoxAud.Play();
         }
     }
     protected virtual void EndAttack()

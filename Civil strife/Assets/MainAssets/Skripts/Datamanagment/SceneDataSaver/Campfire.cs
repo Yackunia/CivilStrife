@@ -60,7 +60,7 @@ public class Campfire : MonoBehaviour
             obj.SetActive(false);
             obj2.SetActive(true);
             move.Sitting(true);
-            move.dash.DisableDash();
+            //move.dash.DisableDash();
             move.wall.DisableWall();
             health.canHurt = false;
             health.healthPoint = health.maxHP;
@@ -87,7 +87,7 @@ public class Campfire : MonoBehaviour
         obj.SetActive(false);
         obj2.SetActive(true);
         move.Sitting(true);
-        move.dash.DisableDash();
+        //move.dash.DisableDash();
         move.wall.DisableWall();
         health.canHurt = false;
         health.healthPoint = health.maxHP;

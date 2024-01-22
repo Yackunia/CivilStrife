@@ -6,9 +6,9 @@ public class DasherHitZone : HitZone
 {
     [SerializeField] private Scusihy en;
 
-    protected override void HitCol(Collision2D collision)
+    protected override void HitCol(Collision2D collision, float damage)
     {
-        base.HitCol(collision);
+        base.HitCol(collision, damageValue);
         if (collision.transform.tag == "Player" && en.enRun())
         {
             en.DamageWithoutDamage();

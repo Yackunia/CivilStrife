@@ -95,7 +95,7 @@ public class WallSliding : MonoBehaviour
             TakePlatform();
         }
 
-        if (isWall && canWallSliding && !attacker.plAttacking() && isStay && !move.plGround() && !move.dash.isDashing)
+        if (isWall && canWallSliding && !attacker.plAttacking() && isStay && !move.plGround() /*&& !move.dash.isDashing*/)
         {
             isStay = false;
             StartWallSliding();
@@ -174,7 +174,7 @@ public class WallSliding : MonoBehaviour
         canClimb = false;
         move.StopPlayer();
         attacker.DisableCombat();
-        move.dash.DisableDash();
+        //move.dash.DisableDash();
         DisableWall();
 
         isHanging = true;
@@ -232,7 +232,7 @@ public class WallSliding : MonoBehaviour
         isClimbing = false;
         isHanging = false;
         move.UnFreezePlayer();
-        move.dash.EnableDash();
+        //move.dash.EnableDash();
         attacker.EnableCombat();
         EnableWall();
 
@@ -324,7 +324,7 @@ public class WallSliding : MonoBehaviour
             EnableClimb();
             EnableWall();
             attacker.EnableCombat();
-            move.dash.EnableDash();
+            //move.dash.EnableDash();
         }
         isFalling = false;
     }
@@ -350,7 +350,7 @@ public class WallSliding : MonoBehaviour
 
         move.StopPlayer();
         attacker.DisableCombat();
-        move.dash.DisableDash();
+        //move.dash.DisableDash();
         an.SetBool("isGroundFail", true);
     }
 
@@ -361,7 +361,7 @@ public class WallSliding : MonoBehaviour
         if (!stands.isUsingStand)
         {
             attacker.EnableCombat();
-            move.dash.EnableDash();
+            //move.dash.EnableDash();
             EnableClimb();
             EnableWall();
         }

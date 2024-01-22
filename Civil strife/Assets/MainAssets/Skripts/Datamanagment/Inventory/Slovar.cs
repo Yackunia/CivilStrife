@@ -117,7 +117,7 @@ public class Slovar : MonoBehaviour
                 {
                     needToStopPlayer = false;
                 }
-                if (move.dash.canDoDash)
+               /* if (move.dash.canDoDash)
                 {
                     move.dash.DisableDash();
                     needToStopWallSlide = true;
@@ -125,14 +125,14 @@ public class Slovar : MonoBehaviour
                 else
                 {
                     needToStopWallSlide = false;
-                }
+                }*/
             }
             else
             {
                 Time.timeScale = 1f;
                 if (needToStopCombat) attacker.EnableCombat();
                 if (needToStopPlayer) move.UnFreezePlayer();
-                if (needToStopWallSlide) move.dash.EnableDash();
+                //if (needToStopWallSlide) move.dash.EnableDash();
 
                 for (int i = 0; i < infObj.Length; i++)
                 {

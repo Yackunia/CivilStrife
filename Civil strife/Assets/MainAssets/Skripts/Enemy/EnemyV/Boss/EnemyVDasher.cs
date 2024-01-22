@@ -5,10 +5,17 @@ using UnityEngine;
 public class EnemyVDasher : HitZone
 {
     [SerializeField] private Traian tr;
-    protected override void HitCol(Collision2D collision)
+    [SerializeField] private float dashingDamage;
+    protected override void HitCol(Collision2D collision, float damage)
     {
-        base.HitCol(collision);
-
-        if (tr.isRunning) tr.StopRun();
+        if (tr.isRunning)
+        {
+            base.HitCol(collision, dashingDamage);
+            tr.StopRun();
+        }
+        else
+        {
+            base.HitCol(collision, damageValue);
+        }
     }
 }

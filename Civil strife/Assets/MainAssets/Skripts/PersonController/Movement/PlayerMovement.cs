@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Other Scripts")]
-    public Dash dash;
+    //public Dash dash;
     public WallSliding wall;
 
     [SerializeField] private Settings set;

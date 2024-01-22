@@ -131,14 +131,14 @@ public class Stands : MonoBehaviour
     {
         move.wall.DisableClimb();
         move.wall.DisableWall();
-        move.dash.DisableDash();
+        //move.dash.DisableDash();
         attacker.DisableCombat();
     }
     public void SetPlayerWithoutStand()
     {
         move.wall.EnableClimb();
         move.wall.EnableWall();
-        move.dash.EnableDash();
+        //move.dash.EnableDash();
         attacker.EnableCombat();
     }
 }

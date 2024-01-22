@@ -132,7 +132,7 @@ public class PlayerHealth : MonoBehaviour
 
             move.StopPlayer();
             attack.DisableCombat();
-            move.dash.DisableDash();
+            //move.dash.DisableDash();
             move.wall.DisableWall();
             move.wall.DisableClimb();
             rb.velocity = new Vector2(knockspeedX, knockSpeedY);
@@ -152,7 +152,7 @@ public class PlayerHealth : MonoBehaviour
     {
         rb.velocity = new Vector2(0f, rb.velocity.y);
 
-        Destroy(move.dash);
+        //Destroy(move.dash);
         Destroy(move.wall);
         Destroy(move);
         Destroy(attack);

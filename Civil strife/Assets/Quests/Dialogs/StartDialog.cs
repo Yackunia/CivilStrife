@@ -69,7 +69,7 @@ public class StartDialog : MonoBehaviour
 
         canvObj.SetActive(false);
         movement.StopPlayer();
-        movement.dash.DisableDash();
+        //movement.dash.DisableDash();
         movement.wall.DisableClimb();
         movement.wall.DisableWall();
         attacker.DisableCombat();
@@ -87,7 +87,7 @@ public class StartDialog : MonoBehaviour
 
         canvObj.SetActive(true);
         movement.UnFreezePlayer();
-        movement.dash.EnableDash();
+        //movement.dash.EnableDash();
         movement.wall.EnableClimb();
         movement.wall.EnableWall();
         attacker.EnableCombat();

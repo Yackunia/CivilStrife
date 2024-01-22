@@ -165,7 +165,7 @@ public class PlayerAttackSistem : MonoBehaviour
         move.FastPlayer();
         move.wall.EnableClimb();
         move.wall.EnableWall();
-        move.dash.EnableDash();
+        //move.dash.EnableDash();
     }
 
     private void EndPain()
